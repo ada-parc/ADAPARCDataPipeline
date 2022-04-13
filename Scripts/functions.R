@@ -1,12 +1,13 @@
-downloadAndFormatAcs <- function(tables) {
-  map(
+downloadAndFormatAcs <- function(tables, geography = "state", year) {
+  df <- map(
     tables, 
     ~ tidycensus::get_acs(
       year = year,
-      geography = "state",
+      geography = geography,
       table = .x,
       geometry = F,
-      cache_table = T
+      # cache_table = T,
+      show_call = T
     ) %>%
       pivot_wider(
         names_from = variable,
@@ -24,6 +25,13 @@ downloadAndFormatAcs <- function(tables) {
         select(NAME = state.name, ABBR = state.abb)
     ) %>%
     select(GEOID, NAME, ABBR, everything())
+  
+  if(geography == "us") {
+    df <- df %>%
+      mutate(ABBR = "USA")
+  }
+  
+  return(df)
 }
 
 

@@ -1,4 +1,4 @@
-demographics <- national_demographics %>%
+demographics <- stacked_demographics %>%
   transmute(
     ### ID
     GEOID = GEOID,
@@ -61,7 +61,7 @@ demographics <- national_demographics %>%
   ) %>%
   mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
 
-community_living <- national_living %>%
+community_living <- stacked_living %>%
   transmute(
     ### ID
     GEOID = GEOID,
@@ -118,7 +118,7 @@ community_living <- national_living %>%
   ) %>%
   mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
 
-community_participation <- national_participation %>%
+community_participation <- stacked_participation %>%
   transmute(
     ### ID
     GEOID = GEOID,
@@ -216,7 +216,7 @@ community_participation <- national_participation %>%
   ) %>%
   mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
 
-work_economic <- national_economic %>%
+work_economic <- stacked_economic %>%
   transmute(
     ### ID
     GEOID = GEOID,
