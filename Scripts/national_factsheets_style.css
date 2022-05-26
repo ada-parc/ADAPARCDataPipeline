@@ -1,0 +1,15 @@
+.main-container { 
+     max-width: 1600px !important;
+ } 
+ .table tbody tr:nth-child(even)>td {
+     background-color: #d3d3d3 !important;
+ }
+ .table thead th {
+     font-size: 12px;
+ }
+ tbody {
+     font-size: 12px;
+ }
+ hr {
+     page-break-after: always;
+ }

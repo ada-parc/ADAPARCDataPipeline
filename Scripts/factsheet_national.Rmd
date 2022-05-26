@@ -1,0 +1,161 @@
+---
+title: ""
+output: 
+  html_document:
+    css: "national_factsheets_style.css"
+    theme: paper
+always_allow_html: true
+tables: true
+params:
+  national_category_selector: "is_community_participation"
+  national_variable_selector: "pwd_19_64_insured_public_pct"
+  access_map_palette_selected: "YlOrBr"
+  year: 2020
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+
+### ----- Libraries -----
+
+# Packages
+library(tidyverse)
+library(gridExtra)
+library(patchwork)
+library(tigris)
+library(sf)
+library(knitr)
+library(kableExtra)
+
+options(scipen = 999999,
+        tigris_use_cache = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                      fig.cap = "", fig.width = 13, fig.asp = .75,
+                      fig.align = "center", out.width = "100%")
+
+
+### ----- National Data import and clean -----
+
+# Get the right combination of dataset and variable
+national_data <- eval(sym(str_remove(params$national_category_selector, "^is_")))
+
+# Markdown title
+rmd_title <- dict_vars$national_dropdown_label[which(dict_vars$var_readable == params$national_variable_selector)][1]
+
+```
+
+## `r rmd_title`
+
+### Summary
+
+```{r national-map-summary, fig.alt = "Descriptive summary of data for the selected topic."}
+
+htmltools::HTML(paste0(altText(national_data, 
+                    params$national_variable_selector),
+            " Detailed information is available below in the map and table below.",
+            "<br><i>Source: ", year - 4, "-", year, " American Community Survey 5-Year Estimates.</i>"))
+
+```
+
+### State-by-State Map
+
+```{r national-map, fig.width=11, fig.alt = "A map of the United States, with each state shaded according to the quartiles described in the summary."}
+
+renderNationalMap(params$national_category_selector, 
+                    params$national_variable_selector,
+                    params$access_map_palette_selected,
+                    output_asp_ratio = .6) +
+  theme(plot.background = element_rect(colour = "white"),
+        plot.title = element_text(face = "bold",
+                                  size = 10),
+        panel.grid = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.margin = margin(t = 2.5, b = 2.5,
+                             l = 0, r = 0, "cm"),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.line = element_blank(),
+        panel.spacing = unit(0L, "pt"),
+        legend.position = "bottom",
+        legend.title = element_text(face = "bold",
+                                    vjust = 0.75),
+        legend.text = element_text(vjust = .5),
+        legend.key = element_rect(color = "black"),
+        strip.text.x = element_text(size = 9L),
+        text = element_text(size = 12))
+  
+```
+
+\newpage
+
+### Table of Selected Topic
+
+```{r national-table, fig.alt = "State-level data for variables relevant to the selected topic."}
+
+
+### ----- Get table variables, title -----
+
+
+# Get variable group based on selected variable
+national_vars_in_topic <- dict_vars %>% 
+    filter((!!sym(params$national_category_selector)) == TRUE,
+           var_topic ==
+             (dict_vars %>% 
+                filter((!!sym(params$national_category_selector)) == TRUE,
+                       var_readable == params$national_variable_selector) %>% 
+                pull(var_topic))) %>% 
+    select(var_pretty, var_readable)
+
+# Caption
+cap_choices <- c("Demographics" = "is_demographics", 
+                 "Community Participation" = "is_community_participation", 
+                 "Community Living" = "is_community_living", 
+                 "Work/Economic" = "is_work_economic")
+
+table_caption <- paste(names(cap_choices[cap_choices == params$national_category_selector]), "Table")
+
+
+### ----- Create table data frame -----
+
+
+# Summary table, full
+# Reorganize dataframe, switch to pretty names
+national_data_table_friendly <- national_data %>%
+    arrange(GEOID) %>% 
+    mutate("State" = paste0(NAME, " (", ABBR, ")")) %>% 
+    select(any_of(c("State",
+                    national_vars_in_topic %>% 
+                      pull(var_readable)))) %>% 
+    mutate(across(-State & -ends_with("_pct"),
+                  ~scales::comma(.x))) %>% 
+    mutate(across(ends_with("_pct"),
+                  ~scales::percent(.x, 
+                                   accuracy = 0.1,
+                                   scale = 1))) %>% 
+    rename(!!any_of(national_vars_in_topic %>% 
+                      deframe()))
+
+### ----- Summary table kable output -----
+
+
+# Full table
+national_topic_table <- 
+  kbl(x = national_data_table_friendly,
+      format = "html",
+      row.names = FALSE,
+      caption = table_caption) %>%
+  kable_paper("striped",
+              full_width = TRUE,
+              position = "left") %>% 
+  kable_styling(bootstrap_options = c("striped",
+                                      "condensed"),
+                full_width = TRUE,
+                font_size = 11,
+                position = "left") %>% 
+  column_spec(1, width = "1.5in")
+
+# UI Output
+htmltools::HTML(national_topic_table) 
+
+```
