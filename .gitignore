@@ -4,3 +4,13 @@
 .RData
 .DS_Store
 .Rbuildignore
+.Rproj.user
+
+*.pdf
+*.Rda
+*.shp
+*.dbf
+*.prj
+*.shx
+*.txt
+

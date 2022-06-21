@@ -1,3 +1,9 @@
+library(tidyverse)
+
+# input ----
+load(here::here("national", "import", "output", "national_import.Rda"))
+
+# clean ----
 demographics <- stacked_demographics %>%
   transmute(
     ### ID
@@ -309,3 +315,15 @@ work_economic <- stacked_economic %>%
     pwod_grtoeq_16_wfh_pct = S1811_C03_038_estimate / 100
   ) %>%
   mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
+
+rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic)
+
+# export ----
+# ---- Write workbook file ----
+message(paste0("Writing data to national_data_", year,".xlsx"))
+writexl::write_xlsx(list("Demographics" = demographics, "Community Living" = community_living, 
+                         "Community Participation" = community_participation, "Work Economic" = work_economic),
+                    here::here("Output", "National", paste0("national_data_", year,".xlsx")))
+
+save.image(here::here("national", "clean", "output", "national_clean.Rda"))
+rm(list = ls())

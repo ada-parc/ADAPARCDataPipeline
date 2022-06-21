@@ -1,14 +1,17 @@
-# Setup -------------------------------------------------------------------
-
-# Libraries
+library(tidyverse)
 library(rmarkdown)
 library(pagedown)
 
 # Load variable dictionary for relating tables, variable codes,
 # and readable values
-dict_vars <- read_csv(here::here("Data", "dict_vars.csv"))
+dict_vars <- read_csv(here::here("national", "generate_national_factsheets", "input", "dict_vars.csv"))
+load(here::here("national", "clean", "output", "national_clean.Rda"))
 
-# Factsheet parameters ----------------------------------------------------
+# functions ----
+source(here::here("national", "generate_national_factsheets", "hand", "functions.R"))
+
+
+# Factsheet parameters ----
 
 # Pull baseline places in database from GitHub repo
 # Organize parameters for looping operation
@@ -34,7 +37,7 @@ factsheet_national_params <- dict_vars %>%
   arrange(row_number_temp) %>%
   mutate("row_number" = str_pad(as.character(row_number()), 3, 
                                 side = "left", pad = "0")) %>% 
-  mutate("output_file" = str_c(here::here("Output", "National", "Fact Sheets"), "/",
+  mutate("output_file" = str_c(here::here("national", "generate_national_factsheets", "output"), "/",
                                row_number, "_",
                                national_dropdown_label, ".html"),
          "params" = pmap(list(national_category_selector,
@@ -62,7 +65,7 @@ factsheet_national_params <- dict_vars %>%
 # ----- Rmd to HTML -----
 
 # Delete existing HTML and PDF files
-file.remove(list.files(str_c(here::here("Output", "National", "Fact Sheets"), "/"),
+file.remove(list.files(str_c(here::here("national", "generate_national_factsheets", "output"), "/"),
                        pattern = ".(html|pdf)$", 
                        full.names = TRUE)
 )
@@ -71,7 +74,7 @@ file.remove(list.files(str_c(here::here("Output", "National", "Fact Sheets"), "/
 factsheet_national_params %>%
   select(output_file, params) %>%
   pwalk(rmarkdown::render,
-        input = here::here("Scripts", "factsheet_national.Rmd"))
+        input = here::here("national", "generate_national_factsheets", "hand", "template.Rmd"))
 
 # Static Check
 # factsheet_national_params %>%
@@ -83,7 +86,7 @@ factsheet_national_params %>%
 
 
 # Get a vector of all the filepaths for the newly-generated HTML files
-html_files <- list.files(here::here("Output", "National", "Fact Sheets"),
+html_files <- list.files(here::here("national", "generate_national_factsheets", "output"),
                          pattern = ".html$", 
                          full.names = TRUE)
 
@@ -92,7 +95,7 @@ map(.x = html_files,
     .f = ~chrome_print(input = .x))
 
 # Delete HTML files
-file.remove(list.files(here::here("Output", "National","Fact Sheets"),
+file.remove(list.files(here::here("national", "generate_national_factsheets", "output"),
                        pattern = ".html$",
                        full.names = TRUE)
 )
@@ -114,6 +117,6 @@ dashboard_factsheet_national <- factsheet_national_params %>%
 
 # Write CSV to file for dashboard front-end
 write_csv(dashboard_factsheet_national,
-          file = here::here("Output", "National","Fact Sheets", "dashboard_factsheet_national.csv"))
+          file = here::here("national", "generate_national_factsheets","output", "dashboard_factsheet_national.csv"))
 
-rm(dashboard_factsheet_national, html_files, factsheet_national_params)
+rm(list = ls())

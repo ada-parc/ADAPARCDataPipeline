@@ -1,12 +1,54 @@
 library(tidyverse)
 library(tidycensus)
+
 options(scipen = 9999)
-year = 2020
-survey = "acs5"
 
-source(here::here("scripts", "functions.R"))
+config_values <- yaml::read_yaml(here::here("national", "import", "hand", "config.yaml"))
+year <- config_values[[1]]$year
+survey <- config_values[[2]]$survey
+rm(config_values)
 
-# ---- Download National Data ----
+# utility function ----
+
+downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
+  df <- map(
+    tables, 
+    ~ tidycensus::get_acs(
+      year = year,
+      geography = geography,
+      table = .x,
+      survey = survey,
+      geometry = F
+      # cache_table = T,
+      # show_call = T
+    ) %>%
+      pivot_wider(
+        names_from = variable,
+        values_from = c(estimate, moe),
+        names_glue = "{variable}_{.value}"
+      )
+  ) %>%
+    reduce(left_join) %>%
+    left_join(
+      tibble(state.abb, state.name) %>% 
+        add_row(
+          state.abb = c("PR", "DC"), 
+          state.name = c("Puerto Rico", "District of Columbia")
+        ) %>%
+        select(NAME = state.name, ABBR = state.abb)
+    ) %>%
+    select(GEOID, NAME, ABBR, everything())
+  
+  if(geography == "us") {
+    df <- df %>%
+      mutate(ABBR = "USA",
+             GEOID = "000")
+  }
+  
+  return(df)
+}
+
+# download ----
 tables <- c("S1810")
 state_demographics <- downloadAndFormatAcs(tables, "state", year, survey)
 national_demographics <- downloadAndFormatAcs(tables, "us", year, survey)
@@ -35,23 +77,9 @@ tables <- c("S1810", "S1811",
 state_economic <- downloadAndFormatAcs(tables, "state", year, survey)
 national_economic <- downloadAndFormatAcs(tables, "us", year, survey)
 stacked_economic <- bind_rows(state_economic, national_economic)
-rm(state_economic, national_economic)
+rm(state_economic, national_economic, survey, tables, downloadAndFormatAcs)
 
+# export ----
 
-# ---- Code National Data ----
-source(here::here("scripts", "national_data_clean.R"))
-rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic, tables)
-
-# ---- Write workbook file ----
-message(paste0("Writing data to national_data_", year,".xlsx"))
-writexl::write_xlsx(list("Demographics" = demographics, "Community Living" = community_living, 
-                         "Community Participation" = community_participation, "Work Economic" = work_economic),
-                    here::here("Output", "National", paste0("national_data_", year,".xlsx")))
-
-# ---- Generate national factsheets ----
-
-source(here::here("Scripts", "generate_national_factsheets.R"))
-
-# ---- Generate place-tract crosswalk ----
-message("Beginning city data update process, please be patient. This process can take a long time.")
-source(here::here("Scripts", "generate_places_tracts_crosswalk.R"))
+save.image(here::here("national", "import", "output", "national_import.Rda"))
+rm(list = ls())
