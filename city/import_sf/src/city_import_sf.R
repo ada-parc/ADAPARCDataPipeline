@@ -1,8 +1,8 @@
-library(tidyverse)
-library(tidycensus)
-library(readxl)
-library(tigris)
-library(sf)
+require(tidyverse)
+require(tidycensus)
+require(readxl)
+require(tigris)
+require(sf)
 config_values <- yaml::read_yaml(here::here("national", "import", "hand", "config.yaml"))
 year <- config_values[[1]]$year
 survey <- config_values[[2]]$survey

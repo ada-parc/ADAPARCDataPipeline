@@ -1,6 +1,8 @@
-library(tidyverse)
-library(rmarkdown)
-library(pagedown)
+require(tidyverse)
+require(rmarkdown)
+require(pagedown)
+
+# The template file and other necessary scripts for the factsheets can be found in /national/generate_national_factsheets/hand/
 
 # Load variable dictionary for relating tables, variable codes,
 # and readable values
@@ -13,8 +15,6 @@ source(here::here("national", "generate_national_factsheets", "hand", "functions
 
 # Factsheet parameters ----
 
-# Pull baseline places in database from GitHub repo
-# Organize parameters for looping operation
 factsheet_national_params <- dict_vars %>%
   mutate("row_number_temp" = row_number()) %>% 
   filter(!is.na(national_dropdown_label)) %>% 
@@ -36,8 +36,8 @@ factsheet_national_params <- dict_vars %>%
   ungroup() %>%
   arrange(row_number_temp) %>%
   mutate("row_number" = str_pad(as.character(row_number()), 3, 
-                                side = "left", pad = "0")) %>% 
-  mutate("output_file" = str_c(here::here("national", "generate_national_factsheets", "output"), "/",
+                                side = "left", pad = "0"),
+         "output_file" = str_c(here::here("national", "generate_national_factsheets", "output"), "/",
                                row_number, "_",
                                national_dropdown_label, ".html"),
          "params" = pmap(list(national_category_selector,
@@ -47,16 +47,6 @@ factsheet_national_params <- dict_vars %>%
                                national_variable_selector = ..2,
                                year = year))) %>% 
   select(row_number, national_category_selector:params) 
-
-
-# Restrict to subset for testing ------------------------------------------
-
-
-# # Create 3 factsheets to make sure of formatting 
-# factsheet_national_params <- factsheet_national_params %>% 
-#   filter(national_variable_selector %in% c("pop_total",
-#                                            "pwd_commute_car_alone_pct",
-#                                            "pwd_commute_public_pct"))
 
 
 # Create factsheets -------------------------------------------------------
@@ -75,12 +65,6 @@ factsheet_national_params %>%
   select(output_file, params) %>%
   pwalk(rmarkdown::render,
         input = here::here("national", "generate_national_factsheets", "hand", "template.Rmd"))
-
-# Static Check
-# factsheet_national_params %>%
-#   select(output_file, params) %>%
-#   slice(1) %>%
-#   rmarkdown::render(input = here::here("Scripts", "factsheet_national.Rmd"))
 
 # ----- HTML to PDF -----
 

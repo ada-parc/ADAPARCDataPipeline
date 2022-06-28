@@ -1,5 +1,5 @@
-library(tidyverse)
-library(tidycensus)
+require(tidyverse)
+require(tidycensus)
 
 load(here::here("city", "places_counties_crosswalk", "output", "places_counties_crosswalk.Rda"))
 load(here::here("city", "places_tracts_crosswalk", "output", "places_tracts_crosswalk.Rda"))
@@ -41,8 +41,6 @@ tracts_data <- pmap_df(places_counties %>%
                                output = "wide")  %>%
                          rename_with(.cols = matches("[0-9]{3}(E|M)$"),
                                      ~ifelse(str_detect(.x, "E$"), str_replace(.x, "E$", "_estimate"), str_replace(.x, "M$", "_moe"))))
-
-# write_csv(tracts_data, here::here("city", "import_acs", "output", "s1810.csv"))
 
 save.image(here::here("city", "import_acs", "output", "city_import_acs.Rda"))
 

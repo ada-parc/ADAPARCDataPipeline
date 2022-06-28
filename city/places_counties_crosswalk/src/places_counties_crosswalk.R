@@ -1,8 +1,8 @@
-library(tidyverse)
-library(tidycensus)
-library(readxl)
-library(tigris)
-library(sf)
+require(tidyverse)
+require(tidycensus)
+require(readxl)
+require(tigris)
+require(sf)
 
 load(here::here("city", "import_sf", "output", "city_import_sf.Rda"))
 

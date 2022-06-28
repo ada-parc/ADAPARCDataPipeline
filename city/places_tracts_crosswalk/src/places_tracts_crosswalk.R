@@ -1,25 +1,19 @@
-library(tidyverse)
-library(tidycensus)
-library(readxl)
-library(tigris)
-library(sf)
+require(tidyverse)
+require(tidycensus)
+require(readxl)
+require(tigris)
+require(sf)
 
 load(here::here("city", "places_counties_crosswalk", "output", "places_counties_crosswalk.Rda"))
 
 message("Finding intersection of places and tracts...")
 
-# tictoc::tic()
-gc()
-
 places_tracts <- map(1:52, function(x) {
   message(paste("Running Place-Tract intersection", x, "of 52"))
-  # tictoc::tic()
   df <- st_intersection(places_split[[x]], tracts_split[[x]])
-  # tictoc::toc()
   gc()
   return(df)
 })
-# tictoc::toc()
 
 # Filter counties by joining to cities
 # Set minimum overlap threshold, default units [m^2]
@@ -56,20 +50,6 @@ dict_location_crosswalk <- places_sf %>%
             by = c("place_GEOID", "STATEFP", "COUNTYFP")) %>% 
   select(place_GEOID, metro_state, 
          starts_with("county_"), starts_with("tract_"))
-
-# Spatial join check (don't want counties that only border included)
-# mapview::mapshot(
-# mapview::mapview(places,
-#                  col.regions = "orange") +
-#   mapview::mapview(counties %>%
-#                      filter(county_GEOID %in%
-#                               places_counties_sf %>% 
-#                               st_drop_geometry() %>% 
-#                               pull(county_GEOID)),
-#                    color = "white",
-#                    col.regions = "blue",
-#                    alpha.regions = 0.4) # ,
-# url = paste0(getwd(), "/places_counties.html"))
 
 
 # Export ------------------------------------------------------------------

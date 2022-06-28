@@ -1,5 +1,5 @@
-library(tidyverse)
-library(tidycensus)
+require(tidyverse)
+require(tidycensus)
 
 options(scipen = 9999)
 
