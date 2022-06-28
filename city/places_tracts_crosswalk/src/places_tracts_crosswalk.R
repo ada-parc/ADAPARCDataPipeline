@@ -8,18 +8,18 @@ load(here::here("city", "places_counties_crosswalk", "output", "places_counties_
 
 message("Finding intersection of places and tracts...")
 
-tictoc::tic()
+# tictoc::tic()
 gc()
 
 places_tracts <- map(1:52, function(x) {
   message(paste("Running Place-Tract intersection", x, "of 52"))
-  tictoc::tic()
+  # tictoc::tic()
   df <- st_intersection(places_split[[x]], tracts_split[[x]])
-  tictoc::toc()
+  # tictoc::toc()
   gc()
   return(df)
 })
-tictoc::toc()
+# tictoc::toc()
 
 # Filter counties by joining to cities
 # Set minimum overlap threshold, default units [m^2]

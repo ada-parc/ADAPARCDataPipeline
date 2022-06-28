@@ -16,8 +16,11 @@ purrr::walk(list.files(here::here("national", "generate_national_factsheets", "o
 load(here::here("city", "import_acs", "output", "city_import_acs.Rda"))
 dict_location_crosswalk <- read.csv(here::here("city", "places_tracts_crosswalk", "output", "dict_location_crosswalk.txt"))
 
-rm(dict_places, fips_codes_tidy, places_pop_est, places_counties, places_split, tracts_split, 
-   year, emitProgress, sourceWithProgress, survey, places_acs, places_sf, places_tracts, places_acs_s1810, places_acs_s1811)
+rm(dict_places, fips_codes_tidy, places_pop_est, 
+   places_counties, places_split, tracts_split, 
+   year, emitProgress, sourceWithProgress, 
+   survey, places_acs, places_sf, 
+   places_tracts, places_acs_s1810, places_acs_s1811)
 # Environment should look like:
 # community_living, community_participation, demographics, work_economic, dict_vars
 # dict_location_crosswalk, tracts_data, tracts_sf, city_place_full

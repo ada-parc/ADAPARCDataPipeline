@@ -23,6 +23,7 @@ counties_split <- split(counties_sf, counties_sf$STATEFP)
 
 gc()
 
+# Takes about 6 hours - Ethan
 places_counties <- map(1:52, function(x) {
   message(paste("Running Place-County intersection", x, "of 52"))
   df <- st_intersection(places_split[[x]], counties_split[[x]])

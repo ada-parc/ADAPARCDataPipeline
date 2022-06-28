@@ -318,12 +318,5 @@ work_economic <- stacked_economic %>%
 
 rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic)
 
-# export ----
-# ---- Write workbook file ----
-message(paste0("Writing data to national_data_", year,".xlsx"))
-writexl::write_xlsx(list("Demographics" = demographics, "Community Living" = community_living, 
-                         "Community Participation" = community_participation, "Work Economic" = work_economic),
-                    here::here("Output", "National", paste0("national_data_", year,".xlsx")))
-
 save.image(here::here("national", "clean", "output", "national_clean.Rda"))
 rm(list = ls())

@@ -42,7 +42,7 @@ tracts_data <- pmap_df(places_counties %>%
                          rename_with(.cols = matches("[0-9]{3}(E|M)$"),
                                      ~ifelse(str_detect(.x, "E$"), str_replace(.x, "E$", "_estimate"), str_replace(.x, "M$", "_moe"))))
 
-write_csv(tracts_data, here::here("city", "import_acs", "output", "s1810.csv"))
+# write_csv(tracts_data, here::here("city", "import_acs", "output", "s1810.csv"))
 
 save.image(here::here("city", "import_acs", "output", "city_import_acs.Rda"))
 
