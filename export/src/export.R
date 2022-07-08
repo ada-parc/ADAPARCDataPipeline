@@ -25,6 +25,7 @@ rm(dict_places, fips_codes_tidy, places_pop_est,
 # community_living, community_participation, demographics, work_economic, dict_vars
 # dict_location_crosswalk, tracts_data, tracts_sf, city_place_full
 
+write.csv(dict_vars, here::here("export", "output", "dict_vars.csv"))
 save.image(here::here("export", "output", "ADA-Website_data.Rda"))
 # load("C:\\Users\\ethan\\Desktop\\ADA PARC\\ADA-PARC-Website-Design\\data\\all_2020N_2019C.rda")
 # community_living, community_participation, demographics, work_economic, dict_vars

@@ -93,8 +93,8 @@ dashboard_factsheet_national <- factsheet_national_params %>%
   select(national_dropdown_label,
          output_file) %>% 
   mutate("output_file" = str_replace_all(output_file,
-                                         pattern = here::here(),
-                                         replacement = "https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master")) %>% 
+                                         pattern = here::here("national", "generate_national_factsheets", "output"),
+                                         replacement = "https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files")) %>% 
   mutate("output_file" = str_replace_all(output_file,
                                          pattern = ".html$",
                                          replacement = ".pdf"))
