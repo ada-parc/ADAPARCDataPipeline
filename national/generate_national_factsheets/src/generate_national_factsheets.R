@@ -6,7 +6,7 @@ require(pagedown)
 
 # Load variable dictionary for relating tables, variable codes,
 # and readable values
-dict_vars <- read_csv(here::here("national", "generate_national_factsheets", "input", "dict_vars.csv"))
+dict_vars <- read_csv(here::here("export", "hand", "dict_vars.csv"))
 load(here::here("national", "clean", "output", "national_clean.Rda"))
 
 # functions ----
