@@ -34,6 +34,8 @@ library(sf)
 source(here("national", "import", "src", "national_import.R"))
 source(here("national", "clean", "src", "national_clean.R"))
 source(here("national", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
+# Export
+source(here("export", "src", "export_national.R"))
 
 # Section 2: City Data
 source(here("city", "import_sf", "src", "city_import_sf.R"))
@@ -42,6 +44,4 @@ source(here("city", "places_counties_crosswalk", "src", "places_counties_crosswa
 source(here("city", "places_tracts_crosswalk", "src", "places_tracts_crosswalk.R"))
 # Break
 source(here("city", "import_acs", "src", "city_import_acs.R"))
-
-# Section 3: Exporting Everything
-source(here("export", "src", "export.R"))
+source(here("export", "src", "export_city.R"))
