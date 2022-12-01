@@ -85,13 +85,13 @@ demographics <- stacked_demographics %>%
       S1810_C02_009_estimate, # Some other race alone
     pwd_multiple = S1810_C02_010_estimate,
     ### Percents
-    pwd_white_pct = pwd_white / pwd_total,
-    pwd_black_pct = pwd_black / pwd_total,
-    pwd_hisp_pct = pwd_hisp / pwd_total,
-    pwd_asian_pct = pwd_asian / pwd_total,
-    pwd_white_nonhisp_pct = pwd_white_nonhisp / pwd_total,
-    pwd_other_pct = pwd_other / pwd_total,
-    pwd_multiple_pct = pwd_multiple / pwd_total,
+    pwd_white_pct = pwd_white / pop_total,
+    pwd_black_pct = pwd_black / pop_total,
+    pwd_hisp_pct = pwd_hisp / pop_total,
+    pwd_asian_pct = pwd_asian / pop_total,
+    pwd_white_nonhisp_pct = pwd_white_nonhisp / pop_total,
+    pwd_other_pct = pwd_other / pop_total,
+    pwd_multiple_pct = pwd_multiple / pop_total,
     
     ### ----- D. Gender -----
     pop_female = S1810_C01_003_estimate,
@@ -105,17 +105,17 @@ demographics <- stacked_demographics %>%
     
     ### ----- D. Type of Disability -----
     pwd_hearing = S1810_C02_019_estimate,
-    pwd_hearing_pct = pwd_hearing / pwd_total,
+    pwd_hearing_pct = pwd_hearing / pop_total,
     pwd_vision = S1810_C02_029_estimate,
-    pwd_vision_pct = pwd_vision / pwd_total,
+    pwd_vision_pct = pwd_vision / pop_total,
     pwd_cognitive = S1810_C02_039_estimate,
-    pwd_cognitive_pct = pwd_cognitive / pwd_total,
+    pwd_cognitive_pct = pwd_cognitive / pop_total,
     pwd_ambulatory = S1810_C02_047_estimate,
-    pwd_ambulatory_pct = pwd_ambulatory / pwd_total,
+    pwd_ambulatory_pct = pwd_ambulatory / pop_total,
     pwd_selfcare = S1810_C02_055_estimate,
-    pwd_selfcare_pct = pwd_selfcare / pwd_total,
+    pwd_selfcare_pct = pwd_selfcare / pop_total,
     pwd_indliving = S1810_C02_063_estimate,
-    pwd_indliving_pct = pwd_indliving / pwd_total
+    pwd_indliving_pct = pwd_indliving / pop_total
   ) %>%
   mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
 
@@ -155,26 +155,26 @@ community_living <- stacked_living %>%
     ### PWD
     pwd_grpquarters_institution = round(pop_grpquarters_institution * pop_grpquarters_institution_pwd_pct,
                                         0),
-    pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pwd_total,
+    pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pop_total,
     ### PWOD
     pwod_grpquarters_institution = pop_grpquarters_institution - pwd_grpquarters_institution,
-    pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pwod_total,
+    pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pop_total,
     
     # ----- CL. Non-Institution -----
     pop_grpquarters_noninstitution = S2601A_C04_001_estimate,
     ### PWD
     pwd_grpquarters_noninstitution = round(pop_grpquarters_noninstitution * pop_grpquarters_noninstitution_pwd_pct, 0),
-    pwd_grpquarters_noninstitution_pct = pwd_grpquarters_noninstitution / pwd_total,
+    pwd_grpquarters_noninstitution_pct = pwd_grpquarters_noninstitution / pop_total,
     ### PWOD
     pwod_grpquarters_noninstitution = pop_grpquarters_noninstitution - pwd_grpquarters_noninstitution,
-    pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pwod_total,
+    pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pop_total,
     
     # ----- CL. Home -----
     ### PWD
-    pwd_home_pct = (pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution) / pwd_total,
+    pwd_home_pct = (pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution) / pop_total,
     pwd_home = round((pwd_total * pwd_home_pct), 2),
     ### PWOD
-    pwod_home_pct = (pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution) / pwod_total,
+    pwod_home_pct = (pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution) / pop_total,
     pwod_home = round((pwod_total * pwod_home_pct), 2),
     
     ### ----- CL. Nursing Homes -----
