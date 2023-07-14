@@ -3,50 +3,50 @@ require(tidycensus)
 
 options(scipen = 9999)
 
-config_values <- yaml::read_yaml(here::here("national", "import", "hand", "config.yaml"))
+config_values <- yaml::read_yaml("config.yaml")
 year <- config_values[[1]]$year
 survey <- config_values[[2]]$survey
 rm(config_values)
 
 # utility function ----
 
-downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
-  df <- map(
-    tables, 
-    ~ tidycensus::get_acs(
-      year = year,
-      geography = geography,
-      table = .x,
-      survey = survey,
-      geometry = F
-      # cache_table = T,
-      # show_call = T
-    ) %>%
-      pivot_wider(
-        names_from = variable,
-        values_from = c(estimate, moe),
-        names_glue = "{variable}_{.value}"
-      )
-  ) %>%
-    reduce(left_join) %>%
-    left_join(
-      tibble(state.abb, state.name) %>% 
-        add_row(
-          state.abb = c("PR", "DC"), 
-          state.name = c("Puerto Rico", "District of Columbia")
-        ) %>%
-        select(NAME = state.name, ABBR = state.abb)
-    ) %>%
-    select(GEOID, NAME, ABBR, everything())
-  
-  if(geography == "us") {
-    df <- df %>%
-      mutate(ABBR = "USA",
-             GEOID = "000")
-  }
-  
-  return(df)
-}
+# downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
+#   df <- map(
+#     tables,
+#     ~ tidycensus::get_acs(
+#       year = year,
+#       geography = geography,
+#       table = .x,
+#       survey = survey,
+#       geometry = F
+#       # cache_table = T,
+#       # show_call = T
+#     ) %>%
+#       pivot_wider(
+#         names_from = variable,
+#         values_from = c(estimate, moe),
+#         names_glue = "{variable}_{.value}"
+#       )
+#   ) %>%
+#     reduce(left_join) %>%
+#     left_join(
+#       tibble(state.abb, state.name) %>%
+#         add_row(
+#           state.abb = c("PR", "DC"),
+#           state.name = c("Puerto Rico", "District of Columbia")
+#         ) %>%
+#         select(NAME = state.name, ABBR = state.abb)
+#     ) %>%
+#     select(GEOID, NAME, ABBR, everything())
+#
+#   if(geography == "us") {
+#     df <- df %>%
+#       mutate(ABBR = "USA",
+#              GEOID = "000")
+#   }
+#
+#   return(df)
+# }
 
 # download ----
 tables <- c("S1810")
@@ -65,21 +65,21 @@ if(year > 2017) {
   message("ACS group quarters tables were not available until 2017 and cannot be included in current request.")
 }
 
-tables <- c("S1810", "S1811", "B18135") 
+tables <- c("S1810", "S1811", "B18135")
 state_participation <- downloadAndFormatAcs(tables, "state", year, survey)
 national_participation <- downloadAndFormatAcs(tables, "us", year, survey)
 stacked_participation <- bind_rows(state_participation, national_participation)
 rm(state_participation, national_participation)
 
-tables <- c("S1810", "S1811", 
-            "B18135", "B18140", "B25091", "B25070", 
-            "C18120", "C18121", "C18130") 
+tables <- c("S1810", "S1811",
+            "B18135", "B18140", "B25091", "B25070",
+            "C18120", "C18121", "C18130")
 state_economic <- downloadAndFormatAcs(tables, "state", year, survey)
 national_economic <- downloadAndFormatAcs(tables, "us", year, survey)
 stacked_economic <- bind_rows(state_economic, national_economic)
 rm(state_economic, national_economic, survey, tables, downloadAndFormatAcs)
 
 # export ----
-
-save.image(here::here("national", "import", "output", "national_import.Rda"))
+save.image(here::here("analysis", "data", "national_raw.Rda"))
+# save.image(here::here("national", "import", "output", "national_import.Rda"))
 rm(list = ls())

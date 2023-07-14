@@ -1,0 +1,64 @@
+#' downloadAndFormatAcs
+#'
+#' Downloads and Formats ACS Data
+#'
+#' @param tables array of strings, corresponding to the US Census tables to be downloaded
+#' @param geography the geography of the request; can be either "state" or "us".
+#' @param year year of data to download
+#' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
+#'
+#' @returns A dataframe of downloaded ACS data, in wide format.
+#'
+#' @import magrittr
+#' @import dplyr
+#' @import tidycensus
+#' @import purrr
+#' @import tibble
+#'
+#' @export
+
+downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
+  # TODO: Throw error if there is no Census key loaded
+  # TODO: Throw error if any of the input parameters are not correct.
+  # TODO: Throw error if any of the tables are not present on our official list, according to what we get from the Census.
+  # TODO: Figure out how to create an example for this function's documentation; unable to get \dontrun{} to compile.
+
+  api_key <- loadCensusAPIKey()
+
+  df <- purrr::map(
+    tables,
+    ~ tidycensus::get_acs(
+      year = year,
+      geography = geography,
+      table = .x,
+      survey = survey,
+      geometry = F,
+      key = api_key
+      # cache_table = T,
+      # show_call = T
+    ) %>%
+      tidyr::pivot_wider(
+        names_from = variable,
+        values_from = c(estimate, moe),
+        names_glue = "{variable}_{.value}"
+      )
+  ) %>%
+    purrr::reduce(left_join) %>%
+    dplyr::left_join(
+      tibble::tibble(state.abb, state.name) %>%
+        tibble::add_row(
+          state.abb = c("PR", "DC"),
+          state.name = c("Puerto Rico", "District of Columbia")
+        ) %>%
+        dplyr::select(NAME = state.name, ABBR = state.abb)
+    ) %>%
+    dplyr::select(GEOID, NAME, ABBR, everything())
+
+  if(geography == "us") {
+    df <- df %>%
+      mutate(ABBR = "USA",
+             GEOID = "000")
+  }
+
+  return(df)
+}
