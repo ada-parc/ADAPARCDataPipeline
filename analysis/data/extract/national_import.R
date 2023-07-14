@@ -8,6 +8,9 @@ year <- config_values[[1]]$year
 survey <- config_values[[2]]$survey
 rm(config_values)
 
+
+# TODO: Work this into two calls--state and national, so they are combined into a single dataset
+
 # utility function ----
 
 # downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {

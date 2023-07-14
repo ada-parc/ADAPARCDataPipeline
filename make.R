@@ -42,16 +42,16 @@ path <- file.path()
 create_package(path)
 
 # load Census API tokens
-readRenviron("~/.Renviron")
-census_key <- Sys.getenv("CENSUS_API_KEY")
-census_api_key(key = census_key)
+# readRenviron("~/.Renviron")
+# census_key <- Sys.getenv("CENSUS_API_KEY")
+# census_api_key(key = census_key)
 
 
 # Section 1: National Data
 source(here::here("analysis", "data", "extract", "national_import.R"))
 # source(here("national", "import", "src", "national_import.R"))
 # TODO: Get the subsequent projects running
-# source(here("national", "clean", "src", "national_clean.R"))
+source(here("analysis", "data", "transform", "national_clean.R"))
 # source(here("national", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
 # # Export
 # source(here("export", "src", "export_national.R"))

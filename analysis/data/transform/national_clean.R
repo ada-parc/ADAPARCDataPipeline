@@ -427,5 +427,5 @@ work_economic <- stacked_economic %>%
 
 
 rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic)
-save.image(here::here("national", "clean", "output", "national_clean.Rda"))
+save.image(here::here("analysis", "data", "national_clean.Rda"))
 rm(list = ls())
