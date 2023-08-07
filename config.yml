@@ -1,0 +1,4 @@
+default:
+  acs:
+    years: [2021, 2022]
+    survey: acs5
