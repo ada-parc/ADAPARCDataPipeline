@@ -1,13 +1,13 @@
 # Read in National data
-load(here::here("national", "clean", "output", "national_clean.Rda"))
+load(here::here("analysis", "data", "national_clean.Rda"))
 
 # Move factsheets to output
 if(!dir.exists(paste0(here::here("export", "output", "factsheets"), "/"))) {
   dir.create(paste0(here::here("export", "output", "factsheets"), "/"))
 }
-purrr::walk(list.files(here::here("national", "generate_national_factsheets", "output")),
+purrr::walk(list.files(here::here("analysis", "generate_national_factsheets", "output")),
             function(x) {
-              file.copy(from = here::here("national", "generate_national_factsheets", "output", x), 
+              file.copy(from = here::here("analysis", "generate_national_factsheets", "output", x),
                         to = here::here("export", "output", "factsheets", x))
             })
 
