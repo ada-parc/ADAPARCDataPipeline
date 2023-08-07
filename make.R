@@ -46,6 +46,8 @@ create_package(path)
 # census_key <- Sys.getenv("CENSUS_API_KEY")
 # census_api_key(key = census_key)
 
+# Do I need to do this?
+devtools::load_all(".")
 
 # Section 1: National Data
 source(here::here("analysis", "data", "extract", "national_import.R"))
