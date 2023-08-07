@@ -15,7 +15,6 @@
 #' @import purrr
 #' @import tibble
 #'
-#' @export
 
 downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
   # TODO: Throw error if there is no Census key loaded
