@@ -3,9 +3,9 @@ require(tidycensus)
 require(readxl)
 require(tigris)
 require(sf)
-config_values <- yaml::read_yaml(here::here("national", "import", "hand", "config.yaml"))
-year <- config_values[[1]]$year
-survey <- config_values[[2]]$survey
+config_values <- config::get()
+year <- config_values$acs$years[1]
+survey <- config_values$acs$survey
 rm(config_values)
 
 
@@ -21,19 +21,19 @@ fips_codes_tidy <- force(fips_codes)
 
 # Get spatial footprint of cities/places
 # Remove US Outlying Islands/US Virgin Islands (c(1:56, 72))
-places_sf <- pmap_df(.l = fips_codes_tidy %>% 
-                       filter(as.numeric(state_code) %in% c(1:56, 72)) %>% 
-                       select(state_code) %>% 
+places_sf <- pmap_df(.l = fips_codes_tidy %>%
+                       filter(as.numeric(state_code) %in% c(1:56, 72)) %>%
+                       select(state_code) %>%
                        distinct(),
-                     .f = ~(tigris::places(state = ..1, 
-                                           cb = TRUE, 
+                     .f = ~(tigris::places(state = ..1,
+                                           cb = TRUE,
                                            year = year,
-                                           class = "sf") %>% 
-                              rename("place_GEOID" = GEOID, 
+                                           class = "sf") %>%
+                              rename("place_GEOID" = GEOID,
                                      "place_NAME" = NAME))) %>%
-  select(STATEFP, PLACEFP, place_GEOID, place_NAME) %>% 
+  select(STATEFP, PLACEFP, place_GEOID, place_NAME) %>%
   mutate("place_area" = st_area(.),
-         "place_area_num" = as.numeric(place_area)) %>% 
+         "place_area_num" = as.numeric(place_area)) %>%
   relocate(geometry, .after = last_col())
 
 # Get population estimates for lookup
@@ -46,23 +46,23 @@ places_pop_est <- get_acs(geography = "place",
   select(GEOID, NAME, POP)
 
 # Clean for lookup
-dict_places <- places_sf %>% 
+dict_places <- places_sf %>%
   st_drop_geometry() %>%
-  select(STATEFP, "GEOID" = place_GEOID) %>% 
+  select(STATEFP, "GEOID" = place_GEOID) %>%
   # Population to order list
   left_join(places_pop_est,
-            by = "GEOID") %>% 
+            by = "GEOID") %>%
   # Metro/State names
-  left_join(fips_codes_tidy %>% 
-              select(state_code, state) %>% 
+  left_join(fips_codes_tidy %>%
+              select(state_code, state) %>%
               distinct(),
-            by = c("STATEFP" = "state_code")) %>% 
+            by = c("STATEFP" = "state_code")) %>%
   # Basic scrubbing
   mutate("metro_state" = paste0(str_remove(NAME, ",.*$"),
-                                ", ", state) %>% 
+                                ", ", state) %>%
            str_replace_all(.,
                            pattern = " (city|village|municipality|town|city and borough|borough|(city|((unified|consolidated|metro|metropolitan) government)) \\(balance\\)|\\(balance\\)), ",
-                           replacement = ", ")) %>% 
+                           replacement = ", ")) %>%
   # Individual cases
   mutate("metro_state" = case_when(GEOID == "3651000" ~
                                      "New York City, NY",
@@ -75,7 +75,7 @@ dict_places <- places_sf %>%
                                    GEOID == "2148006" ~
                                      "Louisville, KY",
                                    TRUE ~
-                                     metro_state)) %>% 
+                                     metro_state)) %>%
   select(GEOID, NAME, metro_state, POP)
 
 
@@ -85,18 +85,22 @@ dict_places <- places_sf %>%
 
 ## ----- Get spatial footprint of counties, tracts -----
 # Remove US Outlying Islands/US Virgin Islands (c(1:56, 72))
+start_time <- Sys.time()
 counties_sf <- pmap_df(.l = places_sf %>%
-                         st_drop_geometry() %>% 
-                         select(STATEFP) %>% 
+                         st_drop_geometry() %>%
+                         select(STATEFP) %>%
                          distinct(),
-                       .f = ~(tigris::counties(state = ..1, 
-                                               cb = TRUE, 
+                       .f = ~(tigris::counties(state = ..1,
+                                               cb = TRUE,
                                                year = year,
-                                               class = "sf") %>% 
-                                rename("county_GEOID" = GEOID, 
-                                       "county_NAME" = NAME))) %>% 
-  select(COUNTYFP, county_GEOID, county_NAME)  
+                                               class = "sf") %>%
+                                rename("county_GEOID" = GEOID,
+                                       "county_NAME" = NAME))) %>%
+  select(COUNTYFP, county_GEOID, county_NAME)
+end_time <- Sys.time()
+time <- end_time - start_time
+print(time)
 
 # export ----
-save.image(here::here("city", "import_sf", "output", "city_import_sf.Rda"))
+save.image(here::here("analysis", "data", "city_import_sf.Rda"))
 rm(list = ls())

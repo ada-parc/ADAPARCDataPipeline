@@ -3,9 +3,10 @@ require(tidycensus)
 
 options(scipen = 9999)
 
-config_values <- yaml::read_yaml("config.yaml")
-year <- config_values[[1]]$year
-survey <- config_values[[2]]$survey
+config_values <- config::get("acs")
+# TODO: Update this script so that it will handle multiple years.
+year <- config_values$years[1]
+survey <- config_values$survey
 rm(config_values)
 
 
@@ -51,6 +52,9 @@ rm(config_values)
 #   return(df)
 # }
 
+
+# NOTE: Internal functions here only work when we load our package locally.
+
 # download ----
 tables <- c("S1810")
 state_demographics <- downloadAndFormatAcs(tables, "state", year, survey)
@@ -80,7 +84,7 @@ tables <- c("S1810", "S1811",
 state_economic <- downloadAndFormatAcs(tables, "state", year, survey)
 national_economic <- downloadAndFormatAcs(tables, "us", year, survey)
 stacked_economic <- bind_rows(state_economic, national_economic)
-rm(state_economic, national_economic, survey, tables, downloadAndFormatAcs)
+rm(state_economic, national_economic, survey, tables)
 
 # export ----
 save.image(here::here("analysis", "data", "national_raw.Rda"))

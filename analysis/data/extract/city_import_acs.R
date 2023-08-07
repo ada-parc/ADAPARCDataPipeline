@@ -5,6 +5,8 @@ load(here::here("city", "places_counties_crosswalk", "output", "places_counties_
 load(here::here("city", "places_tracts_crosswalk", "output", "places_tracts_crosswalk.Rda"))
 places_tracts <- read_csv(here::here("city", "places_tracts_crosswalk", "output", "places_tracts.csv"))
 
+year <- config::get("acs")$years[1]
+
 places_acs_s1810 <- get_acs(geography = "place",
                       table = "S1810",
                       year = year,
@@ -28,8 +30,8 @@ places_acs <- left_join(places_acs_s1810, places_acs_s1811)
 city_place_full <- places_acs %>%
   filter(GEOID %in% places_sf$place_GEOID)
 
-tracts_data <- pmap_df(places_counties %>% 
-                         select(STATEFP, COUNTYFP) %>% 
+tracts_data <- pmap_df(places_counties %>%
+                         select(STATEFP, COUNTYFP) %>%
                          distinct(),
                        ~get_acs(geography = "tract",
                                state = ..1,
