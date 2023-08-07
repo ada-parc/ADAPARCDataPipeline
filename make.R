@@ -28,18 +28,15 @@
 ## devtools::check()
 
 
-library(here)
-library(tidyverse)
-library(tidycensus)
-library(rmarkdown)
-library(pagedown)
-library(readxl)
-library(tigris)
-library(sf)
 
-
-path <- file.path()
-create_package(path)
+# library(here)
+# library(tidyverse)
+# library(tidycensus)
+# library(rmarkdown)
+# library(pagedown)
+# library(readxl)
+# library(tigris)
+# library(sf)
 
 # load Census API tokens
 # readRenviron("~/.Renviron")
@@ -53,17 +50,17 @@ devtools::load_all(".")
 source(here::here("analysis", "data", "extract", "national_import.R"))
 # source(here("national", "import", "src", "national_import.R"))
 # TODO: Get the subsequent projects running
-source(here("analysis", "data", "transform", "national_clean.R"))
-# source(here("national", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
+source(here::here("analysis", "data", "transform", "national_clean.R"))
+source(here::here("analysis", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
 # # Export
-# source(here("export", "src", "export_national.R"))
+source(here::here("analysis", "data", "load", "src", "export_national.R"))
 
 
 # Section 2: City Data
-source(here("city", "import_sf", "src", "city_import_sf.R"))
-source(here("city", "places_counties_crosswalk", "src", "places_counties_crosswalk.R"))
+source(here::here("city", "import_sf", "src", "city_import_sf.R"))
+source(here::here("city", "places_counties_crosswalk", "src", "places_counties_crosswalk.R"))
 # Break
-source(here("city", "places_tracts_crosswalk", "src", "places_tracts_crosswalk.R"))
+source(here::here("city", "places_tracts_crosswalk", "src", "places_tracts_crosswalk.R"))
 # Break
-source(here("city", "import_acs", "src", "city_import_acs.R"))
-source(here("export", "src", "export_city.R"))
+source(here::here("city", "import_acs", "src", "city_import_acs.R"))
+source(here::here("export", "src", "export_city.R"))
