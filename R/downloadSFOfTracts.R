@@ -14,9 +14,6 @@
 
 downloadSFOfTracts <- function(year, fips_codes_for_lookup) {
 
-  fips_codes_for_lookup_formatted <- fips_codes_for_lookup %>%
-    dplyr::select(state_code, county_code)
-
   sf <-
     purrr::pmap_df(.l = fips_codes_for_lookup_formatted,
                    .f = ~ (
