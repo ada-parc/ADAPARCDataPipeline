@@ -15,7 +15,3 @@ Load Census API Key
 \details{
 This allows for US Census Data to be downloaded. Here, we assume that someone already has a key present and we simply load it.
 }
-\examples{
-loadCensusAPIKey()
-
-}
