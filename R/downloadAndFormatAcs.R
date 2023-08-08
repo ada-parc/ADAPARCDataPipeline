@@ -22,7 +22,7 @@ downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "ac
   # TODO: Throw error if any of the tables are not present on our official list, according to what we get from the Census.
   # TODO: Figure out how to create an example for this function's documentation; unable to get \dontrun{} to compile.
 
-  # api_key <- loadCensusAPIKey()
+  api_key <- loadCensusAPIKey()
 
   df <- purrr::map(
     tables,
