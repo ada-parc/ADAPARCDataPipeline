@@ -1,8 +1,9 @@
-#' downloadSpatialFootprintOfCitiesPlaces
+#' downloadSFOfCitiesPlaces
 #'
-#' Downloads SF of Cities and Places in US, based on FIPS codes
+#' Downloads Spatial Footprint (SF) of Cities and Places in US, based on FIPS codes
 #'
 #' @param year year of data to download
+#' @param fips_codes_for_lookup list of fips codes that we want to look up
 #'
 #' @returns A dataframe of downloaded data for counties and places within the US
 #'
@@ -13,17 +14,11 @@
 #' @import purrr
 #'
 
-downloadSpatialFootprintOfCitiesPlaces <- function(year) {
-
-  # Here, we use all US fips_codes
-  fips_codes_tidy <- tigris::fips_codes
+downloadSFOfCitiesPlaces <- function(year, fips_codes_for_lookup) {
 
   places_sf <-
     purrr::pmap_df(
-    .l = fips_codes_tidy %>%
-      dplyr::filter(as.numeric(state_code) %in% c(1:56, 72)) %>% # Remove US Outlying Islands/US Virgin Islands (c(1:56, 72))
-      dplyr::select(state_code) %>%
-      dplyr::distinct(),
+    .l = fips_codes_for_lookup,
     .f = ~ (
       tigris::places(
         state = ..1,
