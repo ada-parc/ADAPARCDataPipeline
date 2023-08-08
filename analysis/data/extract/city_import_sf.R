@@ -6,7 +6,7 @@ rm(config_values)
 
 # Get FIPS
 
-fips_codes_for_lookup <- getFIPSForSFs()
+fips_codes_for_lookup <- getFIPSCodes()
 
 # Places/Cities lookup ----------------------------------------------------
 

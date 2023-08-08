@@ -1,14 +1,14 @@
-#' getFIPSForSFs
+#' getFIPSCodes
 #'
-#' Downloads FIPS codes to use for downloading SFs
+#' Downloads FIPS codes to use for analysis
 #'
-#' @returns A list of FIPS codes to be used to download SFs
+#' @returns A df including information on US FIPS codes, filtered for use in analysis
 #'
 #' @import dplyr
 #' @import tigris
 #'
 
-getFIPSForSFs <- function() {
+getFIPSCodes <- function() {
 
   fips_codes_for_lookup <- c(
       tigris::fips_codes %>%
