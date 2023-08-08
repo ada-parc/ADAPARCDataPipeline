@@ -12,6 +12,8 @@ places_sf <- downloadSFOfCitiesPlaces(year, fips_codes_for_lookup)
 
 counties_sf <- downloadSFOfCounties(year, fips_codes_for_lookup)
 
+tracts_sf <- downloadSFOfTracts(year, fips_codes_for_lookup)
+
 rm(fips_codes_for_lookup)
 
 # export ----
