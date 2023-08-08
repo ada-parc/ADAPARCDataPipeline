@@ -21,7 +21,3 @@ A dataframe of downloaded ACS data, in wide format.
 \description{
 Downloads and Formats ACS Data
 }
-\examples{
-donttrun{downloadAndFormatAcs(tables = c("S120DD", "BC1235"), geography = "state", year = 2019, survey = "acs5")}
-
-}

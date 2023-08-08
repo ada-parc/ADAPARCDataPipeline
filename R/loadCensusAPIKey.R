@@ -11,9 +11,6 @@
 #' loadCensusAPIKey()
 #'
 #' @import dplyr
-#' @import tidycensus
-#'
-#' @export
 
 loadCensusAPIKey <- function() {
 
