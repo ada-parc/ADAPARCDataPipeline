@@ -3,6 +3,7 @@ require(tidycensus)
 require(readxl)
 require(tigris)
 require(sf)
+
 config_values <- config::get()
 year <- config_values$acs$years[1]
 survey <- config_values$acs$survey
@@ -13,37 +14,13 @@ rm(config_values)
 
 
 # All states and counties
-fips_codes_tidy <- force(fips_codes)
+fips_codes_tidy <- tigris::fips_codes
 
 
 # Places/Cities lookup ----------------------------------------------------
 
+places_sf <- downloadSpatialFootprintOfCitiesPlaces(year)
 
-# Get spatial footprint of cities/places
-# Remove US Outlying Islands/US Virgin Islands (c(1:56, 72))
-places_sf <- pmap_df(.l = fips_codes_tidy %>%
-                       filter(as.numeric(state_code) %in% c(1:56, 72)) %>%
-                       select(state_code) %>%
-                       distinct(),
-                     .f = ~(tigris::places(state = ..1,
-                                           cb = TRUE,
-                                           year = year,
-                                           class = "sf") %>%
-                              rename("place_GEOID" = GEOID,
-                                     "place_NAME" = NAME))) %>%
-  select(STATEFP, PLACEFP, place_GEOID, place_NAME) %>%
-  mutate("place_area" = st_area(.),
-         "place_area_num" = as.numeric(place_area)) %>%
-  relocate(geometry, .after = last_col())
-
-# Get population estimates for lookup
-places_pop_est <- get_acs(geography = "place",
-                          variables = c(POP = "B01001_001E"),
-                          year = year,
-                          show_call = T,
-                          geometry = FALSE,
-                          output = "wide") %>%
-  select(GEOID, NAME, POP)
 
 # Clean for lookup
 dict_places <- places_sf %>%
