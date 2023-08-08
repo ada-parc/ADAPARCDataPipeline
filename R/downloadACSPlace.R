@@ -24,8 +24,8 @@ downloadACSPlace <- function(tables, geography = "place", year, survey = "acs5")
   api_key <- loadCensusAPIKey()
 
   df <- tidycensus::get_acs(
-    geography = "place",
-    table = "S1810",
+    geography = geography,
+    table = tables,
     year = year,
     # show_call = T,
     geometry = FALSE,
