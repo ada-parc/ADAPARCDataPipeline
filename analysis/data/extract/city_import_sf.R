@@ -1,8 +1,10 @@
+# Get config values
+
 config_values <- config::get()
 year <- config_values$acs$years[1]
 rm(config_values)
 
-# Create function
+# Get FIPS
 
 fips_codes_for_lookup <- getFIPSForSFs()
 

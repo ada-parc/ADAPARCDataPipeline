@@ -8,6 +8,9 @@ load(here::here("city", "places_counties_crosswalk", "output", "places_counties_
 
 message("Finding intersection of places and tracts...")
 
+# Tracts sf dataframe
+tracts_split <- split(tracts_sf, tracts_sf$STATEFP)
+
 places_tracts <- map(1:52, function(x) {
   message(paste("Running Place-Tract intersection", x, "of 52"))
   df <- st_intersection(places_split[[x]], tracts_split[[x]])
