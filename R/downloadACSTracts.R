@@ -6,6 +6,7 @@
 #' @param geography the geography of the request; can be either "state" or "us".
 #' @param year year of data to download
 #' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
+#' @param fips_codes_for_lookup fips codes of states and counties for lookup
 #'
 #' @returns A dataframe of downloaded ACS data, in wide format.
 #'
@@ -24,11 +25,9 @@ downloadACSTracts <- function(tables, geography = "tracts", year, survey = "acs5
 
   api_key <- loadCensusAPIKey()
 
-  fips_codes_for_lookup_formatted <- fips_codes_for_lookup %>%
-    dplyr::select(state_code, county_code)
 
   df <-
-    purrr::pmap_df(.l = fips_codes_for_lookup_formatted,
+    purrr::pmap_df(.l = fips_codes_for_lookup,
                    .f = ~ (
                      tidycensus::get_acs(
                        geography = geography,
