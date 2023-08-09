@@ -10,7 +10,7 @@ params:
   national_category_selector: "is_community_participation"
   national_variable_selector: "pwd_19_64_insured_public_pct"
   access_map_palette_selected: "YlOrBr"
-  year: 2020
+  year: 2021
 editor_options: 
   chunk_output_type: console
 ---
