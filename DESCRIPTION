@@ -15,6 +15,7 @@ Imports:
     purrr,
     readxl,
     sf,
+    stringr,
     tibble,
     tidycensus,
     tidyr,

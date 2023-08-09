@@ -7,7 +7,6 @@
 #'
 #' @returns Census API Key
 #'
-#' @import dplyr
 
 loadCensusAPIKey <- function() {
 
