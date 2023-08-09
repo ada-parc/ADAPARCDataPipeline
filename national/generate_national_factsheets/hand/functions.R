@@ -24,7 +24,8 @@ renderNationalMap <- function(category, selected,
   # isCompVar
   display_type <- dict_vars %>% 
     filter(var_readable == selected, !!sym(category)) %>% 
-    pull(display_type)
+    pull(display_type) %>% head(1)
+  
   
   is_comp <- ifelse(display_type == "comp", 
                     TRUE, FALSE)
