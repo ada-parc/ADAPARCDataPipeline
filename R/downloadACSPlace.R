@@ -12,6 +12,7 @@
 #' @import dplyr
 #' @import tidycensus
 #' @import stringr
+#' @import purrr
 #'
 
 downloadACSPlace <- function(tables, geography = "place", year, survey = "acs5") {
@@ -23,16 +24,22 @@ downloadACSPlace <- function(tables, geography = "place", year, survey = "acs5")
 
   api_key <- loadCensusAPIKey()
 
-  df <- tidycensus::get_acs(
-    geography = geography,
-    table = tables,
-    year = year,
-    # show_call = T,
-    geometry = FALSE,
-    output = "wide",
-    key = api_key,
-    survey = survey
-  )  %>%
+  df <-
+    purrr::map(
+      tables,
+      ~ tidycensus::get_acs(
+        geography = geography,
+        table = .x,
+        year = year,
+        # show_call = T,
+        geometry = FALSE,
+        output = "wide",
+        key = api_key,
+        survey = survey,
+        cache_table = TRUE
+      )
+    ) %>%
+    purrr::reduce(left_join) %>%
     dplyr::rename_with(
       .cols = matches("[0-9]{3}(E|M)$"),
       ~ ifelse(
