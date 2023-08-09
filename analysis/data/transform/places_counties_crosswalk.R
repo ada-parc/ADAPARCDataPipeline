@@ -4,7 +4,7 @@ require(readxl)
 require(tigris)
 require(sf)
 
-load(here::here("city", "import_sf", "output", "city_import_sf.Rda"))
+load(here::here("analysis", "data", "city_import_sf.Rda"))
 
 ## ----- Unique city/state/county codes -----
 # Filter counties by joining to cities
@@ -41,8 +41,9 @@ places_counties <- places_counties %>%
   filter(overlap_pct > 0) %>%
   st_drop_geometry()
 
-
-
+# TODO: MOVE CITY_PLACE_FULL to one of the transform sections; not referenced until loading flows (where we're exporting Rda's)
+city_place_full <- places_acs %>%
+  filter(GEOID %in% places_sf$place_GEOID)
 
 # export ----
 rm(counties_sf, counties_split)
