@@ -16,24 +16,31 @@
 
 downloadSFOfCitiesPlaces <- function(year, fips_codes_for_states) {
 
+  # start_p <- Sys.time()
   places_sf <-
-    purrr::pmap_df(
-    .l = fips_codes_for_states,
-    .f = ~ (
-      tigris::places(
-        state = ..1,
-        cb = TRUE,
-        year = year,
-        class = "sf"
-      ) %>%
-        dplyr::rename("place_GEOID" = GEOID,
-               "place_NAME" = NAME)
-    )
-  ) %>%
-    dplyr::select(STATEFP, PLACEFP, place_GEOID, place_NAME) %>%
+    purrr::map(fips_codes_for_states,
+               ~ tigris::places(
+                   state = .x,
+                   cb = TRUE,
+                   year = year,
+                   class = "sf"
+                 )) %>%
+    purrr::reduce(left_join) %>%
+    dplyr::select(STATEFP, PLACEFP, place_GEOID = GEOID, place_NAME = NAME) %>%
     dplyr::mutate("place_area" = sf::st_area(.),
-           "place_area_num" = as.numeric(place_area)) %>%
+                  "place_area_num" = as.numeric(place_area)) %>%
     dplyr::relocate(geometry, .after = last_col())
+
+  # start <- Sys.time()
+  # jane <-
+  # lapply(fips_codes_for_states, function(x) { tigris::places(
+  #   state = x,
+  #   cb = TRUE,
+  #   year = year,
+  #   class = "sf"
+  # )}) %>% rbind_tigris()
+  # end <- Sys.time()
+
 
   return(places_sf)
 

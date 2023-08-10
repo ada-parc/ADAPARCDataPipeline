@@ -20,6 +20,8 @@ downloadACSTracts(
 \item{year}{year of data to download}
 
 \item{survey}{specification of ACS survey type (ex. "acs5" or "acs1")}
+
+\item{fips_codes_for_lookup}{fips codes of states and counties for lookup}
 }
 \value{
 A dataframe of downloaded ACS data, in wide format.

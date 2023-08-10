@@ -3,7 +3,7 @@
 #' Downloads Spatial Footprint (SF) of Tracts in US, based on FIPS codes
 #'
 #' @param year year of data to download
-#' @param fips_codes_for_lookup list of fips codes that we want to look up
+#' @param fips_codes_for_states list of fips codes for states that we want to look up
 #'
 #' @returns A dataframe of downloaded data for Census tracts within the US
 #'
@@ -12,20 +12,20 @@
 #' @import purrr
 #'
 
-downloadSFOfTracts <- function(year, fips_codes_for_lookup) {
+downloadSFOfTracts <- function(year, fips_codes_for_states) {
 
   sf <-
-    purrr::pmap_df(.l = fips_codes_for_lookup_formatted,
-                   .f = ~ (
-                     tigris::tracts(
-                       state = ..1,
-                       county = ..2,
-                       cb = TRUE,
-                       year = year,
-                       class = "sf"
-                     )
-                   )) %>%
-    dplyr::select("t_GEOID" = GEOID,
+    lapply(fips_codes_for_states, function(x) {
+      message(paste0("Looking up tract for state: ", x))
+      tigris::tracts(
+        state = x,
+        cb = TRUE,
+        year = year,
+        class = "sf"
+      )
+    }) %>%
+    tigris::rbind_tigris() %>%
+    dplyr::select("tract_GEOID" = GEOID,
                   "tract_NAME" = NAME,
                   STATEFP,
                   COUNTYFP) %>%
@@ -34,4 +34,5 @@ downloadSFOfTracts <- function(year, fips_codes_for_lookup) {
     dplyr::relocate(geometry, .after = last_col())
 
   return(sf)
+
 }
