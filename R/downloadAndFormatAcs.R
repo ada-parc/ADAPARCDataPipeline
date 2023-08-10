@@ -32,9 +32,8 @@ downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "ac
       table = .x,
       survey = survey,
       geometry = F,
-      key = api_key
-      # cache_table = T,
-      # show_call = T
+      key = api_key,
+      cache_table = T
     ) %>%
       tidyr::pivot_wider(
         names_from = variable,
