@@ -39,7 +39,7 @@ dict_location_crosswalk <- places_sf %>%
   # Tracts
   left_join(places_tracts %>% 
               select(place_GEOID, STATEFP, COUNTYFP, 
-                     tract_GEOID, tract_NAME,
+                     tract_GEOID = t_GEOID, tract_NAME,
                      "tract_place_overlap_pct" = overlap_pct),
             by = "place_GEOID") %>% 
   # Counties joined to correct tracts
