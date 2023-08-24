@@ -4,12 +4,12 @@
 \alias{downloadSFOfTracts}
 \title{downloadSFOfTracts}
 \usage{
-downloadSFOfTracts(year, fips_codes_for_lookup)
+downloadSFOfTracts(year, fips_codes_for_states)
 }
 \arguments{
 \item{year}{year of data to download}
 
-\item{fips_codes_for_lookup}{list of fips codes that we want to look up}
+\item{fips_codes_for_states}{list of fips codes for states that we want to look up}
 }
 \value{
 A dataframe of downloaded data for Census tracts within the US
