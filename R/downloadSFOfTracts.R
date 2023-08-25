@@ -15,7 +15,7 @@
 downloadSFOfTracts <- function(year, fips_codes_for_states) {
 
   sf <-
-    lapply(fips_codes_for_states, function(x) {
+    purrr::map(fips_codes_for_states, function(x) {
       message(paste0("Looking up tract for state: ", x))
       tigris::tracts(
         state = x,
