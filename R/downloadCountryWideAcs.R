@@ -1,9 +1,9 @@
-#' downloadAndFormatAcs
+#' downloadCountryWideAcs
 #'
-#' Downloads and Formats ACS Data
+#' Downloads ACS Data for the full country, according to the specified geography. Please consult the list here to ensure that the geography you are requesting does not require a sub-geography, such as state, in order to request: https://walker-data.com/tidycensus/articles/basic-usage.html#geography-in-tidycensus
 #'
 #' @param tables array of strings, corresponding to the US Census tables to be downloaded
-#' @param geography the geography of the request; can be "state" / "us" / "place".
+#' @param geography the geography of the request; can be geographies such as "state" / "us" / "place".
 #' @param year year of data to download
 #' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
 #'
@@ -17,7 +17,7 @@
 #' @import tidyr
 #'
 
-downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
+downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "acs5") {
   # TODO: Throw error if there is no Census key loaded
   # TODO: Throw error if any of the input parameters are not correct.
   # TODO: Throw error if any of the tables are not present on our official list, according to what we get from the Census.
@@ -36,7 +36,8 @@ downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "ac
       key = api_key,
       cache_table = F,
       output = "wide"
-    )
+    ),
+    .progress = TRUE
   ) %>%
     purrr::reduce(left_join)
 

@@ -7,7 +7,7 @@ survey <- config::get("acs")$survey
 places_pop_est <- downloadACSPlacePopulationEstimate(year)
 
 tables <- c("S1810", "S1811")
-places_acs <- downloadAndFormatAcs(tables, "place", year, survey)
+places_acs <- downloadCountryWideAcs(tables, "place", year, survey)
 
 
 # Tracts data download

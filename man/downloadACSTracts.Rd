@@ -2,11 +2,11 @@
 % Please edit documentation in R/downloadACSTracts.R
 \name{downloadACSTracts}
 \alias{downloadACSTracts}
-\title{downloadACSTracts}
+\title{downloadStateWideAcs}
 \usage{
 downloadACSTracts(
   tables,
-  geography = "tracts",
+  geography = "tract",
   year,
   survey = "acs5",
   fips_codes_for_lookup
@@ -21,7 +21,7 @@ downloadACSTracts(
 
 \item{survey}{specification of ACS survey type (ex. "acs5" or "acs1")}
 
-\item{fips_codes_for_lookup}{fips codes of states and counties for lookup}
+\item{fips_codes_for_lookup}{fips codes of states for lookup}
 }
 \value{
 A dataframe of downloaded ACS data, in wide format.
