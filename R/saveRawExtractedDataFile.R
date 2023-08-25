@@ -12,8 +12,8 @@
 saveRawExtractedDataFile <- function(raw_extracted_data, name) {
 
   folder_path <-
-    here::here("analysis", "data", "raw_extracted_data_files")
-  full_file_name <- paste0(folder_path, "/", name)
+    here::here("analysis", "data", "raw")
+  full_file_name <- paste0(folder_path, "/", name, ".Rds")
 
   # Check if the folder exists
   if (!file.exists(folder_path)) {

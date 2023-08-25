@@ -17,8 +17,9 @@ counties_sf <- downloadSFOfCounties(year, fips_codes_for_states)
 #TODO: Unclear why the state_code title of this list causes problems for tracts but not other requests.
 tracts_sf <- downloadSFOfTracts(year, fips_codes_for_states$state_code)
 
-rm("fips_codes_for_state_and_county", "fips_codes_for_states")
-
 # export ----
-save.image(here::here("analysis", "data", "city_import_sf.Rda"))
+saveRawExtractedDataFile(places_sf, "places_sf")
+saveRawExtractedDataFile(counties_sf, "counties_sf")
+saveRawExtractedDataFile(tracts_sf, "tracts_sf")
+
 rm(list = ls())

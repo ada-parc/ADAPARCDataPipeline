@@ -26,30 +26,18 @@
 ## run this regularly to clean up this file: usethis::use_tidy_description()
 ## devtools::document()
 ## devtools::check()
+#TODO: For extractions, which can all happen independently, see if there are multithreaded strategies to increase speed/efficiency.
+# Extractions--run all extraction files!
+start_time <- Sys.time()
+source(here::here("analysis", "scripts", "extract", "national_import.R"))
+source(here::here("analysis", "scripts", "extract", "city_import_sf.R"))
+source(here::here("analysis", "scripts", "extract", "city_import_acs.R"))
+end_time <- Sys.time()
 
-
-
-# library(here)
-# library(tidyverse)
-# library(tidycensus)
-# library(rmarkdown)
-# library(pagedown)
-# library(readxl)
-# library(tigris)
-# library(sf)
-
-# load Census API tokens
-# readRenviron("~/.Renviron")
-# census_key <- Sys.getenv("CENSUS_API_KEY")
-# census_api_key(key = census_key)
-
-# Do I need to do this?
-devtools::load_all(".")
+total_extraction_time <- end_time - start_time
 
 # Section 1: National Data
-source(here::here("analysis", "data", "extract", "national_import.R"))
-# source(here("national", "import", "src", "national_import.R"))
-# TODO: Get the subsequent projects running
+source(here::here("analysis", "data", "scripts", "extract", "national_import.R"))
 source(here::here("analysis", "data", "transform", "national_clean.R"))
 source(here::here("analysis", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
 # # Export

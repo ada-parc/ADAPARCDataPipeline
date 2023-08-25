@@ -14,4 +14,4 @@
 *.txt
 
 *.html
-analysis/data/raw_extracted_data_files/**
+analysis/data/raw/**

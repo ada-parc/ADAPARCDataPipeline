@@ -17,6 +17,8 @@
 load(here::here("analysis", "data",
                 "national_raw.Rda"))
 
+year <- config::get()$acs$years[1]
+
 ### ---- ACS variable lookup -----
 
 
@@ -49,6 +51,20 @@ load(here::here("analysis", "data",
 
 ### ---- Clean -----
 
+map_of_variables <- getADAPARCBaseToSourceVariableMap()
+
+# duplicates <-
+#   map_of_variables %>%
+#   group_by(source_var_code) %>%
+#   filter(n() > 1)
+
+base_vars_demographics <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_demographics"), "acs", year)
+
+base_vars_living <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_living"), "acs", year)
+
+base_vars_economic <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_economic"), "acs", year)
+
+base_vars_participation <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_participation"), "acs", year)
 
 # ---- (D) Demographics -----
 demographics <- stacked_demographics %>%
@@ -182,6 +198,7 @@ community_living <- stacked_living %>%
 
     ### ----- CL. Nursing Homes -----
     ### Pop 18-64, PWD, PWOD
+    ### NOTE: JANE UPDATED THESE VAR NAMES IN THE DOCUMENT TO BE UNIQUE, WITH pop_grpqrters_18_64 and pwd_grpqrters_18_64
     pop_18_64 = S2602_C01_047_estimate,
     pwd_18_64_pct = S2602_C01_048_estimate / 100,
     pwd_18_64 = round(pop_18_64 * pwd_18_64_pct, 0),
@@ -198,6 +215,7 @@ community_living <- stacked_living %>%
 
     ### ----- CL. Incarcerated Persons -----
     ### PWD
+    ### NOTE: JANE UPDATED THE DENOMINATORS FOR THE PCT'S IN THE MAP FILE TO "pwd_corrections_base_number" AND "pwod_corrections_base_number"
     pwd_corrections = B26108_038_estimate,
     pwd_corrections_pct = pwd_corrections / B26108_002_estimate,
     ### PWOD
@@ -310,7 +328,7 @@ community_participation <- stacked_participation %>%
     pwod_degree_aa_pct = S1811_C03_042_estimate / 100,
     pwd_degree_grtoeq_ba_pct = S1811_C02_043_estimate / 100,
     pwod_degree_grtoeq_ba_pct = S1811_C03_043_estimate / 100,
-    ### Values
+    ### Values (base below named "pwd_pop_educ" in map)
     pwd_lessthan_highschool = pwd_lessthan_highschool_pct * S1811_C02_039_estimate,
     pwod_lessthan_highschool = pwod_lessthan_highschool_pct * S1811_C03_039_estimate,
     pwd_highschoolequiv = pwd_highschoolequiv_pct * S1811_C02_039_estimate,
@@ -359,6 +377,8 @@ work_economic <- stacked_economic %>%
     pwod_notlabor_pct = pwod_notlabor / pwod_19_64,
 
     ### ----- WE. Poverty Status -----
+    ### the first two vars here have been renamed "pop_total_class_18_64" and "pwd_class_18_64"
+    ### and "pwod_class_18_64"
     pop_18_64 = C18130_009_estimate,
     pwd_18_64 = C18130_010_estimate,
     pwod_18_64 = C18130_013_estimate,
@@ -378,14 +398,14 @@ work_economic <- stacked_economic %>%
     mortgage_burdened_40_50 = B25091_010_estimate,
     mortgage_burdened_grtoeq_50 = B25091_011_estimate,
     mortgage_burdened = mortgage_burdened_30_35 + mortgage_burdened_35_40 + mortgage_burdened_40_50 + mortgage_burdened_grtoeq_50,
-    mortgage_burdened_pct = mortgage_burdened / B25091_002_estimate,
+    mortgage_burdened_pct = mortgage_burdened / B25091_002_estimate, # total_housing_units_mortgage
     ### Rent
     rent_burdened_30_35 = B25070_007_estimate,
     rent_burdened_35_40 = B25070_008_estimate,
     rent_burdened_40_50 = B25070_009_estimate,
     rent_burdened_grtoeq_50 = B25070_010_estimate,
     rent_burdened = rent_burdened_30_35 + rent_burdened_35_40 + rent_burdened_40_50  + rent_burdened_grtoeq_50,
-    rent_burdened_pct = rent_burdened / B25070_001_estimate,
+    rent_burdened_pct = rent_burdened / B25070_001_estimate, # rent_total
 
     ### ----- WE. Full/Part Time Workers -----
     ### Values

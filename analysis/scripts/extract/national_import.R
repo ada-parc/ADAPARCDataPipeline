@@ -1,8 +1,3 @@
-require(tidyverse)
-require(tidycensus)
-
-options(scipen = 9999)
-
 config_values <- config::get("acs")
 # TODO: Update this script so that it will handle multiple years.
 year <- config_values$years[1]
@@ -11,49 +6,8 @@ rm(config_values)
 
 
 # TODO: Work this into two calls--state and national, so they are combined into a single dataset
+# TODO: Create a function that will facilitate and bind downloading the different state and us datasets
 
-# utility function ----
-
-# downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
-#   df <- map(
-#     tables,
-#     ~ tidycensus::get_acs(
-#       year = year,
-#       geography = geography,
-#       table = .x,
-#       survey = survey,
-#       geometry = F
-#       # cache_table = T,
-#       # show_call = T
-#     ) %>%
-#       pivot_wider(
-#         names_from = variable,
-#         values_from = c(estimate, moe),
-#         names_glue = "{variable}_{.value}"
-#       )
-#   ) %>%
-#     reduce(left_join) %>%
-#     left_join(
-#       tibble(state.abb, state.name) %>%
-#         add_row(
-#           state.abb = c("PR", "DC"),
-#           state.name = c("Puerto Rico", "District of Columbia")
-#         ) %>%
-#         select(NAME = state.name, ABBR = state.abb)
-#     ) %>%
-#     select(GEOID, NAME, ABBR, everything())
-#
-#   if(geography == "us") {
-#     df <- df %>%
-#       mutate(ABBR = "USA",
-#              GEOID = "000")
-#   }
-#
-#   return(df)
-# }
-
-
-# NOTE: Internal functions here only work when we load our package locally.
 
 # download ----
 tables <- c("S1810")
@@ -61,6 +15,8 @@ state_demographics <- downloadAndFormatAcs(tables, "state", year, survey)
 national_demographics <- downloadAndFormatAcs(tables, "us", year, survey)
 stacked_demographics <- bind_rows(national_demographics, state_demographics)
 rm(state_demographics, national_demographics)
+
+test_demo <- readRawExtractedDataFile("national_demographics")
 
 if(year > 2017) {
   tables <- c("S1810", "S2601A", "S2602", "B26108")
@@ -87,6 +43,12 @@ stacked_economic <- bind_rows(state_economic, national_economic)
 rm(state_economic, national_economic, survey, tables)
 
 # export ----
-save.image(here::here("analysis", "data", "national_raw.Rda"))
-# save.image(here::here("national", "import", "output", "national_import.Rda"))
+
+saveRawExtractedDataFile(stacked_demographics, "national_demographics")
+saveRawExtractedDataFile(stacked_living, "national_living")
+saveRawExtractedDataFile(stacked_participation, "national_participation")
+saveRawExtractedDataFile(stacked_economic, "national_economic")
+
+
+# save.image(here::here("analysis", "data", "national_raw.Rda"))
 rm(list = ls())
