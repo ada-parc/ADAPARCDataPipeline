@@ -7,7 +7,7 @@
 getFIPSCodesForStates()
 }
 \value{
-A df including information on US FIPS codes, filtered for use in analysis
+A list of FIPS state codes
 }
 \description{
 Downloads FIPS codes for states and counties to use for analysis

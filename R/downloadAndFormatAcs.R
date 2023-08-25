@@ -3,7 +3,7 @@
 #' Downloads and Formats ACS Data
 #'
 #' @param tables array of strings, corresponding to the US Census tables to be downloaded
-#' @param geography the geography of the request; can be either "state" or "us".
+#' @param geography the geography of the request; can be "state" / "us" / "place".
 #' @param year year of data to download
 #' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
 #'
@@ -14,6 +14,7 @@
 #' @import tidycensus
 #' @import purrr
 #' @import tibble
+#' @import tidyr
 #'
 
 downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "acs5") {
@@ -33,26 +34,27 @@ downloadAndFormatAcs <- function(tables, geography = "state", year, survey = "ac
       survey = survey,
       geometry = F,
       key = api_key,
-      cache_table = T
-    ) %>%
-      tidyr::pivot_wider(
-        names_from = variable,
-        values_from = c(estimate, moe),
-        names_glue = "{variable}_{.value}"
-      )
+      cache_table = F,
+      output = "wide"
+    )
   ) %>%
-    purrr::reduce(left_join) %>%
-    dplyr::left_join(
-      tibble::tibble(state.abb, state.name) %>%
-        tibble::add_row(
-          state.abb = c("PR", "DC"),
-          state.name = c("Puerto Rico", "District of Columbia")
-        ) %>%
-        dplyr::select(NAME = state.name, ABBR = state.abb)
-    ) %>%
-    dplyr::select(GEOID, NAME, ABBR, everything())
+    purrr::reduce(left_join)
 
-  if(geography == "us") {
+
+  if (geography == "state") {
+    df <- df %>%
+      dplyr::left_join(
+        tibble::tibble(state.abb, state.name) %>%
+          tibble::add_row(
+            state.abb = c("PR", "DC"),
+            state.name = c("Puerto Rico", "District of Columbia")
+          ) %>%
+          dplyr::select(NAME = state.name, ABBR = state.abb)
+      ) %>%
+      dplyr::select(GEOID, NAME, ABBR, everything())
+  }
+
+  if (geography == "us") {
     df <- df %>%
       mutate(ABBR = "USA",
              GEOID = "000")

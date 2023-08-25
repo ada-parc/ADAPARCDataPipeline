@@ -9,7 +9,7 @@ downloadAndFormatAcs(tables, geography = "state", year, survey = "acs5")
 \arguments{
 \item{tables}{array of strings, corresponding to the US Census tables to be downloaded}
 
-\item{geography}{the geography of the request; can be either "state" or "us".}
+\item{geography}{the geography of the request; can be "state" / "us" / "place".}
 
 \item{year}{year of data to download}
 
