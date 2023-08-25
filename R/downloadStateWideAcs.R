@@ -1,4 +1,4 @@
-#' downloadACSTracts
+#' downloadStateWideAcs
 #'
 #' Downloads and Formats ACS Tracts for the place geography
 #'
@@ -6,7 +6,7 @@
 #' @param geography the geography of the request; can be either "state" or "us".
 #' @param year year of data to download
 #' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
-#' @param fips_codes_for_lookup fips codes of states and counties for lookup
+#' @param state_codes_for_lookup list of fips codes of states for lookup
 #'
 #' @returns A dataframe of downloaded ACS data, in wide format.
 #'
@@ -16,7 +16,7 @@
 #' @import purrr
 #'
 
-downloadACSTracts <- function(tables, geography = "tracts", year, survey = "acs5", fips_codes_for_lookup) {
+downloadStateWideAcs <- function(tables, geography = "tract", year, survey = "acs5", state_codes_for_lookup) {
   # TODO: Understand why this function is meaningfully different to the data download flow from what was written for the national data -- can it be combined? with all ACS flows?
   # TODO: Throw error if there is no Census key loaded
   # TODO: Throw error if any of the input parameters are not correct.
@@ -25,29 +25,34 @@ downloadACSTracts <- function(tables, geography = "tracts", year, survey = "acs5
 
   api_key <- loadCensusAPIKey()
 
+  get_data_by_state_and_table <- function(state, table) {
+
+    message(paste0("Retrieving data for state: ", state))
+
+    tidycensus::get_acs(
+      geography = geography,
+      table = table,
+      year = year,
+      state = state,
+      geometry = FALSE,
+      output = "wide",
+      key = api_key,
+      survey = survey
+    )
+  }
 
   df <-
-    purrr::pmap_df(.l = fips_codes_for_lookup,
-                   .f = ~ (
-                     tidycensus::get_acs(
-                       geography = geography,
-                       table = tables,
-                       year = year,
-                       # show_call = T,
-                       geometry = FALSE,
-                       output = "wide",
-                       key = api_key,
-                       survey = survey
-                     )  %>%
-                       dplyr::rename_with(
-                         .cols = matches("[0-9]{3}(E|M)$"),
-                         ~ ifelse(
-                           stringr::str_detect(.x, "E$"),
-                           stringr::str_replace(.x, "E$", "_estimate"),
-                           stringr::str_replace(.x, "M$", "_moe")
-                         )
-                       )
-                   ))
+    purrr::map(tables, function(table) {
+
+      message(paste0("Retrieving data for table: ", table))
+
+      purrr::map(state_codes_for_lookup, function(state) {
+        get_data_by_state_and_table(state, table)
+      },
+      .progress = TRUE) %>%
+        purrr::reduce(left_join)
+    }) %>%
+    purrr::reduce(left_join)
 
   return(df)
 }

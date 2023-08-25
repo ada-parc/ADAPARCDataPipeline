@@ -16,8 +16,6 @@ national_demographics <- downloadCountryWideAcs(tables, "us", year, survey)
 stacked_demographics <- bind_rows(national_demographics, state_demographics)
 rm(state_demographics, national_demographics)
 
-test_demo <- readRawExtractedDataFile("national_demographics")
-
 if(year > 2017) {
   tables <- c("S1810", "S2601A", "S2602", "B26108")
   state_living <- downloadCountryWideAcs(tables, "state", year, survey)

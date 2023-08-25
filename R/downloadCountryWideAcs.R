@@ -14,7 +14,6 @@
 #' @import tidycensus
 #' @import purrr
 #' @import tibble
-#' @import tidyr
 #'
 
 downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "acs5") {
@@ -57,7 +56,7 @@ downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "
 
   if (geography == "us") {
     df <- df %>%
-      mutate(ABBR = "USA",
+      dplyr::mutate(ABBR = "USA",
              GEOID = "000")
   }
 
