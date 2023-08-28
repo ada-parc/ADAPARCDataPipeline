@@ -14,6 +14,7 @@
 #' @import tidycensus
 #' @import purrr
 #' @import tibble
+#' @import tidyr
 #'
 
 downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "acs5") {
@@ -33,13 +34,15 @@ downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "
       survey = survey,
       geometry = F,
       key = api_key,
-      cache_table = F,
-      output = "wide"
-    ),
+      cache_table = F
+    )	%>%
+      select(GEOID, NAME, variable, estimate) %>%
+      tidyr::pivot_wider(
+      names_from = variable,
+      values_from = c(estimate)),
     .progress = TRUE
   ) %>%
     purrr::reduce(left_join)
-
 
   if (geography == "state") {
     df <- df %>%
