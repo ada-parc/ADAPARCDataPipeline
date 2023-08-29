@@ -18,7 +18,6 @@ saveRawExtractedDataFile <- function(raw_extracted_data, name) {
   # Check if the folder exists
   if (!file.exists(folder_path)) {
     # If it doesn't exist, create the folder
-    #
     dir.create(folder_path)
   }
 

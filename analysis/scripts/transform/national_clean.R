@@ -1,62 +1,12 @@
 
-
-### ---- Load libraries -----
-
-
-# require(tidyverse)
-
-
-### ---- Input -----
-
-
-# Read in national import data (import step already run)
-# load(here::here("national", "import",
-#                 "output", "national_import.Rda"))
-
-
-load(here::here("analysis", "data",
-                "national_raw.Rda"))
-
 year <- config::get()$acs$years[1]
 
-### ---- ACS variable lookup -----
 
-
-# Load ACS metadata (ACS 5-Year and Subject, bind together
-# ACS 5-Year
-# ref_vars <- tidycensus::load_variables(2020, "acs5", cache = TRUE)
-# ref_vars_sub <- tidycensus::load_variables(2020, "acs5/subject", cache = TRUE)
-# ref_vars <- bind_rows(ref_vars, ref_vars_sub)
-# rm(ref_vars_sub)
-
-# Workspace for checking calculations
-# Filter ACS ref metadata
-# temp <- ref_vars %>%
-#   filter(str_detect(name, "^S2602_")) %>%
-#   select(-geography) %>%
-#   # Join required data table, check USA values for calcs
-#   left_join(stacked_living %>%
-#               filter(ABBR == "USA") %>%
-#               mutate(across(everything(), as.character)) %>%
-#               pivot_longer(cols = everything(),
-#                            names_to = "name",
-#                            values_to = "usa_value") %>%
-#               filter(!str_detect(name, "_moe$")) %>%
-#               mutate("name" = str_remove(name, "_estimate$")),
-#             by = "name") %>%
-#   relocate(usa_value, .after = label)
-#
-# clipr::write_clip(temp)
-
-
-### ---- Clean -----
+############################################
+### ---- Get base vars from raw data -----
+############################################
 
 map_of_variables <- getADAPARCBaseToSourceVariableMap()
-
-# duplicates <-
-#   map_of_variables %>%
-#   group_by(source_var_code) %>%
-#   filter(n() > 1)
 
 base_vars_demographics <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_demographics"), "acs", year)
 
@@ -66,43 +16,36 @@ base_vars_economic <- transformRawVariablesToADAPARCBaseVariables(map_of_variabl
 
 base_vars_participation <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_participation"), "acs", year)
 
-# ---- (D) Demographics -----
-demographics <- stacked_demographics %>%
-  transmute(
-    ### ID
-    GEOID = GEOID,
-    NAME = NAME,
-    ABBR = ABBR,
+############################################
+# Calculate variables from base variables
+############################################
 
+# TODO: Do these mutations in functions -- create specific sub-functions to help calculate variables over time. How do I want to set this up?
+
+# ---- (D) Demographics -----
+demographics <- base_vars_demographics %>%
+  dplyr::mutate(
     ### ----- D. Pop, PWD, PWOD -----
-    # Pop
-    pop_total = S1810_C01_001_estimate,
     # PWD
-    pwd_total = S1810_C02_001_estimate,
     pwd_pct = pwd_total / pop_total,
     # PWOD
     pwod_total = pop_total - pwd_total,
     pwod_pct = pwod_total / pop_total,
 
     ### ----- D. Age -----
-    pop_18_64 = S1810_C01_015_estimate + S1810_C01_016_estimate,
-    pwd_18_64 = S1810_C02_015_estimate + S1810_C02_016_estimate,
+    pop_18_64 = pop_18_64_ages18to34 + pop_18_64_ages35to64,
+    pwd_18_64 = pwd_18_64_noninstitutionalized18to34yrs + pwd_18_64_noninstitutionalized35to64,
     pwd_18_64_pct = pwd_18_64 / pop_18_64,
-    pop_grtoeq_65 = S1810_C01_017_estimate + S1810_C01_018_estimate,
-    pwd_grtoeq_65 = S1810_C02_017_estimate + S1810_C02_018_estimate,
+    pop_grtoeq_65 = pop_grtoeq_65_65to74 + pop_grtoeq_65_75yrsplus,
+    pwd_grtoeq_65 = pwd_grtoeq_65_65to74 + pwd_grtoeq_65_75yrsplus,
     pwd_grtoeq_65_pct = pwd_grtoeq_65 / pop_grtoeq_65,
 
     ### ----- D. Race/Ethnicity -----
-    pwd_white = S1810_C02_004_estimate,
-    pwd_black = S1810_C02_005_estimate,
-    pwd_hisp = S1810_C02_012_estimate,
-    pwd_asian = S1810_C02_007_estimate,
-    pwd_white_nonhisp = S1810_C02_011_estimate,
 
-    pwd_other = S1810_C02_006_estimate + # American Indian and Alaska Native alone
-      S1810_C02_008_estimate + # Native Hawaiian and Other Pacific Islander alone
-      S1810_C02_009_estimate, # Some other race alone
-    pwd_multiple = S1810_C02_010_estimate,
+    pwd_other = pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
+      pwd_other_nativehawaiian_otherpacificislander + # Native Hawaiian and Other Pacific Islander alone
+      pwd_other_other_race,
+    # Some other race alone
     ### Percents
     pwd_white_pct = pwd_white / pop_total,
     pwd_black_pct = pwd_black / pop_total,
@@ -113,30 +56,23 @@ demographics <- stacked_demographics %>%
     pwd_multiple_pct = pwd_multiple / pop_total,
 
     ### ----- D. Gender -----
-    pop_female = S1810_C01_003_estimate,
-    pwd_female = S1810_C02_003_estimate,
     female_pwd_pct = pwd_female / pop_female,
     pwd_female_pct = pwd_female / pwd_total,
-    pop_male = S1810_C01_002_estimate,
-    pwd_male = S1810_C02_002_estimate,
     male_pwd_pct = pwd_male / pop_male,
     pwd_male_pct = pwd_male / pwd_total,
 
     ### ----- D. Type of Disability -----
-    pwd_hearing = S1810_C02_019_estimate,
     pwd_hearing_pct = pwd_hearing / pop_total,
-    pwd_vision = S1810_C02_029_estimate,
     pwd_vision_pct = pwd_vision / pop_total,
-    pwd_cognitive = S1810_C02_039_estimate,
     pwd_cognitive_pct = pwd_cognitive / pop_total,
-    pwd_ambulatory = S1810_C02_047_estimate,
     pwd_ambulatory_pct = pwd_ambulatory / pop_total,
-    pwd_selfcare = S1810_C02_055_estimate,
     pwd_selfcare_pct = pwd_selfcare / pop_total,
-    pwd_indliving = S1810_C02_063_estimate,
-    pwd_indliving_pct = pwd_indliving / pop_total
-  ) %>%
-  mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
+    pwd_indliving_pct = pwd_indliving / pop_total,
+    dplyr::across(
+      .cols = tidyselect::ends_with("pct"),
+      .fns = ~ round(.x * 100, 2)
+    )
+  )
 
 
 # ---- (CL) Community Living -----
@@ -445,7 +381,11 @@ work_economic <- stacked_economic %>%
 
 # ----- Save Output -----
 
+# TODO: Update this process so that we can get another folder for processed data
+# MAYBE... I should be grabbing all this data once, updating the data, and then pulling apart into 4 different df's. The benefit here is that we likely want just one DF anyway for Tableau.
+# saveRawExtractedDataFile(demographics, "demographics")
 
-rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic)
-save.image(here::here("analysis", "data", "national_clean.Rda"))
+
+# rm(stacked_demographics, stacked_living, stacked_participation, stacked_economic)
+# save.image(here::here("analysis", "data", "national_clean.Rda"))
 rm(list = ls())

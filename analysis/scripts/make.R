@@ -26,20 +26,24 @@
 ## run this regularly to clean up this file: usethis::use_tidy_description()
 ## devtools::document()
 ## devtools::check()
+
 #TODO: For extractions, which can all happen independently, see if there are multithreaded strategies to increase speed/efficiency.
-# Extractions--run all extraction files!
-start_time <- Sys.time()
+
+# Extractions
+
 source(here::here("analysis", "scripts", "extract", "national_import.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_sf.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_acs.R"))
-end_time <- Sys.time()
 
-total_extraction_time <- end_time - start_time
+# Transformations--run transformations here. Can be multithreaded between flows.
+# Output targets are national data and city data; within national and city, execution is linear.
+source(here::here("analysis", "data", "transform", "national_clean.R"))
+
 
 # Section 1: National Data
 source(here::here("analysis", "data", "scripts", "extract", "national_import.R"))
 source(here::here("analysis", "data", "transform", "national_clean.R"))
-source(here::here("analysis", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
+# source(here::here("analysis", "generate_national_factsheets", "src", "generate_national_factsheets.R"))
 # # Export
 source(here::here("analysis", "data", "load", "src", "export_national.R"))
 

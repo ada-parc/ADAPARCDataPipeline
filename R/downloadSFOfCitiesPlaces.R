@@ -29,18 +29,7 @@ downloadSFOfCitiesPlaces <- function(year, fips_codes_for_states) {
     dplyr::select(STATEFP, PLACEFP, place_GEOID = GEOID, place_NAME = NAME) %>%
     dplyr::mutate("place_area" = sf::st_area(.),
                   "place_area_num" = as.numeric(place_area)) %>%
-    dplyr::relocate(geometry, .after = last_col())
-
-  # start <- Sys.time()
-  # jane <-
-  # lapply(fips_codes_for_states, function(x) { tigris::places(
-  #   state = x,
-  #   cb = TRUE,
-  #   year = year,
-  #   class = "sf"
-  # )}) %>% rbind_tigris()
-  # end <- Sys.time()
-
+    dplyr::relocate(geometry, .after = dplyr::last_col())
 
   return(places_sf)
 
