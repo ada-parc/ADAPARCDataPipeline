@@ -27,17 +27,16 @@
 ## devtools::document()
 ## devtools::check()
 
-#TODO: For extractions, which can all happen independently, see if there are multithreaded strategies to increase speed/efficiency.
-
-# Extractions
-
-source(here::here("analysis", "scripts", "extract", "national_import.R"))
+# Extractions (these are all independent and can be run in any order)
+#TODO: Consider multithreaded strategies to increase speed/efficiency.
+# rename: national_acs_extract
+source(here::here("analysis", "scripts", "extract", "national_acs_import.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_sf.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_acs.R"))
 
 # Transformations--run transformations here. Can be multithreaded between flows.
 # Output targets are national data and city data; within national and city, execution is linear.
-source(here::here("analysis", "data", "transform", "national_clean.R"))
+source(here::here("analysis", "data", "transform", "national_acs_transformation"))
 
 
 # Section 1: National Data
