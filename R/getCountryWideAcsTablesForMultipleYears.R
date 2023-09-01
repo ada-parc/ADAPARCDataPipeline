@@ -4,6 +4,7 @@
 #'
 #' @param tables raw data extracted from an external source (not transformed). Must be an R object.
 #' @param years name for the file
+#' @param survey ACS survey requested (ex. "acs1" or "acs5")
 #'
 #' @returns A dataframe of country-wide ACS data, in wide format, for both US and state-levels.
 #'
@@ -11,7 +12,7 @@
 #' @import dplyr
 #' @import purrr
 
-getCountryWideAcsTablesForMultipleYears <- function(tables, years) {
+getCountryWideAcsTablesForMultipleYears <- function(tables, years, survey) {
 
   downloadSingleYearOfAcsTableData <- function(tables, year) {
 
@@ -20,7 +21,6 @@ getCountryWideAcsTablesForMultipleYears <- function(tables, years) {
     if (year < 2017) {
       # Filter out tables that are not available before 2017
       tables_unavailable_before_2017 <- c("S2602", "B26108")
-
       tables_to_request <- setdiff(tables_to_request, tables_unavailable_before_2017)
     }
 
