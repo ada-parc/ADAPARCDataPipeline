@@ -4,12 +4,14 @@
 \alias{getCountryWideAcsTablesForMultipleYears}
 \title{getCountryWideAcsTablesForMultipleYears}
 \usage{
-getCountryWideAcsTablesForMultipleYears(tables, years)
+getCountryWideAcsTablesForMultipleYears(tables, years, survey)
 }
 \arguments{
 \item{tables}{raw data extracted from an external source (not transformed). Must be an R object.}
 
 \item{years}{name for the file}
+
+\item{survey}{ACS survey requested (ex. "acs1" or "acs5")}
 }
 \value{
 A dataframe of country-wide ACS data, in wide format, for both US and state-levels.
