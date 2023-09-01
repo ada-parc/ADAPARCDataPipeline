@@ -1,18 +1,18 @@
 
-year <- config::get()$acs$years[1]
+years <- config::get()$acs$years
 
 
 ############################################
 ### ---- Get base vars from raw data -----
 ############################################
 
-map_of_variables <- getADAPARCBaseToSourceVariableMap()
+map_of_variables <- getADAPARCBaseToSourceVariableMap(years)
 
-base_vars_demographics <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_demographics"), "acs", year)
+base_vars_demographics <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_demographics"), "acs")
 
-base_vars_living <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_living"), "acs", year)
+base_vars_living <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_living"), "acs")
 
-base_vars_economic <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_economic"), "acs", year)
+base_vars_economic <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_economic"), "acs")
 
 base_vars_participation <- transformRawVariablesToADAPARCBaseVariables(map_of_variables, raw_data = readRawExtractedDataFile("national_participation"), "acs", year)
 
@@ -22,8 +22,14 @@ base_vars_participation <- transformRawVariablesToADAPARCBaseVariables(map_of_va
 
 # TODO: Do these mutations in functions -- create specific sub-functions to help calculate variables over time. How do I want to set this up?
 
+# TODO: Long term, to facilitate analysis in Tableau, there should not be a distinction between these DFs; rather, we can combine our data with information on
+
+
 # ---- (D) Demographics -----
-demographics <- base_vars_demographics %>%
+demographics <- addCalculatedVariablesForBaseDemographics(base_vars_demographics)
+
+
+  base_vars_demographics %>%
   dplyr::mutate(
     ### ----- D. Pop, PWD, PWOD -----
     # PWD

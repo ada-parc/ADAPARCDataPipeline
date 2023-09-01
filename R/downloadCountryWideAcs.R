@@ -42,7 +42,8 @@ downloadCountryWideAcs <- function(tables, geography = "state", year, survey = "
       values_from = c(estimate)),
     .progress = TRUE
   ) %>%
-    purrr::reduce(left_join)
+    purrr::reduce(left_join) %>%
+    mutate(year = year)
 
   if (geography == "state") {
     df <- df %>%

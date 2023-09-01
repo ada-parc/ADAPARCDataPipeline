@@ -4,11 +4,14 @@
 \alias{getADAPARCBaseToSourceVariableMap}
 \title{getADAPARCBaseToSourceVariableMap}
 \usage{
-getADAPARCBaseToSourceVariableMap()
+getADAPARCBaseToSourceVariableMap(years)
+}
+\arguments{
+\item{years}{list of years being retrieved}
 }
 \value{
 a dataframe mapping ADA-PARC base variables to their source variables, including the year and the source of the data (ex. ACS, HUD)
 }
 \description{
-Read in a dataframe that maps ADA-PARC variables to their source
+Read in a dataframe that maps ADA-PARC variables to their source.
 }

@@ -1,0 +1,82 @@
+#' addCalculatedVariablesForBaseDemographics
+#'
+#' Add Calculated Variables To Base Data for Demographics
+#'
+#' @param base_data dataframe with ADA-PARC base variables
+#'
+#'
+#' @returns a DF with ADA-PARC base and calculated variables
+#'
+#' @import purrr
+
+addCalculatedVariablesForBaseDemographics <- function(base_data) {
+
+  years_in_data <- unique(base_data$year)
+
+  generate_calculated_variables_per_year <- function(year_for_filter) {
+
+    # While we aren't taking advantage of this structure right now, if/when there are different calculations for variables across different years, we will be able to create additional sub-functions and use for the mutation in that specific year. For example, the ACS changed how it calculates certain variables around disability before 2012; if we are able to determine which base variables from 2012 we can use to calculate an equivalent to a >2012 variable, we will be able to compare across those time periods.
+
+    df <- base_data %>%
+      filter(year == year_for_filter) %>%
+      dplyr::mutate(
+        ### ----- D. Pop, PWD, PWOD -----
+        # PWD
+        pwd_pct = pwd_total / pop_total,
+        # PWOD
+        pwod_total = pop_total - pwd_total,
+        pwod_pct = pwod_total / pop_total,
+
+        ### ----- D. Age -----
+        pop_18_64 = pop_18_64_ages18to34 + pop_18_64_ages35to64,
+        pwd_18_64 = pwd_18_64_noninstitutionalized18to34yrs + pwd_18_64_noninstitutionalized35to64,
+        pwd_18_64_pct = pwd_18_64 / pop_18_64,
+        pop_grtoeq_65 = pop_grtoeq_65_65to74 + pop_grtoeq_65_75yrsplus,
+        pwd_grtoeq_65 = pwd_grtoeq_65_65to74 + pwd_grtoeq_65_75yrsplus,
+        pwd_grtoeq_65_pct = pwd_grtoeq_65 / pop_grtoeq_65,
+
+        ### ----- D. Race/Ethnicity -----
+
+        pwd_other = pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
+          pwd_other_nativehawaiian_otherpacificislander + # Native Hawaiian and Other Pacific Islander alone
+          pwd_other_other_race,
+        # Some other race alone
+        ### Percents
+        pwd_white_pct = pwd_white / pop_total,
+        pwd_black_pct = pwd_black / pop_total,
+        pwd_hisp_pct = pwd_hisp / pop_total,
+        pwd_asian_pct = pwd_asian / pop_total,
+        pwd_white_nonhisp_pct = pwd_white_nonhisp / pop_total,
+        pwd_other_pct = pwd_other / pop_total,
+        pwd_multiple_pct = pwd_multiple / pop_total,
+
+        ### ----- D. Gender -----
+        female_pwd_pct = pwd_female / pop_female,
+        pwd_female_pct = pwd_female / pwd_total,
+        male_pwd_pct = pwd_male / pop_male,
+        pwd_male_pct = pwd_male / pwd_total,
+
+        ### ----- D. Type of Disability -----
+        pwd_hearing_pct = pwd_hearing / pop_total,
+        pwd_vision_pct = pwd_vision / pop_total,
+        pwd_cognitive_pct = pwd_cognitive / pop_total,
+        pwd_ambulatory_pct = pwd_ambulatory / pop_total,
+        pwd_selfcare_pct = pwd_selfcare / pop_total,
+        pwd_indliving_pct = pwd_indliving / pop_total,
+        dplyr::across(
+          .cols = tidyselect::ends_with("pct"),
+          .fns = ~ round(.x * 100, 2)
+        ),
+        .keep = FALSE
+      )
+
+    return(df)
+  }
+
+
+  calculated_and_base_data <-
+    map(years, ~ generate_calculated_variables_per_year(.x)) %>%
+    dplyr::bind_rows()
+
+  return(calculated_and_base_data)
+}

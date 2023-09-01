@@ -7,8 +7,7 @@
 transformRawVariablesToADAPARCBaseVariables(
   ada_parc_base_to_source_var_map,
   raw_data,
-  source,
-  year
+  source
 )
 }
 \arguments{
@@ -17,12 +16,10 @@ transformRawVariablesToADAPARCBaseVariables(
 \item{raw_data}{dataframe with raw data from source}
 
 \item{source}{source of data (ACS, HUD, etc.)}
-
-\item{year}{year of the raw data}
 }
 \value{
-a dataframe with ADA-PARC base data
+a dataframe with ADA-PARC base data across all years
 }
 \description{
-Transform Raw Variables to ADA-PARC Base Variables
+Transform Raw Variables to ADA-PARC Base Variables. This function assumes \code{GEOID}, \code{NAME}, \code{ABBR}, \code{year}as column names.
 }
