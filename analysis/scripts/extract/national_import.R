@@ -38,8 +38,3 @@ saveRawExtractedDataFile(raw_national_acs_demographics, "national_demographics")
 saveRawExtractedDataFile(raw_national_acs_living, "national_living")
 saveRawExtractedDataFile(raw_national_acs_participation, "national_participation")
 saveRawExtractedDataFile(raw_national_acs_economic, "national_economic")
-
-# TODO: UPDATE THE
-
-# save.image(here::here("analysis", "data", "national_raw.Rda"))
-rm(list = ls())
