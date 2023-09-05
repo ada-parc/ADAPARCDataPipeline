@@ -30,9 +30,9 @@
 # Extractions (these are all independent and can be run in any order)
 #TODO: Consider multithreaded strategies to increase speed/efficiency.
 # rename: national_acs_extract
-source(here::here("analysis", "scripts", "extract", "national_acs_import.R"))
-source(here::here("analysis", "scripts", "extract", "city_import_sf.R"))
+source(here::here("analysis", "scripts", "extract", "national_import_acs.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_acs.R"))
+source(here::here("analysis", "scripts", "extract", "city_import_tigris.R"))
 
 # Transformations--run transformations here. Can be multithreaded between flows.
 # Output targets are national data and city data; within national and city, execution is linear.
