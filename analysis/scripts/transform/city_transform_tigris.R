@@ -13,12 +13,15 @@
 #
 #
 # Place split by state
+
 message("Finding intersection of places and counties...")
-places_sf <- places_sf %>%
-  mutate(STATEFP = as.factor(STATEFP)) %>%
-  left_join(places_pop_est, by = c("place_GEOID" = "GEOID")) %>%
-  filter(POP > 3500)
-places_split <- split(places_sf, places_sf$STATEFP)
+
+
+places <- readRawExtractedDataFile("places_sf")
+places_pop_est <- readRawExtractedDataFile("places_pop_est")
+
+places_split <- splitPlacesSFByState(places, places_pop_est)
+
 
 # Counties split by state
 counties_sf <- counties_sf %>%
