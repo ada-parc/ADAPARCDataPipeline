@@ -15,7 +15,7 @@ purrr::walk(list.files(here::here("analysis", "generate_national_factsheets", "o
 # community_living, community_participation, demographics, work_economic
 
 save.image(here::here("export", "output", "ADA-Website_tables_national.Rda"))
-rm(list = ls())
+
 # load("C:\\Users\\ethan\\Desktop\\ADA PARC\\ADA-PARC-Website-Design\\data\\all_2020N_2019C.rda")
 # community_living, community_participation, demographics, work_economic, dict_vars
 # dict_location_crosswalk, tracts_data, tracts_sf, city_place_full

@@ -21,5 +21,3 @@ tracts_sf <- downloadSFOfTracts(year, fips_codes_for_states)
 saveRawExtractedDataFile(places_sf, "places_sf")
 saveRawExtractedDataFile(counties_sf, "counties_sf")
 saveRawExtractedDataFile(tracts_sf, "tracts_sf")
-
-rm(list = ls())

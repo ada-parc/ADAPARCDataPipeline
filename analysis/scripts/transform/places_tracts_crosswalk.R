@@ -101,5 +101,3 @@ write_csv(dict_places, here::here("city", "places_tracts_crosswalk", "output", "
 st_write(tracts_sf, here::here("city", "places_tracts_crosswalk", "output", "geo_tract.shp"), delete_dsn = TRUE)
 
 write_csv(dict_location_crosswalk, here::here("city", "places_tracts_crosswalk", "output", "dict_location_crosswalk.txt"))
-
-rm(list = ls())

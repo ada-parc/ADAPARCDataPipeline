@@ -105,5 +105,3 @@ dashboard_factsheet_national <- factsheet_national_params %>%
 # Write CSV to file for dashboard front-end
 write_csv(dashboard_factsheet_national,
           file = here::here("analysis", "generate_national_factsheets","output", "dashboard_factsheet_national.csv"))
-
-rm(list = ls())

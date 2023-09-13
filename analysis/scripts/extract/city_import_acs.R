@@ -19,5 +19,3 @@ tracts_data <- downloadACSTracts(tables, "tract", year, survey, fips_for_state)
 saveRawExtractedDataFile(places_pop_est, "places_pop_est")
 saveRawExtractedDataFile(places_acs, "places_acs")
 saveRawExtractedDataFile(tracts_data, "tracts_data")
-
-rm(list = ls())

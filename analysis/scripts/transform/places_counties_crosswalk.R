@@ -48,4 +48,3 @@ city_place_full <- places_acs %>%
 # export ----
 rm(counties_sf, counties_split)
 save.image(here::here("city", "places_counties_crosswalk", "output", "places_counties_crosswalk.Rda"))
-rm(list = ls())
