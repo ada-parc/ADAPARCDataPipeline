@@ -16,7 +16,6 @@
 
 downloadSFOfCitiesPlaces <- function(year, fips_codes_for_states) {
 
-  # start_p <- Sys.time()
   places_sf <-
     purrr::map(fips_codes_for_states,
                ~ tigris::places(
@@ -25,7 +24,7 @@ downloadSFOfCitiesPlaces <- function(year, fips_codes_for_states) {
                    year = year,
                    class = "sf"
                  )) %>%
-    purrr::reduce(left_join) %>%
+    dplyr::bind_rows() %>%
     dplyr::select(STATEFP, PLACEFP, place_GEOID = GEOID, place_NAME = NAME) %>%
     dplyr::mutate("place_area" = sf::st_area(.),
                   "place_area_num" = as.numeric(place_area)) %>%
