@@ -1,9 +1,9 @@
 #' downloadStateWideAcs
 #'
-#' Downloads and Formats ACS Tracts for the place geography
+#' Downloads and Formats ACS Tracts by state
 #'
 #' @param tables array of strings, corresponding to the US Census tables to be downloaded
-#' @param geography the geography of the request; can be either "state" or "us".
+#' @param geography the geography of the request
 #' @param year year of data to download
 #' @param survey specification of ACS survey type (ex. "acs5" or "acs1")
 #' @param state_codes_for_lookup list of fips codes of states for lookup

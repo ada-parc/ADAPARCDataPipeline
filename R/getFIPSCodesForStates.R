@@ -10,8 +10,9 @@
 
 getFIPSCodesForStates <- function() {
 
-  fips_codes_for_lookup <- c(getFIPSCodesForStateAndCounty() %>%
-                               dplyr::select(state_code) %>% unique())
+  fips_codes_for_lookup <- getFIPSCodesForStateAndCounty() %>%
+    dplyr::pull(state_code) %>%
+    unique()
 
   return(fips_codes_for_lookup)
 }

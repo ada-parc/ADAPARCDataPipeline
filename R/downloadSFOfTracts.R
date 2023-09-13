@@ -15,16 +15,14 @@
 downloadSFOfTracts <- function(year, fips_codes_for_states) {
 
   sf <-
-    purrr::map(fips_codes_for_states, function(x) {
-      message(paste0("Looking up tract for state: ", x))
-      tigris::tracts(
-        state = x,
-        cb = TRUE,
-        year = year,
-        class = "sf"
-      )
-    }) %>%
-    tigris::rbind_tigris() %>%
+    purrr::map(fips_codes_for_states,
+               ~ tigris::tracts(
+                 state = .x,
+                 cb = TRUE,
+                 year = year,
+                 class = "sf"
+               )) %>%
+    dplyr::bind_rows() %>%
     dplyr::select("tract_GEOID" = GEOID,
                   "tract_NAME" = NAME,
                   STATEFP,
