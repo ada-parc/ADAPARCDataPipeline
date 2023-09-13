@@ -15,13 +15,18 @@
 downloadSFOfCounties <- function(year, fips_codes_for_states) {
 
   sf <-
-    purrr::pmap_df(.l = fips_codes_for_states,
-        .f = ~(tigris::counties(state = ..1,
-                                cb = TRUE,
-                                year = year,
-                                class = "sf") %>%
-                 dplyr::rename("county_GEOID" = GEOID,
-                        "county_NAME" = NAME))) %>%
+    purrr::map(fips_codes_for_states,
+               ~ (tigris::counties(
+                 state = .x,
+                 cb = TRUE,
+                 year = year,
+                 class = "sf"
+               ))) %>%
+    dplyr::bind_rows() %>%
+    dplyr::rename("county_GEOID" = GEOID,
+                  "county_NAME" = NAME) %>%
+    dplyr::mutate(STATEFP = str_extract(county_GEOID, "^[0-9]{2}") %>%
+                    as.factor()) %>%
     dplyr::select(COUNTYFP, county_GEOID, county_NAME)
 
 return(sf)
