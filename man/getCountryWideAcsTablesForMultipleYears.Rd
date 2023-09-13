@@ -4,7 +4,13 @@
 \alias{getCountryWideAcsTablesForMultipleYears}
 \title{getCountryWideAcsTablesForMultipleYears}
 \usage{
-getCountryWideAcsTablesForMultipleYears(tables, years, survey)
+getCountryWideAcsTablesForMultipleYears(
+  tables,
+  years,
+  survey,
+  scope,
+  fips_codes_for_states = c()
+)
 }
 \arguments{
 \item{tables}{raw data extracted from an external source (not transformed). Must be an R object.}
@@ -12,6 +18,10 @@ getCountryWideAcsTablesForMultipleYears(tables, years, survey)
 \item{years}{name for the file}
 
 \item{survey}{ACS survey requested (ex. "acs1" or "acs5")}
+
+\item{scope}{The scope of the geography to request--for example, can be "tracts" to get census tract data, or can be "national," which will request both "state" and "us" geographies from the cesus}
+
+\item{fips_codes_for_states}{A list of FIPS codes to be used for lookup if the request will be made state-by-state}
 }
 \value{
 A dataframe of country-wide ACS data, in wide format, for both US and state-levels.

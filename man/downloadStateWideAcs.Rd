@@ -15,7 +15,7 @@ downloadStateWideAcs(
 \arguments{
 \item{tables}{array of strings, corresponding to the US Census tables to be downloaded}
 
-\item{geography}{the geography of the request; can be either "state" or "us".}
+\item{geography}{the geography of the request}
 
 \item{year}{year of data to download}
 
@@ -27,5 +27,5 @@ downloadStateWideAcs(
 A dataframe of downloaded ACS data, in wide format.
 }
 \description{
-Downloads and Formats ACS Tracts for the place geography
+Downloads and Formats ACS Tracts by state
 }

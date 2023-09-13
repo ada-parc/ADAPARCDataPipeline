@@ -4,7 +4,13 @@
 \alias{downloadCountryWideAcs}
 \title{downloadCountryWideAcs}
 \usage{
-downloadCountryWideAcs(tables, geography = "state", year, survey = "acs5")
+downloadCountryWideAcs(
+  tables,
+  geography,
+  year,
+  survey = "acs5",
+  fips_codes_for_states = c()
+)
 }
 \arguments{
 \item{tables}{array of strings, corresponding to the US Census tables to be downloaded}
@@ -14,6 +20,8 @@ downloadCountryWideAcs(tables, geography = "state", year, survey = "acs5")
 \item{year}{year of data to download}
 
 \item{survey}{specification of ACS survey type (ex. "acs5" or "acs1")}
+
+\item{fips_codes_for_states}{an optional list of state codes for ACS lookup if the geography must be requested state-by-state}
 }
 \value{
 A dataframe of downloaded ACS data, in wide format.
