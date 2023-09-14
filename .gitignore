@@ -6,7 +6,6 @@
 .Rproj.user
 
 *.pdf
-*.Rda
 *.shp
 *.dbf
 *.prj
@@ -14,4 +13,4 @@
 *.txt
 
 *.html
-analysis/data/raw/**
+analysis/data/**
