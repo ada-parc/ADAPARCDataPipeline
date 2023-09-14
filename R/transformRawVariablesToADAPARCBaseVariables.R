@@ -27,9 +27,16 @@ transformRawVariablesToADAPARCBaseVariables <- function(ada_parc_base_to_source_
 
 
     ada_parc_base_data <-
+
       raw_data %>%
       filter(year == year_for_filter) %>%
-      dplyr::select(GEOID, NAME, ABBR, year, tidyselect::all_of(in_scope_base_to_source_variables_map$source_var_code)) %>%
+      dplyr::select(
+        GEOID,
+        NAME,
+        dplyr::any_of(c("ABBR")),
+        year,
+        tidyselect::all_of(in_scope_base_to_source_variables_map$source_var_code)
+      ) %>%
       dplyr::rename_with(
         ~ ifelse(
           .x %in% in_scope_base_to_source_variables_map$source_var_code,
