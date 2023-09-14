@@ -21,10 +21,6 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
     df <- base_data %>%
       filter(year == year_for_filter) %>%
       dplyr::mutate(
-        GEOID = GEOID,
-        NAME = NAME,
-        ABBR = ABBR,
-        year = year,
         ### ----- D. Pop, PWD, PWOD -----
         # PWD
         pwd_pct = pwd_total / pop_total,
@@ -72,7 +68,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
           .cols = tidyselect::ends_with("pct"),
           .fns = ~ round(.x * 100, 2)
         ),
-        .keep = "none"
+        # .keep = "none"
       )
 
     return(df)
