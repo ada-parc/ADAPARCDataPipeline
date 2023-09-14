@@ -34,8 +34,8 @@ getCountryWideAcsTablesForMultipleYears <- function(tables, years, survey, scope
       full_country_data <- dplyr::bind_rows(acs_national_data, acs_state_data)
     }
 
-    if (scope == "tract") {
-      full_country_data <- downloadCountryWideAcs(tables_to_request, "tract", year, survey, fips_codes_for_states)
+    if (scope == "tract" | scope == "place") {
+      full_country_data <- downloadCountryWideAcs(tables_to_request, scope, year, survey, fips_codes_for_states)
     }
 
 
