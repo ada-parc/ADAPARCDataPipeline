@@ -27,7 +27,7 @@ downloadSFOfCounties <- function(year, fips_codes_for_states) {
                   "county_NAME" = NAME) %>%
     dplyr::mutate(STATEFP = str_extract(county_GEOID, "^[0-9]{2}") %>%
                     as.factor()) %>%
-    dplyr::select(COUNTYFP, county_GEOID, county_NAME)
+    dplyr::select(COUNTYFP, county_GEOID, county_NAME, STATEFP)
 
 return(sf)
 }
