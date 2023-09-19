@@ -15,5 +15,5 @@ splitPlacesSFByState(places, places_pop_est)
 a dataframe of places, split by state code
 }
 \description{
-Split a Places SF dataframe into a split dataframe according to states. Note: "Places" is a geography defined by the US Census.
+Split a Places SF dataframe into a split dataframe according to states. Note: "Places" is a geography defined by the US Census. We filter according to population that is 3500+
 }
