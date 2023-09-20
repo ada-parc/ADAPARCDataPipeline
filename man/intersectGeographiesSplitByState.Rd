@@ -4,19 +4,16 @@
 \alias{intersectGeographiesSplitByState}
 \title{intersectGeographiesSplitByState}
 \usage{
-intersectGeographiesSplitByState(
-  geography_split_by_state_1,
-  geography_split_by_state_2
-)
+intersectGeographiesSplitByState(places_sf, tracts_sf)
 }
 \arguments{
-\item{geography_split_by_state_1}{a dataframe (type SF) that is split by state}
+\item{places_sf}{a dataframe (type SF) that is split by state}
 
-\item{geography_split_by_state_2}{a dataframe (type SF) that is split by state}
+\item{tracts_sf}{a dataframe (type SF) that is split by state}
 }
 \value{
 a dataframe that combines
 }
 \description{
-Intersect two SF dataframes that are split by states
+Intersect two SF dataframes that are split by states. They will be intersected, left-right. The two dataframes must be of the same length.
 }
