@@ -2,7 +2,6 @@
 
 config_values <- config::get()
 year <- config_values$acs$years[1]
-rm(config_values)
 
 # Get FIPS
 
