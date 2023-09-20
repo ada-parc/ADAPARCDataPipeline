@@ -2,7 +2,6 @@ message("Finding intersection of places and tracts")
 
 # Bring raw extracted data files into the environment
 places_sf_raw <- readRawExtractedDataFile("places_sf")
-# counties_sf_raw <- readRawExtractedDataFile("counties_sf")
 tracts_sf_raw <- readRawExtractedDataFile("tracts_sf")
 
 # Note: While this is somewhat breaking our pattern of transformations that are specific to the data source (pulling in place ACS data), it will filter out a significant number of places (as of 2022, we filter places to have populations of 3500+, we drop 23549 places). This offers notable performance improvements.
@@ -16,11 +15,6 @@ tracts_split <- split(tracts_sf_raw, tracts_sf_raw$STATEFP)
 
 
 # Combine Places with both Counties and Tracts
-# TODO: NEED TO UPDATE THE INTERSECTGEOGRAHPIES FUNCTION TO CLARIFY WHAT IT DOES
-# TODO: places don't neatly intersect counties. However, census tracts do.
-# places_counties <- intersectGeographiesSplitByState(places_split, counties_split)
-
-
 start_time <- Sys.time()
 
 places_tracts <- intersectGeographiesSplitByState(places_split, tracts_split)
