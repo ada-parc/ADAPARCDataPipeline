@@ -20,11 +20,11 @@ source(here::here("analysis", "scripts", "extract", "city_import_tigris.R"))
 
 
 # Transformations (until the "final" script, execution of these scripts are independent and can be run in any order)
-source(here::here("analysis", "data", "transform", "national_transform_acs"))
+source(here::here("analysis", "scripts", "transform", "national_transform_acs.R"))
 
-source(here::here("analysis", "data", "transform", "city_transform_tigris")) # Dependency on "places_pop_est" to filter out locations and improve performance
-source(here::here("analysis", "data", "transform", "city_transform_acs"))
-source(here::here("analysis", "data", "transform", "city_transform_final")) # Combines outputs from previous "city_transform_*" scripts; must run last
+source(here::here("analysis", "scripts", "transform", "city_transform_tigris.R")) # Dependency on "places_pop_est" to filter out locations and improve performance
+source(here::here("analysis", "scripts", "transform", "city_transform_acs.R"))
+source(here::here("analysis", "scripts", "transform", "city_transform_final.R")) # Combines outputs from previous "city_transform_*" scripts; must run last
 
 
 # Load
