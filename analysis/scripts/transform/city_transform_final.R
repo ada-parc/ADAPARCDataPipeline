@@ -7,7 +7,7 @@ saveFinalDataFile(place_tract_county_map, "dict_location_crosswalk")
 
 city_place_data_processed <- readTransformedExtractedDataFile("city_place_data_processed")
 
-# Have to filter the city_place_data_processed so that it's relevant to cities we will show on the webiste
+# Filter the city_place_data_processed so that it's relevant to cities we will show on the website
 city_place_data_final <-
   city_place_data_processed %>%
   filter(GEOID %in% place_tract_county_map$place_GEOID)
@@ -17,4 +17,7 @@ saveFinalDataFile(city_place_data_processed, "city_place_full")
 
 
 city_tracts_data_final <- readTransformedExtractedDataFile("city_tracts_data_processed")
-saveFinalDataFile(city_tracts_data_final, "tract_data")
+saveFinalDataFile(city_tracts_data_final, "tracts_data")
+
+
+saveFinalDataFile(readRawExtractedDataFile("tracts_sf"), "tracts_sf")
