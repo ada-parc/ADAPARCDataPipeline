@@ -6,16 +6,16 @@ rm(config_values)
 
 # download ----
 demographics_tables <- c("S1810")
-raw_national_acs_demographics <- getCountryWideAcsTablesForMultipleYears(demographics_tables, years, national, survey)
+raw_national_acs_demographics <- getCountryWideAcsTablesForMultipleYears(tables = demographics_tables, years = years, , survey = survey, scope = "national")
 
 
 living_tables <- c("S1810", "S2601A", "S2602", "B26108")
-raw_national_acs_living <- getCountryWideAcsTablesForMultipleYears(living_tables, years, national, survey)
+raw_national_acs_living <- getCountryWideAcsTablesForMultipleYears(tables = living_tables, years = years, , survey = survey, scope = "national")
 
 
 
 participation_tables <- c("S1810", "S1811", "B18135")
-raw_national_acs_participation <- getCountryWideAcsTablesForMultipleYears(participation_tables, years, national, survey)
+raw_national_acs_participation <- getCountryWideAcsTablesForMultipleYears(tables = participation_tables, years = years, , survey = survey, scope = "national")
 
 
 
@@ -29,7 +29,7 @@ economic_tables <- c("S1810",
                      "C18121",
                      "C18130")
 
-raw_national_acs_economic <- getCountryWideAcsTablesForMultipleYears(economic_tables, years, national, survey)
+raw_national_acs_economic <- getCountryWideAcsTablesForMultipleYears(tables = economic_tables, years = years, , survey = survey, scope = "national")
 
 
 # export ----
