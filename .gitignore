@@ -14,3 +14,4 @@
 
 *.html
 #analysis/data/** # Note: No file on GitHub can be bigger than 100MB. If files are larger than that, do not commit.
+analysis/data/raw/
