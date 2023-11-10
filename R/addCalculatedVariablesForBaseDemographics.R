@@ -38,10 +38,11 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
 
         ### ----- D. Race/Ethnicity -----
 
-        pwd_other = pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
+        pwd_other = (pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
           pwd_other_nativehawaiian_otherpacificislander + # Native Hawaiian and Other Pacific Islander alone
-          pwd_other_other_race,
-        # Some other race alone
+          pwd_other_other_race + # Some other race alone
+          pwd_multiple # Multiple
+          ),
         ### Percents
         pwd_white_pct = pwd_white / pop_total,
         pwd_black_pct = pwd_black / pop_total,
