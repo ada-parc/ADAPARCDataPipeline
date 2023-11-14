@@ -64,15 +64,22 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_cognitive_pct = pwd_cognitive / pop_total,
         pwd_ambulatory_pct = pwd_ambulatory / pop_total,
         pwd_selfcare_pct = pwd_selfcare / pop_total,
-        pwd_indliving_pct = pwd_indliving / pop_total,
-        dplyr::across(
-          .cols = tidyselect::ends_with("pct"),
-          .fns = ~ round(.x * 100, 2)
-        ),
+        pwd_indliving_pct = pwd_indliving / pop_total
         # .keep = "none"
       ) %>%
       ### ---- Commute ------
-    { if ("pwd_total_commute" %in% colnames(.)) mutate(pwd_car_commute = (pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100))) else .}
+    { if ("pwd_total_commute" %in% colnames(.))
+      mutate(.,
+             pwd_car_commute = pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100),
+             pwd_pub_transit = pwd_total_commute * (pwd_commute_public_pct / 100),
+             pwd_walk_bike = pwd_total_commute * ((pwd_commute_walk + pwd_commute_taxi_car_bike_etc) / 100),
+             pwd_wfh = pwd_total_commute * (pwd_grtoeq_16_wfh_pct / 100),
+             dplyr::across(
+               .cols = tidyselect::ends_with("pct"),
+               .fns = ~ round(.x * 100, 2)
+             )
+        )
+      else .}
 
     return(df)
   }
