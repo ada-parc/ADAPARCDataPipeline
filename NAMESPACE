@@ -2,6 +2,7 @@
 
 import(dplyr)
 import(here)
+import(httr)
 import(magrittr)
 import(purrr)
 import(readxl)

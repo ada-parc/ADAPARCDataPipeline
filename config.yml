@@ -2,3 +2,5 @@ default:
   acs:
     years: [2021]
     survey: acs5
+  hud:
+    years: [2022]
