@@ -15,6 +15,7 @@
 
 # Extractions (these are all independent and can be run in any order)
 source(here::here("analysis", "scripts", "extract", "national_import_acs.R"))
+source(here::here("analysis", "scripts", "extract", "national_import_hud.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_acs.R"))
 source(here::here("analysis", "scripts", "extract", "city_import_tigris.R"))
 
