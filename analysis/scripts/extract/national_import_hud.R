@@ -3,4 +3,6 @@ years <- config::get("hud")$years
 
 national_hud <- getNationalHudForMultipleYears(years)
 
-saveRawExtractedDataFile(data, "national_hud")
+saveRawExtractedDataFile(national_hud, "national_hud")
+
+rm(list = ls())
