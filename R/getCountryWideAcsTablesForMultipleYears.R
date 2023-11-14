@@ -3,7 +3,7 @@
 #' Description
 #'
 #' @param tables raw data extracted from an external source (not transformed). Must be an R object.
-#' @param years name for the file
+#' @param years the years of data to retrieve
 #' @param survey ACS survey requested (ex. "acs1" or "acs5")
 #' @param scope The scope of the geography to request--for example, can be "tracts" to get census tract data, or can be "national," which will request both "state" and "us" geographies from the cesus
 #' @param fips_codes_for_states A list of FIPS codes to be used for lookup if the request will be made state-by-state
