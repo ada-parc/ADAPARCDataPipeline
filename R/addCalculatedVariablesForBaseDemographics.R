@@ -69,7 +69,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
       ) %>%
 
       ### ---- Commute ------
-    { if ("pwd_total_commute" %in% colnames(.))
+    { if ("pwd_total_commute" %in% colnames(.)) # This var isn't present in all geographies
       mutate(.,
              pwd_car_commute = pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100),
              pwd_car_commute_pct = pwd_car_commute / pwd_total_commute,
