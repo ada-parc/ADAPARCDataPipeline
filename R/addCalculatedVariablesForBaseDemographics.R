@@ -72,7 +72,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         # .keep = "none"
       ) %>%
       ### ---- Commute ------
-    { if ("pwd_total_commute" %in% colnames()) mutate(pwd_car_commute = (pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100))) else .}
+    { if ("pwd_total_commute" %in% colnames(.)) mutate(pwd_car_commute = (pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100))) else .}
 
     return(df)
   }
