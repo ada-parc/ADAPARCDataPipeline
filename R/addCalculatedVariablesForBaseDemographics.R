@@ -67,13 +67,19 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_indliving_pct = pwd_indliving / pop_total
         # .keep = "none"
       ) %>%
+
       ### ---- Commute ------
     { if ("pwd_total_commute" %in% colnames(.))
       mutate(.,
              pwd_car_commute = pwd_total_commute * ((pwd_commute_car_alone_pct + pwd_commute_carpool) / 100),
+             pwd_car_commute_pct = pwd_car_commute / pwd_total_commute,
              pwd_pub_transit = pwd_total_commute * (pwd_commute_public_pct / 100),
+             pwd_pub_transit_pct = pwd_commute_public_pct,
              pwd_walk_bike = pwd_total_commute * ((pwd_commute_walk + pwd_commute_taxi_car_bike_etc) / 100),
+             pwd_walk_bike_pct = pwd_walk_bike / pwd_total_commute,
              pwd_wfh = pwd_total_commute * (pwd_grtoeq_16_wfh_pct / 100),
+             pwd_wfh_pct = pwd_grtoeq_16_wfh_pct,
+
              dplyr::across(
                .cols = tidyselect::ends_with("pct"),
                .fns = ~ round(.x * 100, 2)
