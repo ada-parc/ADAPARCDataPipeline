@@ -21,8 +21,8 @@ transformNationalHudData <- function(hud_data) {
                  ) %>% replace_na(0)),
                  NAME = sub("^[A-Z]{2} |^[A-Z]{2}$", "", States) # This allows for the name of the state to be extracted; will be used to join to other data later on
     ) %>%
-    dplyr::select(NAME, program_label, total_pct_disabled) %>%
-    dplyr::group_by(NAME, program_label) %>%
+    dplyr::select(NAME, program_label, total_pct_disabled, year) %>%
+    dplyr::group_by(NAME, program_label, year) %>%
     dplyr::summarise(total_pct_disabled = (sum(ifelse(is.na(total_pct_disabled), 0, total_pct_disabled), na.rm = TRUE)) * 100) %>%
     tidyr::pivot_wider(names_from = program_label, values_from = total_pct_disabled) %>%
     dplyr::rename(pwd_housing_choice_voucher_pct = `Housing Choice Vouchers`, pwd_pubhousing_pct = `Public Housing`) %>%
