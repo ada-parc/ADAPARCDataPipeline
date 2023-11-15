@@ -79,13 +79,13 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
              pwd_walk_bike_pct = pwd_walk_bike / pwd_total_commute,
              pwd_wfh = pwd_total_commute * (pwd_grtoeq_16_wfh_pct / 100),
              pwd_wfh_pct = pwd_grtoeq_16_wfh_pct,
-
-             dplyr::across(
-               .cols = tidyselect::ends_with("pct"),
-               .fns = ~ round(.x * 100, 2)
-             )
         )
-      else .}
+      else .} %>%
+
+     dplyr::mutate(dplyr::across(
+        .cols = tidyselect::ends_with("pct"),
+        .fns = ~ round(.x * 100, 2)
+      )) # Have to put this at the end so that we appropriately calculate all pct, regardless of whether it has "pwd_total_commute" data or not
 
     return(df)
   }
