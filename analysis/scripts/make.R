@@ -22,6 +22,7 @@ source(here::here("analysis", "scripts", "extract", "city_import_tigris.R"))
 
 # Transformations (until the "final" script, execution of these scripts are independent and can be run in any order)
 source(here::here("analysis", "scripts", "transform", "national_transform_acs.R"))
+source(here::here("analysis", "scripts", "transform", "national_transform_hud.R"))
 source(here::here("analysis", "scripts", "transform", "national_transform_final.R"))
 
 
