@@ -1,14 +1,15 @@
 # Read transformed data files
 demographics <- readTransformedExtractedDataFile("transformed_acs_demographics")
 
-community_living <- readTransformedExtractedDataFile("transformed_acs_community_living")
+acs_community_living <- readTransformedExtractedDataFile("transformed_acs_community_living")
+
+hud_community_living <- readTransformedExtractedDataFile("transformed_hud_data")
+
+community_living <- dplyr::left_join(acs_community_living, hud_community_living)
 
 work_economic <- readTransformedExtractedDataFile("transformed_acs_work_economic")
 
 community_participation <- readTransformedExtractedDataFile("transformed_acs_community_participation")
-
-
-#TODO: add hud data
 
 
 # Save final data files
