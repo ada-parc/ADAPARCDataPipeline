@@ -40,7 +40,7 @@ getNationalHudForMultipleYears <- function(years) {
     # Read the first sheet of the Excel file directly from the temporary file
     data <- readxl::read_excel(tf, sheet = 1) %>%
       dplyr::select(all_of(columns_to_keep)) %>%
-      dplyr::mutate(year = year,
+      dplyr::mutate(year = as.numeric(year),
         across(starts_with("pct_"), ~ ifelse(. < 0, NA, . / 100)))# Function to replace negative values with NA and convert to proportion
 
 

@@ -81,11 +81,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
              pwd_wfh_pct = pwd_grtoeq_16_wfh_pct,
         )
       else .} %>%
-
-     dplyr::mutate(dplyr::across(
-        .cols = tidyselect::ends_with("pct"),
-        .fns = ~ round(.x * 100, 2)
-      )) # Have to put this at the end so that we appropriately calculate all pct, regardless of whether it has "pwd_total_commute" data or not
+      formatPctAndNonPctData(.)
 
     return(df)
   }

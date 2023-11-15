@@ -19,7 +19,7 @@ getADAPARCBaseToSourceVariableMap <- function(years) {
 
     df <- readxl::read_xlsx(here::here("analysis", "data", "ada_parc_base_variables_mapped_to_source_variables.xlsx"),
                       sheet = sheet_name) %>%
-      mutate(year = year)
+      dplyr::mutate(year = as.numeric(year))
   }
 
 

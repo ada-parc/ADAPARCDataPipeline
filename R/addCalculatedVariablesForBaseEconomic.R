@@ -24,7 +24,7 @@ addCalculatedVariablesForBaseEconomic <- function(base_data) {
         GEOID = GEOID,
         NAME = NAME,
         ABBR = ABBR,
-
+        year = year,
         ### ----- WE. Pop, PWD, PWOD -----
         # Pop
         pop_total = pop_total,
@@ -121,8 +121,7 @@ addCalculatedVariablesForBaseEconomic <- function(base_data) {
         pwod_grtoeq_16_wfh_pct = pwod_grtoeq_16_wfh_pct / 100,
         .keep = "none"
       ) %>%
-      mutate(across(.cols = ends_with("pct"), .fns = ~ round(.x * 100, 2)))
-
+      formatPctAndNonPctData(.)
 
     return(df)
   }

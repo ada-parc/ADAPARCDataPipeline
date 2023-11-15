@@ -111,7 +111,7 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
         pwod_corrections_pct = pwod_corrections / pwod_grpquarters,
         .keep = "none"
       ) %>%
-      mutate(across(.cols = ends_with("pct"), .fns = ~ round(.x * 100, 2)))
+      formatPctAndNonPctData(.)
 
     return(df)
   }

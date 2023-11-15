@@ -130,7 +130,7 @@ addCalculatedVariablesForBaseParticipation <- function(base_data) {
         pwd_degree_grtoeq_ba = pwd_degree_grtoeq_ba_pct * pwd_pop_educ,
         pwod_degree_grtoeq_ba = pwod_degree_grtoeq_ba_pct * pwod_pop_educ
       ) %>%
-      mutate(across(.cols = ends_with("pct"),.fns = ~ round(.x * 100, 2)))
+      formatPctAndNonPctData(.)
 
 return(df)
 }

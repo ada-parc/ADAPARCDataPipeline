@@ -18,6 +18,9 @@ city_place_data_base <-  transformRawVariablesToADAPARCBaseVariables(ada_parc_ba
 
 city_place_data_processed <- addCalculatedVariablesForBaseDemographics(city_place_data_base)
 
+# Checking for Albany (place GEOID: 36001000202)
+
+
 saveTransformedDataFile(city_place_data_processed, "city_place_data_processed")
 
 # Create "tracts_data" for the website:

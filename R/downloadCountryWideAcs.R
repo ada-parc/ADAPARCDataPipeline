@@ -76,7 +76,7 @@ downloadCountryWideAcs <- function(tables, geography, year, survey = "acs5", fip
       values_from = c(estimate))
   ) %>%
     purrr::reduce(left_join) %>%
-    dplyr::mutate(year = year)
+    dplyr::mutate(year = as.numeric(year))
 
   if (geography == "state") {
     df <- df %>%
@@ -88,7 +88,7 @@ downloadCountryWideAcs <- function(tables, geography, year, survey = "acs5", fip
           ) %>%
           dplyr::select(NAME = state.name, ABBR = state.abb)
       ) %>%
-      dplyr::select(GEOID, NAME, ABBR, everything())
+      dplyr::select(GEOID, NAME, ABBR, year, everything())
   }
 
   if (geography == "us") {
