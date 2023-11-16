@@ -7,11 +7,12 @@
 #' @return formatted df
 #'
 #' @import dplyr
+#' @import scales
 formatPctAndNonPctData <- function(df) {
 
   formatted_df <- df %>%
     dplyr::mutate(dplyr::across(where(is.numeric) & !year & !dplyr::ends_with("_pct"),
-                                ~ scales::comma(.))) %>%
+                                ~ scales::comma(round(.)))) %>%
     dplyr::mutate(dplyr::across(dplyr::ends_with("_pct"),
                                 ~ as.numeric(.))) %>%
     dplyr::mutate(dplyr::across(dplyr::ends_with("_pct"),
