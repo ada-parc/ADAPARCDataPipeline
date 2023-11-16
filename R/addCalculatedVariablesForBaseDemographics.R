@@ -40,9 +40,13 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
 
         pwd_other = (pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
           pwd_other_nativehawaiian_otherpacificislander + # Native Hawaiian and Other Pacific Islander alone
-          pwd_other_other_race + # Some other race alone
-          pwd_multiple # Multiple
+          pwd_other_other_race # Some other race alone
           ),
+        pwd_other_multiple = (pwd_other_americanindian_alaskanative + # American Indian and Alaska Native alone
+                                pwd_other_nativehawaiian_otherpacificislander + # Native Hawaiian and Other Pacific Islander alone
+                                pwd_other_other_race + # Some other race alone
+                                pwd_multiple # Multiple
+        ),
         ### Percents of total population
         pwd_white_pct = pwd_white / pop_total,
         pwd_black_pct = pwd_black / pop_total,
@@ -60,6 +64,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_white_nonhisp_dis_pct = pwd_white_nonhisp / pwd_total,
         pwd_other_dis_pct = pwd_other / pwd_total,
         pwd_multiple_dis_pct = pwd_multiple / pwd_total,
+        pwd_other_multiple_dis_pct = pwd_other_multiple / pwd_total,
 
         ### ----- D. Gender -----
         female_pwd_pct = pwd_female / pop_female,
