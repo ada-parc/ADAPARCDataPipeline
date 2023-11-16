@@ -2,9 +2,7 @@
 demographics <- readTransformedExtractedDataFile("transformed_acs_demographics")
 
 acs_community_living <- readTransformedExtractedDataFile("transformed_acs_community_living")
-
 hud_community_living <- readTransformedExtractedDataFile("transformed_hud_data")
-
 community_living <- dplyr::left_join(acs_community_living, hud_community_living)
 
 work_economic <- readTransformedExtractedDataFile("transformed_acs_work_economic")

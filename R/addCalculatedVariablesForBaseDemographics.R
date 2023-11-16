@@ -43,7 +43,7 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
           pwd_other_other_race + # Some other race alone
           pwd_multiple # Multiple
           ),
-        ### Percents
+        ### Percents of total population
         pwd_white_pct = pwd_white / pop_total,
         pwd_black_pct = pwd_black / pop_total,
         pwd_hisp_pct = pwd_hisp / pop_total,
@@ -51,6 +51,15 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_white_nonhisp_pct = pwd_white_nonhisp / pop_total,
         pwd_other_pct = pwd_other / pop_total,
         pwd_multiple_pct = pwd_multiple / pop_total,
+
+        # Percents of total disabled population
+        pwd_white_dis_pct = pwd_white / pwd_total,
+        pwd_black_dis_pct = pwd_black / pwd_total,
+        pwd_hisp_dis_pct = pwd_hisp / pwd_total,
+        pwd_asian_dis_pct = pwd_asian / pwd_total,
+        pwd_white_nonhisp_dis_pct = pwd_white_nonhisp / pwd_total,
+        pwd_other_dis_pct = pwd_other / pwd_total,
+        pwd_multiple_dis_pct = pwd_multiple / pwd_total,
 
         ### ----- D. Gender -----
         female_pwd_pct = pwd_female / pop_female,
@@ -64,9 +73,15 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_cognitive_pct = pwd_cognitive / pop_total,
         pwd_ambulatory_pct = pwd_ambulatory / pop_total,
         pwd_selfcare_pct = pwd_selfcare / pop_total,
-        pwd_indliving_pct = pwd_indliving / pop_total
+        pwd_indliving_pct = pwd_indliving / pop_total,
+
+
+        # Other labor data -- this is confusing, but we currently don't pull the correct tables for pwd_not_labor and need this data available; constructing using what we have from the acs5/subject table (this is what has been done historically; we can revisit).
+        pwd_not_in_labor_force = pwd_16_plus_subj - pop_total_employed_16_plus
+
         # .keep = "none"
       ) %>%
+
 
       ### ---- Commute ------
     { if ("pwd_total_commute" %in% colnames(.)) # This var isn't present in all geographies
@@ -75,10 +90,12 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
              pwd_car_commute_pct = pwd_car_commute / pwd_total_commute,
              pwd_pub_transit = pwd_total_commute * (pwd_commute_public_pct / 100),
              pwd_pub_transit_pct = pwd_commute_public_pct,
+             pwd_pub_transit_dis_pct = pwd_pub_transit / pwd_total_commute,
              pwd_walk_bike = pwd_total_commute * ((pwd_commute_walk + pwd_commute_taxi_car_bike_etc) / 100),
              pwd_walk_bike_pct = pwd_walk_bike / pwd_total_commute,
              pwd_wfh = pwd_total_commute * (pwd_grtoeq_16_wfh_pct / 100),
              pwd_wfh_pct = pwd_grtoeq_16_wfh_pct,
+             pwd_wfh_dis_pct = pwd_wfh / pwd_total_commute,
         )
       else .} %>%
       formatPctAndNonPctData(.)

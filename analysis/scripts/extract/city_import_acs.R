@@ -14,7 +14,7 @@ places_data_acs_raw <- getCountryWideAcsTablesForMultipleYears(tables, years, su
 
 
 # Tracts data download
-tables <- c("S1810")
+tables <- c("S1810", "S1811")
 tracts_data_acs_raw <- getCountryWideAcsTablesForMultipleYears(tables, years, survey, "tract", fips_for_state)
 
 
