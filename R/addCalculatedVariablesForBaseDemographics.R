@@ -80,13 +80,15 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_selfcare_pct = pwd_selfcare / pop_total,
         pwd_indliving_pct = pwd_indliving / pop_total,
 
-
-        # Other labor data -- this is confusing, but we currently don't pull the correct tables for pwd_not_labor and need this data available; constructing using what we have from the acs5/subject table (this is what has been done historically; we can revisit).
-        pwd_not_in_labor_force = pwd_16_plus_subj - pop_total_employed_16_plus
-
         # .keep = "none"
       ) %>%
 
+      { if ("pwd_16_plus_subj" %in% colnames(.) &
+           "pop_total_employed_16_plus" %in% colnames(.))
+        # Other labor data -- this is confusing, but we currently don't pull the correct tables for pwd_not_labor and need this data available; constructing using what we have from the acs5/subject table (this is what has been done historically; we can revisit).
+        mutate(.,
+               pwd_not_in_labor_force = pwd_16_plus_subj - pop_total_employed_16_plus)
+        else .} %>%
 
       ### ---- Commute ------
     { if ("pwd_total_commute" %in% colnames(.)) # This var isn't present in all geographies
