@@ -39,6 +39,7 @@ addCalculatedVariablesForBaseEconomic <- function(base_data) {
         pop_19_64 = pop_19_64,
         # Not the same as the instructions spreadsheet; used this instead to keep calculations in same universe
         pwd_19_64 = pwd_19_64,
+        pwd_19_64_pct = pwd_19_64 / pop_19_64,
         pwod_19_64 = pop_19_64 - pwd_19_64,
         pwd_employed_subj = pwd_employed_subj,
         pwod_employed = pwod_employed,
