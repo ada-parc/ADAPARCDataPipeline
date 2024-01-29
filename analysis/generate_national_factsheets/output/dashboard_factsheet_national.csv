@@ -1,0 +1,36 @@
+national_dropdown_label,output_file
+People with and without Disabilities,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/001_PeoplewithandwithoutDisabilities.pdf
+Type: Hearing Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/002_TypeHearingDisability.pdf
+Type: Vision Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/003_TypeVisionDisability.pdf
+Type: Cognitive Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/004_TypeCognitiveDisability.pdf
+Type: Mobility Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/005_TypeMobilityDisability.pdf
+Type: Self Care Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/006_TypeSelfCareDisability.pdf
+Type: Independent Living Disability,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/007_TypeIndependentLivingDisability.pdf
+Race & Ethnicity: White,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/008_Race&EthnicityWhite.pdf
+Race & Ethnicity: Black or African American,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/009_Race&EthnicityBlackorAfricanAmerican.pdf
+Race & Ethnicity: Hispanic,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/010_Race&EthnicityHispanic.pdf
+Race & Ethnicity: Asian,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/011_Race&EthnicityAsian.pdf
+Race & Ethnicity: Some other race,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/012_Race&EthnicitySomeotherrace.pdf
+Race & Ethnicity: Two or more races,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/013_Race&EthnicityTwoormoreraces.pdf
+Age: Age 18 - 64,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/014_AgeAge1864.pdf
+Age: Age 65 and Older,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/015_AgeAge65andOlder.pdf
+Sex: Female,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/016_SexFemale.pdf
+Sex: Male,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/017_SexMale.pdf
+Living Situation: Living at Home in Community,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/018_LivingSituationLivingatHomeinCommunity.pdf
+Living Situation: Living in Group Quarters in Community,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/019_LivingSituationLivinginGroupQuartersinCommunity.pdf
+Living Situation: Living in an Institution,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/020_LivingSituationLivinginanInstitution.pdf
+"Institution: Living in Nursing Homes, Age 18 - 64",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/021_InstitutionLivinginNursingHomesAge1864.pdf
+Institution: Living in Correctional Facilities,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/022_InstitutionLivinginCorrectionalFacilities.pdf
+"Insurance: No Health Insurance, Age 19-64",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/023_InsuranceNoHealthInsuranceAge1964.pdf
+"Insurance: with Health Insurance, Age 19-64",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/024_InsurancewithHealthInsuranceAge1964.pdf
+Transportation: Uses Public Transportation to work,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/025_TransportationUsesPublicTransportationtowork.pdf
+Transportation: Uses Own Vehicle to work,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/026_TransportationUsesOwnVehicletowork.pdf
+"Education: No High School Diploma or Equivalent, Age 25 and above",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/027_EducationNoHighSchoolDiplomaorEquivalentAge25andabove.pdf
+"Education: High School Diploma or Equivalent, Age 25 and above",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/028_EducationHighSchoolDiplomaorEquivalentAge25andabove.pdf
+"Education: Bachelors Degree or Higher, Age 25 and above",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/029_EducationBachelorsDegreeorHigherAge25andabove.pdf
+Poverty: Living Below Poverty,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/030_PovertyLivingBelowPoverty.pdf
+"Income: Median Income, age 16 and older ($)",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/031_IncomeMedianIncomeage16andolder($).pdf
+Employment: Employed,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/032_EmploymentEmployed.pdf
+Employment: Unemployed,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/033_EmploymentUnemployed.pdf
+Employment: Not in Labor Force,https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/034_EmploymentNotinLaborForce.pdf
+"Employment: Work from Home , age 16 or older",https://raw.githubusercontent.com/ada-parc/ADA-PARC-Website-Design/master/factsheet_national/output_files/035_EmploymentWorkfromHomeage16orolder.pdf

@@ -1,4 +1,3 @@
-*.Rproj
 .Rproj.user/**
 .Rhistory
 .RData
@@ -7,7 +6,6 @@
 .Rproj.user
 
 *.pdf
-*.Rda
 *.shp
 *.dbf
 *.prj
@@ -15,3 +13,8 @@
 *.txt
 
 *.html
+
+# Note: No file on GitHub can be bigger than 100MB. If files are larger than that, do not commit.
+analysis/data/raw/*
+analysis/data/processed/*
+analysis/data/final/*
