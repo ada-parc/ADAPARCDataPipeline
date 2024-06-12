@@ -27,7 +27,7 @@ addACSCalculatedVariables <- function(base_data) {
         year = year,
         ### ----- D. Pop, PWD, PWOD -----
         # PWD
-        pwd_pct = pwd_total / pop_total,
+        pwd_pct = (pwd_total / pop_total),
         # PWOD
         pwod_total = pop_total - pwd_total,
         pwod_pct = pwod_total / pop_total,
@@ -84,20 +84,7 @@ addACSCalculatedVariables <- function(base_data) {
         pwd_selfcare_pct = pwd_selfcare / pop_total,
         pwd_indliving_pct = pwd_indliving / pop_total,
 
-        ### ----- WE. Pop, PWD, PWOD -----
-        # Pop
-        pop_total = pop_total,
-        # PWD
-        pwd_total = pwd_total,
-        pwd_pct = pwd_total / pop_total,
-        # PWOD
-        pwod_total = pop_total - pwd_total,
-        pwod_pct = pwod_total / pop_total,
-
         ### ----- WE. Employment Status -----
-        pop_19_64 = pop_19_64,
-        # Not the same as the instructions spreadsheet; used this instead to keep calculations in same universe
-        pwd_19_64 = pwd_19_64,
         pwd_19_64_pct = pwd_19_64 / pop_19_64,
         pwod_19_64 = pop_19_64 - pwd_19_64,
         pwd_employed_subj = pwd_employed_subj,
@@ -114,9 +101,6 @@ addACSCalculatedVariables <- function(base_data) {
         pwod_notlabor_pct = pwod_notlabor / pwod_19_64,
 
         ### ----- WE. Poverty Status -----
-        ### the first two vars here have been renamed "pop_total_class_18_64" and "pwd_class_18_64"
-        ### and "pwod_class_18_64"
-        #TODO: If combining all datasets, need pop_total_class_18_64 and pwd_class_18_64 to get unique names, since they have some confusing similar variables elsewhere
         pop_total_class_18_64 = pop_total_class_18_64,
         pwd_class_18_64 = pwd_class_18_64,
         pwod_class_18_64 = pwod_class_18_64,
@@ -184,9 +168,9 @@ addACSCalculatedVariables <- function(base_data) {
         # Must use table S2601A since it is total population
         # Rather than civilian noninstitutionalized as is ACS default
         pop_total_grpquarters = pop_total_grpquarters,
-        pwd_pct = pwd_pct / 100,
-        pwd_total_grpquarters = round(pop_total_grpquarters * pwd_pct, 0),
-        pwod_total = pop_total_grpquarters - pwd_total_grpquarters,
+        pwd_pct_grpquarters = pwd_pct / 100,
+        pwd_total_grpquarters = round(pop_total_grpquarters * pwd_grpquarters_pct, 0),
+        pwod_total_grpquarters = pop_total_grpquarters - pwd_total_grpquarters,
 
         ### ----- CL. Group Quarters -----
         # ***NOTE: Group quarters sometimes uses a different universe for calculating percentages.
@@ -264,8 +248,6 @@ addACSCalculatedVariables <- function(base_data) {
         ### ----- CP. Health Insurance -----
 
         ### ----- CP. Insured/Uninsured, 19-64 -----
-        pop_19_64 = pop_19_64,
-        pwd_19_64 = pwd_19_64,
         pwd_19_64_insured = pwd_19_64_insured,
         pwd_19_64_insured_private = pwd_19_64_insured_private,
         pwd_19_64_insured_public = pwd_19_64_insured_public,
