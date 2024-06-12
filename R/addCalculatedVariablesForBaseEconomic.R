@@ -57,18 +57,18 @@ addCalculatedVariablesForBaseEconomic <- function(base_data) {
         ### ----- WE. Poverty Status -----
         ### the first two vars here have been renamed "pop_total_class_18_64" and "pwd_class_18_64"
         ### and "pwod_class_18_64"
-        #TODO: If combining all datasets, need pop_18_64 and pwd_18_64 to get unique names, since they have some confusing similar variables elsewhere
-        pop_18_64 = pop_total_class_18_64,
-        pwd_18_64 = pwd_class_18_64,
-        pwod_18_64 = pwod_class_18_64,
+        #TODO: If combining all datasets, need pop_total_class_18_64 and pwd_class_18_64 to get unique names, since they have some confusing similar variables elsewhere
+        pop_total_class_18_64 = pop_total_class_18_64,
+        pwd_class_18_64 = pwd_class_18_64,
+        pwod_class_18_64 = pwod_class_18_64,
         pwd_below_poverty = pwd_below_poverty,
         pwod_below_poverty = pwod_below_poverty,
         pwd_atorabove_poverty = pwd_atorabove_poverty,
         pwod_atorabove_poverty = pwod_atorabove_poverty,
-        pwd_below_poverty_pct = pwd_below_poverty / pwd_18_64,
-        pwod_below_poverty_pct = pwod_below_poverty / pwod_18_64,
-        pwd_atorabove_poverty_pct = pwd_atorabove_poverty / pwd_18_64,
-        pwod_atorabove_poverty_pct = pwod_atorabove_poverty / pwod_18_64,
+        pwd_below_poverty_pct = pwd_below_poverty / pwd_class_18_64,
+        pwod_below_poverty_pct = pwod_below_poverty / pwod_class_18_64,
+        pwd_atorabove_poverty_pct = pwd_atorabove_poverty / pwd_class_18_64,
+        pwod_atorabove_poverty_pct = pwod_atorabove_poverty / pwod_class_18_64,
 
         ### ----- WE. Housing Affordability -----
         ### Mortgage

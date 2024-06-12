@@ -29,10 +29,10 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
         ### ----- CL. Pop, PWD, PWOD -----
         # Must use table S2601A since it is total population
         # Rather than civilian noninstitutionalized as is ACS default
-        pop_total = pop_total_grpquarters,
+        pop_total_grpquarters = pop_total_grpquarters,
         pwd_pct = pwd_pct / 100,
-        pwd_total = round(pop_total * pwd_pct, 0),
-        pwod_total = pop_total - pwd_total,
+        pwd_total_grpquarters = round(pop_total_grpquarters * pwd_pct, 0),
+        pwod_total = pop_total_grpquarters - pwd_total_grpquarters,
 
         ### ----- CL. Group Quarters -----
         # ***NOTE: Group quarters sometimes uses a different universe for calculating percentages.
@@ -47,7 +47,7 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
         pop_grpquarters = pop_grpquarters,
         pwd_grpquarters_pct = pwd_grpquarters_pct / 100,
         # Percentages supplied by ACS are whole numbers
-        grpquarters_pct = pop_grpquarters / pop_total,
+        grpquarters_pct = pop_grpquarters / pop_total_grpquarters,
 
         # ----- CL. Institution -----
         pop_grpquarters_institution = pop_grpquarters_institution,
@@ -56,10 +56,10 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
           pop_grpquarters_institution * pop_grpquarters_institution_pwd_pct,
           0
         ),
-        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pop_total,
+        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pop_total_grpquarters,
         ### PWOD
         pwod_grpquarters_institution = pop_grpquarters_institution - pwd_grpquarters_institution,
-        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pop_total,
+        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pop_total_grpquarters,
 
         # ----- CL. Non-Institution -----
         pop_grpquarters_noninstitution = pop_grpquarters_noninstitution,
@@ -68,39 +68,38 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
           pop_grpquarters_noninstitution * pop_grpquarters_noninstitution_pwd_pct,
           0
         ),
-        pwd_grpquarters_noninstitution_pct = pwd_grpquarters_noninstitution / pop_total,
+        pwd_grpquarters_noninstitution_pct = pwd_grpquarters_noninstitution / pop_total_grpquarters,
         ### PWOD
         pwod_grpquarters_noninstitution = pop_grpquarters_noninstitution - pwd_grpquarters_noninstitution,
-        pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pop_total,
+        pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pop_total_grpquarters,
 
         # ----- CL. Home -----
         ### PWD
         pwd_home_pct = (
-          pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
-        ) / pop_total,
-        pwd_home = round((pwd_total * pwd_home_pct), 2),
+          pwd_total_grpquarters - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
+        ) / pop_total_grpquarters,
+        pwd_home = round((pwd_total_grpquarters * pwd_home_pct), 2),
         ### PWOD
         pwod_home_pct = (
           pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution
-        ) / pop_total,
+        ) / pop_total_grpquarters,
         pwod_home = round((pwod_total * pwod_home_pct), 2),
 
         ### ----- CL. Nursing Homes -----
         ### Pop 18-64, PWD, PWOD
         ### NOTE: JANE UPDATED THESE VAR NAMES IN THE DOCUMENT TO BE UNIQUE, WITH pop_grpqrters_18_64 and pwd_grpqrters_18_64
-        pop_18_64 = pop_grpqrters_18_64,
-        pwd_18_64_pct = pwd_grpqrters_18_64 / 100,
-        pwd_18_64 = round(pop_18_64 * pwd_18_64_pct, 0),
-        pwod_18_64_pct = pwod_nursing_18_64_pct / 100,
-        pwod_18_64 = round(pop_18_64 * pwod_18_64_pct, 0),
+        pwd_grpqrters_18_64_pct = pwd_grpqrters_18_64 / 100,
+        pwd_grpqrters_18_64 = round(pop_grpqrters_18_64 * pwd_18_64_pct, 0),
+        pwod_grpqrters_18_64_pct = pwod_nursing_18_64_pct / 100,
+        pwod_grpqrters_18_64 = round(pop_grpqrters_18_64 * pwod_grpqrters_18_64_pct, 0),
         ### PWD
         pwd_nursing_18_64 = round(pop_nursing_18_64 *
                                     (pwd_nursing_18_64_pct / 100), 0),
-        pwd_nursing_18_64_pct = pwd_nursing_18_64 / pwd_18_64,
+        pwd_nursing_18_64_pct = pwd_nursing_18_64 / pwd_grpqrters_18_64,
         ### PWOD
         pwod_nursing_18_64 = round(pop_nursing_18_64 *
                                      (pwod_nursing_18_64 / 100), 0),
-        pwod_nursing_18_64_pct = pwod_nursing_18_64 / pwod_18_64,
+        pwod_nursing_18_64_pct = pwod_nursing_18_64 / pwod_grpqrters_18_64,
 
         ### ----- CL. Incarcerated Persons -----
         ### PWD
