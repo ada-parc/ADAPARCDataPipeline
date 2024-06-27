@@ -76,9 +76,9 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
         # ----- CL. Home -----
         ### PWD
         pwd_home_pct = (
-          pwd_total_grpquarters - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
-        ) / pop_total_grpquarters,
-        pwd_home = round((pwd_total_grpquarters * pwd_home_pct), 2),
+          pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
+        ) / pwd_total,
+        pwd_home = round((pwd_total * pwd_home_pct), 2),
         ### PWOD
         pwod_home_pct = (
           pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution
