@@ -29,56 +29,88 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
         ### ----- CL. Pop, PWD, PWOD -----
         # Must use table S2601A since it is total population
         # Rather than civilian noninstitutionalized as is ACS default
-        pop_total_grpquarters = pop_total_grpquarters,
+
+         # total population of groupquarters
+        pop_total_grpquarters  = pop_grpquarters, # changed from pop_total_grpquarters to pop_grpquarters
+
+         # percent of people with disabilities, converted
         pwd_pct = pwd_pct / 100,
-        pwd_total_grpquarters = round(pop_total_grpquarters * pwd_pct, 0),
-        pwod_total = pop_total_grpquarters - pwd_total_grpquarters,
+
+         # total population of people with disabilities living in groupquarters
+        pwd_total_grpquarters = pwd_grpquarters_institution + pwd_grpquarters_noninstitution, # changed from - round(pop_total_grpquarters * pwd_pct, 0),
+
+         # total population of people without disabilities living in groupquarters
+        pwod_total_grpquarters =pop_total_grpquarters - pwd_total_grpupquarters, # changed from pop_total_grpquarters - pwd_total_grpquarters,
 
         ### ----- CL. Group Quarters -----
         # ***NOTE: Group quarters sometimes uses a different universe for calculating percentages.
         # E.g. pop_grpquarters_institution_pwd_pct (S2601A_C03_047_estimate)
         # Universe is number of people living in institution, NOT PWD
+
+        # percent of disabled population in groupquarters (institutionalized)
         pop_grpquarters_institution_pwd_pct = pop_grpquarters_institution_pwd_pct / 100,
+
+        # percent of non-disabled population in groupquarters (institutionalized)
         pop_grpquarters_institution_pwod_pct = (1 - pop_grpquarters_institution_pwd_pct),
+
+        # percent of disabled population in groupquarters (noninstitutionalized)
         pop_grpquarters_noninstitution_pwd_pct = pop_grpquarters_noninstitution_pwd_pct / 100,
+
+        #percent of non-disabled population in groupquarters (noninstitutionalized)
         pop_grpquarters_noninstitution_pwod_pct = (1 - pop_grpquarters_noninstitution_pwd_pct),
 
         # Front end group quarters variables
         pop_grpquarters = pop_grpquarters,
         pwd_grpquarters_pct = pwd_grpquarters_pct / 100,
+
         # Percentages supplied by ACS are whole numbers
         grpquarters_pct = pop_grpquarters / pop_total_grpquarters,
 
         # ----- CL. Institution -----
         pop_grpquarters_institution = pop_grpquarters_institution,
+
         ### PWD
+
+        # number of disabled population in institutionalized groupquarters
         pwd_grpquarters_institution = round(
           pop_grpquarters_institution * pop_grpquarters_institution_pwd_pct,
           0
         ),
-        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pop_total_grpquarters,
+
+        # percentage of disabled population in institutionalized groupquarters
+        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pwd_total,
+
         ### PWOD
+
+        # number of non-disabled in institutionalized groupquarters
         pwod_grpquarters_institution = pop_grpquarters_institution - pwd_grpquarters_institution,
-        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pop_total_grpquarters,
+
+        # percentage of non-disabled in institutionalized groupquarters
+        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / (pop_total - pwd_total),
 
         # ----- CL. Non-Institution -----
         pop_grpquarters_noninstitution = pop_grpquarters_noninstitution,
+
         ### PWD
+
+        # number of disabled in noninstitutionalized groupquarters
         pwd_grpquarters_noninstitution = round(
           pop_grpquarters_noninstitution * pop_grpquarters_noninstitution_pwd_pct,
           0
         ),
-        pwd_grpquarters_noninstitution_pct = pwd_grpquarters_noninstitution / pop_total_grpquarters,
         ### PWOD
         pwod_grpquarters_noninstitution = pop_grpquarters_noninstitution - pwd_grpquarters_noninstitution,
-        pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pop_total_grpquarters,
+        pwod_grpquarters_noninstitution_pct = pwod_grpquarters_noninstitution / pop_total,
 
         # ----- CL. Home -----
         ### PWD
-        pwd_home_pct = (
-          pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
-        ) / pwd_total,
+
+        # percentage of disabled living at home
+        pwd_home_pct = (pwd_total - pwd_grpquarters) / pwd_total,
+
+        # number of disabled living at home
         pwd_home = round((pwd_total * pwd_home_pct), 2),
+
         ### PWOD
         pwod_home_pct = (
           pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution
@@ -122,3 +154,4 @@ addCalculatedVariablesForBaseLiving <- function(base_data) {
 
   return(calculated_and_base_data)
 }
+

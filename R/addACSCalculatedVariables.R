@@ -168,9 +168,14 @@ addACSCalculatedVariables <- function(base_data) {
         # Must use table S2601A since it is total population
         # Rather than civilian noninstitutionalized as is ACS default
         pop_total_grpquarters = pop_total_grpquarters,
-        pwd_pct_grpquarters = pwd_pct / 100,
-        pwd_total_grpquarters = round(pop_total_grpquarters * pwd_grpquarters_pct, 0),
-        pwod_total_grpquarters = pop_total_grpquarters - pwd_total_grpquarters,
+
+        pwd_total_grpquarters = round(pop_grpquarters * (pwd_grpquarters_pct / 100), 0),
+
+        pwod_total_grpquarters = pop_grpquarters - pwd_total_grpquarters,
+
+        pwd_pct_grpquarters = pwd_total_grpquarters / pwd_total,
+
+        pwod_pct_grpquarters = pwod_total_grpquarters / pwod_total,
 
         ### ----- CL. Group Quarters -----
         # ***NOTE: Group quarters sometimes uses a different universe for calculating percentages.
@@ -183,7 +188,7 @@ addACSCalculatedVariables <- function(base_data) {
 
         # Front end group quarters variables
         pop_grpquarters = pop_grpquarters,
-        pwd_grpquarters_pct = pwd_grpquarters_pct / 100,
+        pwd_grpquarters_pct = pwd_grpquarters_pct,
         # Percentages supplied by ACS are whole numbers
         grpquarters_pct = pop_grpquarters / pop_total_grpquarters,
 
@@ -194,10 +199,10 @@ addACSCalculatedVariables <- function(base_data) {
           pop_grpquarters_institution * pop_grpquarters_institution_pwd_pct,
           0
         ),
-        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pop_total_grpquarters,
+        pwd_grpquarters_institution_pct = pwd_grpquarters_institution / pwd_total, # changed from pop_total_grpquarters,
         ### PWOD
         pwod_grpquarters_institution = pop_grpquarters_institution - pwd_grpquarters_institution,
-        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pop_total_grpquarters,
+        pwod_grpquarters_institution_pct = pwod_grpquarters_institution / pwod_total, # changed from pop_total_grpquarters,
 
         # ----- CL. Non-Institution -----
         pop_grpquarters_noninstitution = pop_grpquarters_noninstitution,
@@ -213,10 +218,13 @@ addACSCalculatedVariables <- function(base_data) {
 
         # ----- CL. Home -----
         ### PWD
-        pwd_home_pct = (
-          pwd_total_grpquarters - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
-        ) / pop_total_grpquarters,
-        pwd_home = round((pwd_total_grpquarters * pwd_home_pct), 2),
+        pwd_home = (pwd_grpquarters - (pwd_grpquarters_institution + pwd_grpquarters_noninstitution)),
+        pwd_home_pct = (pwd_home / pwd_grpquarters),
+
+        #pwd_home_pct = (
+          #pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
+       # ) / pop_total_grpquarters,
+        #pwd_home = round((pwd_total * pwd_home_pct), 2),
         ### PWOD
         pwod_home_pct = (
           pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution
