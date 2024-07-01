@@ -221,19 +221,15 @@ addACSCalculatedVariables <- function(base_data) {
         pwd_home = (pwd_grpquarters - (pwd_grpquarters_institution + pwd_grpquarters_noninstitution)),
         pwd_home_pct = (pwd_home / pwd_grpquarters),
 
-        #pwd_home_pct = (
-          #pwd_total - pwd_grpquarters_institution - pwd_grpquarters_noninstitution
-       # ) / pop_total_grpquarters,
-        #pwd_home = round((pwd_total * pwd_home_pct), 2),
+
         ### PWOD
-        pwod_home_pct = (
-          pwod_total - pwod_grpquarters_institution - pwod_grpquarters_noninstitution
-        ) / pop_total_grpquarters,
-        pwod_home = round((pwod_total * pwod_home_pct), 2),
+
+        pwod_home = (pwod_grpquarters - pwod_total_grpquarters),
+        pwod_home_pct = (pwod_home / pwod_grpquarters),
 
         ### ----- CL. Nursing Homes -----
         ### Pop 18-64, PWD, PWOD
-        pwd_grpqrters_18_64_pct = pwd_grpqrters_18_64 / 100,
+        pwd_grpqrters_18_64pct = pwd_grpqrters_18_64 / 100,
         pwd_grpqrters_18_64 = round(pop_grpqrters_18_64 * pwd_18_64_pct, 0),
         pwod_grpqrters_18_64_pct = pwod_nursing_18_64_pct / 100,
         pwod_grpqrters_18_64 = round(pop_grpqrters_18_64 * pwod_grpqrters_18_64_pct, 0),
