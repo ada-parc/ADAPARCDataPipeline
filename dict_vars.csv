@@ -194,12 +194,16 @@ pwod_not_fulltime_pct,Full and Part Time Workers,"Percent of People without Disa
 pop_didnotwork,Full and Part Time Workers,"Population, Did Not Work",C18121_008,FALSE,FALSE,FALSE,TRUE,FALSE,standalone,NA,NA,NA
 pwd_didnotwork,Full and Part Time Workers,"People with Disabilities, Did Not Work",C18121_009,FALSE,FALSE,FALSE,TRUE,FALSE,comp,NA,NA,didnotwork
 pwod_didnotwork,Full and Part Time Workers,"People without Disabilities, Who Did Not Work",C18121_010,FALSE,FALSE,FALSE,TRUE,FALSE,comp,NA,NA,didnotwork
-pop_least_one_cpu,Computer and Internet,"Population, At Least One Type of Computing Device",S2801_C01_002,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Access to Computer,NA,NA
-pwd_int,Computer and Internet,"People with Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Access to Internet,NA,NA
-pwd_int_pct,Computer and Internet,"Percent of People with Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
-pwod_int,Computer and Internet,"People without Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
-pwod_int_pct,Computer and Internet,"Percent of People without Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
-pwd_smartphone,Computer and Internet,"People with Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Devices - Smartphone Access,NA,NA
-pwd_smartphone_pct,Computer and Internet,"Percent of People with Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
-pwod_smartphone,Computer and Internet,"People without Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
-pwod_smartphone_pct,Computer and Internet,"Percent of People without Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pop_least_one_cpu,Computer,"Population, At Least One Type of Computing Device",S2801_C01_002,FALSE,FALSE,TRUE,FALSE,FALSE,standalone,NA,NA,NA
+pwd_computer,Computer,"People with Disabilities, Access to Laptop or Desktop",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Percent of Disabled Population with Computer Access,NA,NA
+pwod_computer,Computer,"People without Disabilities, Access to Laptop or Desktop",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwd_computer_pct,Computer,"Percent of People with Disabilities, Access to Laptop or Desktop",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwod_computer_pct,Computer,"Percent of People without Disabilities, Access to Laptop or Desktop",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwd_int,Internet,"People with Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwd_int_pct,Internet,"Percent of People with Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Percent of Disabled Population with Internet Access,NA,NA
+pwod_int,Internet,"People without Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwod_int_pct,Internet,"Percent of People without Disabilities, Access to Internet",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwd_smartphone,Smartphone,"People with Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwd_smartphone_pct,Smartphone,"Percent of People with Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,Percent of Disabled Population with Smartphone Access,NA,NA
+pwod_smartphone,Smartphone,"People without Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
+pwod_smartphone_pct,Smartphone,"Percent of People without Disabilities, Access to Smartphone",NA,FALSE,FALSE,TRUE,FALSE,TRUE,standalone,NA,NA,NA
