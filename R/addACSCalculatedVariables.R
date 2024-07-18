@@ -169,13 +169,18 @@ addACSCalculatedVariables <- function(base_data) {
         # Rather than civilian noninstitutionalized as is ACS default
         pop_total_grpquarters = pop_total_grpquarters,
 
-        pwd_total_grpquarters = round(pop_grpquarters * (pwd_grpquarters_pct / 100), 0),
+        pop_grpquarters = pop_grpquarters,
+
+        pwd_grpquarters_pct = pwd_grpquarters_pct / 100,
+
+        pwd_grpquarters = pwd_grpquarters,
+
+        pwd_total_grpquarters = pwd_grpquarters * pwd_grpquarters_pct,
 
         pwod_total_grpquarters = pop_grpquarters - pwd_total_grpquarters,
 
-        pwd_pct_grpquarters = pwd_total_grpquarters / pwd_total,
-
-        pwod_pct_grpquarters = pwod_total_grpquarters / pwod_total,
+        # Percentages supplied by ACS are whole numbers
+        grpquarters_pct = pop_grpquarters / pop_total_grpquarters,
 
         ### ----- CL. Group Quarters -----
         # ***NOTE: Group quarters sometimes uses a different universe for calculating percentages.
@@ -186,11 +191,6 @@ addACSCalculatedVariables <- function(base_data) {
         pop_grpquarters_noninstitution_pwd_pct = pop_grpquarters_noninstitution_pwd_pct / 100,
         pop_grpquarters_noninstitution_pwod_pct = (1 - pop_grpquarters_noninstitution_pwd_pct),
 
-        # Front end group quarters variables
-        pop_grpquarters = pop_grpquarters,
-        pwd_grpquarters_pct = pwd_grpquarters_pct,
-        # Percentages supplied by ACS are whole numbers
-        grpquarters_pct = pop_grpquarters / pop_total_grpquarters,
 
         # ----- CL. Institution -----
         pop_grpquarters_institution = pop_grpquarters_institution,
