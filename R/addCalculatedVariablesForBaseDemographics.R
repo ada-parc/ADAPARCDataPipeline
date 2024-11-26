@@ -80,6 +80,30 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwd_selfcare_pct = pwd_selfcare / pop_total,
         pwd_indliving_pct = pwd_indliving / pop_total,
 
+        ### ----- CP. Educational Attainment -----
+        ### Percents
+        pwd_lessthan_highschool_pct = pwd_lessthan_highschool_pct / 100,
+        pwod_lessthan_highschool_pct = pwod_lessthan_highschool_pct / 100,
+        pwd_highschoolequiv_pct = pwd_highschoolequiv_pct / 100,
+        pwod_highschoolequiv_pct = pwod_highschoolequiv_pct / 100,
+        pwd_degree_aa_pct = pwd_degree_aa_pct / 100,
+        pwod_degree_aa_pct = pwod_degree_aa_pct / 100,
+        pwd_degree_grtoeq_ba_pct = pwd_degree_grtoeq_ba_pct / 100,
+        pwod_degree_grtoeq_ba_pct = pwod_degree_grtoeq_ba_pct / 100,
+        ### Values (base below named "pwd_pop_educ" in map)
+        pwd_lessthan_highschool = pwd_lessthan_highschool_pct * pwd_pop_educ,
+        pwod_lessthan_highschool = pwod_lessthan_highschool_pct * pwod_pop_educ,
+        pwd_highschoolequiv = pwd_highschoolequiv_pct * pwd_pop_educ,
+        pwod_highschoolequiv = pwod_highschoolequiv_pct * pwod_pop_educ,
+        pwd_degree_aa = pwd_degree_aa_pct * pwd_pop_educ,
+        pwod_degree_aa = pwod_degree_aa_pct * pwod_pop_educ,
+        pwd_degree_grtoeq_ba = pwd_degree_grtoeq_ba_pct * pwd_pop_educ,
+        pwod_degree_grtoeq_ba = pwod_degree_grtoeq_ba_pct * pwod_pop_educ,
+
+        ### ----- WE. Median Income -----
+        pwd_grtoeq_16_med_individual_income = pwd_grtoeq_16_med_individual_income,
+        pwod_grtoeq_16_med_individual_income = pwod_grtoeq_16_med_individual_income,
+
         # .keep = "none"
       ) %>%
 
