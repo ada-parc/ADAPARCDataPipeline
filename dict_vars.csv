@@ -70,7 +70,7 @@ pwd_grpquarters_institution,Living in Institutionalized Group Quarters,"People w
 pwd_grpquarters_institution_pct,Living in Institutionalized Group Quarters,"Percent of People with Disabilities Living in Group Quarters, Institutionalized",NA,FALSE,TRUE,FALSE,FALSE,TRUE,story,Living in Institutionalized Groupquarters,"According to the U.S. Census, institutional living includes correctional facilities, nursing homes and mental hospitals.",NA
 pop_grpquarters_institution_pwd_pct,Living in Institutionalized Group Quarters,"Percent of People Living in Group Quarters, Institutionalized, with Disabilities",S2601A_C03_047,FALSE,TRUE,FALSE,FALSE,FALSE,story,NA,NA,NA
 pop_nursing,Living in Nursing Home,Population Living in Nursing Homes,S2602_C04_001,FALSE,TRUE,FALSE,FALSE,FALSE,comp,NA,NA,NA
-pop_18_64,Living in Nursing Home Age 18-64,"Population Living in Nursing Homes, Age 18 - 64",S2602_C01_047,FALSE,TRUE,FALSE,FALSE,TRUE,story,NA,NA,NA
+pop_18_64,Living in Nursing Home Age 18-64,"Population Living in Nursing Homes, Age 18 - 64",S2602_C01_047,FALSE,TRUE,FALSE,FALSE,FALSE,story,NA,NA,NA
 pwd_18_64,Living in Nursing Home Age 18-64,"People with Disabilities, Age 18 - 64",NA,FALSE,TRUE,FALSE,FALSE,TRUE,story,NA,NA,NA
 pwd_18_64_pct,Living in Nursing Home Age 18-64,"Percent of People with Disabilities, Age 18 - 64",S2602_C01_048,FALSE,TRUE,FALSE,FALSE,TRUE,story,NA,NA,NA
 pop_nursing_18_24,Living in Nursing Home Age 18-24,"Population Living in Nursing Homes, Age 18 - 24",S2602_C04_006,FALSE,TRUE,FALSE,FALSE,FALSE,story,NA,NA,NA
