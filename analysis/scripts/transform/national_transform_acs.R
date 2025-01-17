@@ -22,7 +22,7 @@ transformed_acs_national <- addACSCalculatedVariables(base_variables_national)
 #######################################
 
 # Read the access_int CSV file
-access_int <- read_csv("access_int.csv")
+access_int <- read.csv("access_int.csv")
 
 # Ensure access_int has unique columns (excluding the common key 'id')
 common_key <- "NAME" # Update with the actual key column name

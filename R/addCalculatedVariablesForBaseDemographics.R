@@ -101,8 +101,8 @@ addCalculatedVariablesForBaseDemographics <- function(base_data) {
         pwod_degree_grtoeq_ba = pwod_degree_grtoeq_ba_pct * pwod_pop_educ,
 
         ### ----- WE. Median Income -----
-        pwd_grtoeq_16_med_individual_income = pwd_grtoeq_16_med_individual_income,
-        pwod_grtoeq_16_med_individual_income = pwod_grtoeq_16_med_individual_income,
+       # pwd_grtoeq_16_med_individual_income = pwd_grtoeq_16_med_individual_income,
+       # pwod_grtoeq_16_med_individual_income = pwod_grtoeq_16_med_individual_income,
 
         # .keep = "none"
       ) %>%

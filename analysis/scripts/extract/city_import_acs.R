@@ -9,12 +9,12 @@ fips_for_state <- getFIPSCodesForStates()
 # We use this later in order to filter out places with small populations; it is acceptable to pull this data for only the most recent year to filter places, since that's likely what we're most interested in. Was uncertain about this decision or not, so if someone else feels strongly, please change.
 places_pop_est <- downloadACSPlacePopulationEstimate(max(years))
 
-tables <- c("S1810", "S1811", "C18130")
+tables <- c("S1810", "S1811", "C18130", "B18140")
 places_data_acs_raw <- getCountryWideAcsTablesForMultipleYears(tables, years, survey, "place")
 
 
 # Tracts data download
-tables <- c("S1810", "S1811")
+tables <- c("S1810", "S1811", "C18130","B18140")
 tracts_data_acs_raw <- getCountryWideAcsTablesForMultipleYears(tables, years, survey, "tract", fips_for_state)
 
 

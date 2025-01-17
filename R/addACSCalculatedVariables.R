@@ -149,8 +149,8 @@ addACSCalculatedVariables <- function(base_data) {
         pwod_not_fulltime_pct = pwod_not_fulltime / pwod_19_64,
 
         ### ----- WE. Median Income -----
-        pwd_grtoeq_16_med_individual_income = pwd_grtoeq_16_med_individual_income,
-        pwod_grtoeq_16_med_individual_income = pwod_grtoeq_16_med_individual_income,
+      #  pwd_grtoeq_16_med_individual_income = pwd_grtoeq_16_med_individual_income,
+      #  pwod_grtoeq_16_med_individual_income = pwod_grtoeq_16_med_individual_income,
 
         ### ----- WE. Working from Home -----
         # Percentages supplied by ACS are whole numbers, numbers derived
