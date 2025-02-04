@@ -35,10 +35,10 @@ addACSCalculatedVariables <- function(base_data) {
         ### ----- D. Age -----
         pop_18_64 = pop_18_64_ages18to34 + pop_18_64_ages35to64,
         pwd_18_64 = pwd_18_64_noninstitutionalized18to34yrs + pwd_18_64_noninstitutionalized35to64,
-        pwd_18_64_pct = pwd_18_64 / pop_18_64,
+        pwd_18_64_pct = pwd_18_64 / pwd_total,
         pop_grtoeq_65 = pop_grtoeq_65_65to74 + pop_grtoeq_65_75yrsplus,
         pwd_grtoeq_65 = pwd_grtoeq_65_65to74 + pwd_grtoeq_65_75yrsplus,
-        pwd_grtoeq_65_pct = pwd_grtoeq_65 / pop_grtoeq_65,
+        pwd_grtoeq_65_pct = pwd_grtoeq_65 / pwd_total,
 
         ### ----- D. Race/Ethnicity -----
 
@@ -51,24 +51,17 @@ addACSCalculatedVariables <- function(base_data) {
                                 pwd_other_other_race + # Some other race alone
                                 pwd_multiple # Multiple
         ),
-        ### Percents of total population
-        pwd_white_pct = pwd_white / pop_total,
-        pwd_black_pct = pwd_black / pop_total,
-        pwd_hisp_pct = pwd_hisp / pop_total,
-        pwd_asian_pct = pwd_asian / pop_total,
-        pwd_white_nonhisp_pct = pwd_white_nonhisp / pop_total,
-        pwd_other_pct = pwd_other / pop_total,
-        pwd_multiple_pct = pwd_multiple / pop_total,
+        ### Percents of total disabled population
+        pwd_white_pct = pwd_white / pwd_total,
+        pwd_black_pct = pwd_black / pwd_total,
+        pwd_hisp_pct = pwd_hisp / pwd_total,
+        pwd_asian_pct = pwd_asian / pwd_total,
+        pwd_white_nonhisp_pct = pwd_white_nonhisp / pwd_total,
+        pwd_other_pct = pwd_other / pwd_total,
+        pwd_multiple_pct = pwd_multiple / pwd_total,
+        pwd_other_americanindian_alaskanative_pct = pwd_other_americanindian_alaskanative / pwd_total,
+        pwd_other_nativehawaiian_otherpacificislander_pct =  pwd_other_nativehawaiian_otherpacificislander / pwd_total,
 
-        # Percents of total disabled population
-        pwd_white_dis_pct = pwd_white / pwd_total,
-        pwd_black_dis_pct = pwd_black / pwd_total,
-        pwd_hisp_dis_pct = pwd_hisp / pwd_total,
-        pwd_asian_dis_pct = pwd_asian / pwd_total,
-        pwd_white_nonhisp_dis_pct = pwd_white_nonhisp / pwd_total,
-        pwd_other_dis_pct = pwd_other / pwd_total,
-        pwd_multiple_dis_pct = pwd_multiple / pwd_total,
-        pwd_other_multiple_dis_pct = pwd_other_multiple / pwd_total,
 
         ### ----- D. Gender -----
         female_pwd_pct = pwd_female / pop_female,
@@ -225,7 +218,7 @@ addACSCalculatedVariables <- function(base_data) {
         ### PWOD
 
         pwod_home = (pwod_grpquarters - pwod_total_grpquarters),
-        pwod_home_pct = (pwod_home / pwod_grpquarters),
+        pwod_home_pct = (pwod_home / pwod_total_grpquarters),
 
         ### ----- CL. Nursing Homes -----
         ### Pop 18-64, PWD, PWOD
