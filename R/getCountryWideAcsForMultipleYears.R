@@ -10,6 +10,7 @@
 #' @import here
 #' @import dplyr
 #' @import purrr
+#'
 
 getCountryWideAcsForMultipleYears <- function(years, scope) {
 
@@ -33,6 +34,8 @@ getCountryWideAcsForMultipleYears <- function(years, scope) {
   downloadACS <- function(variables_for_year, year_to_download, geography) {
     api_key <- loadCensusAPIKey()
 
+    Sys.sleep(1)
+
     data <-
       tidycensus::get_acs(
         year = year_to_download,
@@ -41,7 +44,7 @@ getCountryWideAcsForMultipleYears <- function(years, scope) {
         survey = "acs5",
         geometry = F,
         key = api_key,
-        cache_table = F,
+        cache_table = TRUE,
         .progress = TRUE
       ) %>%
         dplyr::select(GEOID, NAME, variable, estimate) %>%

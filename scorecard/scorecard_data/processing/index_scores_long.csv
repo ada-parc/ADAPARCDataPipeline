@@ -1,0 +1,1326 @@
+GEOID,NAME,ABBR,year,index_id,index_label,index_type,category,dimension,index_level,n_members,frac_present,index_score_100
+000,United States,USA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,53.342796291758106
+01,Alabama,AL,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,53.19012043196537
+02,Alaska,AK,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,36.71291095884466
+04,Arizona,AZ,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,48.090482161130524
+05,Arkansas,AR,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,38.88351168204575
+06,California,CA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,55.44601163323824
+08,Colorado,CO,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,56.69394040160032
+09,Connecticut,CT,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,49.119540667755956
+10,Delaware,DE,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,43.28817490367932
+11,District of Columbia,DC,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,61.62440665064745
+12,Florida,FL,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,53.21095569925154
+13,Georgia,GA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,52.40784903409903
+15,Hawaii,HI,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,47.55822400594441
+16,Idaho,ID,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,48.06204835912382
+17,Illinois,IL,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.40524571763578
+18,Indiana,IN,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,43.98468323358284
+19,Iowa,IA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,40.407710612362294
+20,Kansas,KS,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,60.41099976006048
+21,Kentucky,KY,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,49.20177924255538
+22,Louisiana,LA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,44.88379400901518
+23,Maine,ME,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,44.77650477142943
+24,Maryland,MD,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,55.93757041810717
+25,Massachusetts,MA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,43.22201790102918
+26,Michigan,MI,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,55.53628012644902
+27,Minnesota,MN,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,47.02346856991488
+28,Mississippi,MS,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,41.36188769810549
+29,Missouri,MO,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.89792438197183
+30,Montana,MT,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,51.04293892849692
+31,Nebraska,NE,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.50538949362467
+32,Nevada,NV,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,52.13344801114829
+33,New Hampshire,NH,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.85894847545396
+34,New Jersey,NJ,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,43.94457717558352
+35,New Mexico,NM,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,60.158014315470936
+36,New York,NY,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.50134747649259
+37,North Carolina,NC,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,48.28609884073504
+38,North Dakota,ND,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.12681269314683
+39,Ohio,OH,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,51.23191063660286
+40,Oklahoma,OK,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,55.42474964793216
+41,Oregon,OR,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,52.94969790519428
+42,Pennsylvania,PA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,49.61320240689158
+44,Rhode Island,RI,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,49.514429241720265
+45,South Carolina,SC,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,37.163530802250236
+46,South Dakota,SD,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,65.15668055018823
+47,Tennessee,TN,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,50.43779950191353
+48,Texas,TX,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,55.889717403403075
+49,Utah,UT,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,62.607208552210835
+50,Vermont,VT,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,45.839769645237396
+51,Virginia,VA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,48.767731135684414
+53,Washington,WA,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,48.13132337860536
+54,West Virginia,WV,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,40.199349722331085
+55,Wisconsin,WI,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,46.66395949263857
+56,Wyoming,WY,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,1,38.91097973564398
+72,Puerto Rico,PR,2023,index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,category,2,0,NA
+000,United States,USA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.266912599559795
+01,Alabama,AL,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,43.76192417308972
+02,Alaska,AK,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,58.441908623475925
+04,Arizona,AZ,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,72.64038163746964
+05,Arkansas,AR,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,49.788074305496295
+06,California,CA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,62.93613405117663
+08,Colorado,CO,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,48.78575148930514
+09,Connecticut,CT,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,52.669825581954434
+10,Delaware,DE,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,50.979505074068314
+11,District of Columbia,DC,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,54.423474853474275
+12,Florida,FL,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,47.57368098946816
+13,Georgia,GA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,51.79240865536165
+15,Hawaii,HI,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,68.94625946272245
+16,Idaho,ID,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,44.70453091232707
+17,Illinois,IL,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,36.97365547349082
+18,Indiana,IN,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,33.512692966099564
+19,Iowa,IA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,22.449517774596018
+20,Kansas,KS,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,34.44840359697707
+21,Kentucky,KY,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,48.66489638858631
+22,Louisiana,LA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.60999391210789
+23,Maine,ME,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,37.0508964249208
+24,Maryland,MD,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,54.129221449991356
+25,Massachusetts,MA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,44.61639296552693
+26,Michigan,MI,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,57.42612854568971
+27,Minnesota,MN,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,50.51709093978997
+28,Mississippi,MS,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,46.820705930486604
+29,Missouri,MO,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,32.93461126670363
+30,Montana,MT,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,52.344627752222294
+31,Nebraska,NE,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,36.4986851116678
+32,Nevada,NV,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,64.73658302116986
+33,New Hampshire,NH,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,40.98870819005721
+34,New Jersey,NJ,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.20571774386404
+35,New Mexico,NM,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,68.25572196565601
+36,New York,NY,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,56.37435299567392
+37,North Carolina,NC,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,50.61844850470901
+38,North Dakota,ND,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,11.490505979771513
+39,Ohio,OH,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,36.61334213745855
+40,Oklahoma,OK,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,44.553169080618595
+41,Oregon,OR,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,67.10001739056136
+42,Pennsylvania,PA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,32.66619655645067
+44,Rhode Island,RI,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,33.575649110158395
+45,South Carolina,SC,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.44655877211845
+46,South Dakota,SD,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,47.28434576683981
+47,Tennessee,TN,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,55.834111632470886
+48,Texas,TX,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,48.17456940339473
+49,Utah,UT,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,68.80971214013397
+50,Vermont,VT,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,61.235039287557896
+51,Virginia,VA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,48.61228610496069
+53,Washington,WA,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,74.81034343726976
+54,West Virginia,WV,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,49.7344388556635
+55,Wisconsin,WI,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,58.08694031803982
+56,Wyoming,WY,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,47.53857506046696
+72,Puerto Rico,PR,2023,index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,scorecard,2,0,NA
+000,United States,USA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.418679983956416
+01,Alabama,AL,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,62.61831669084101
+02,Alaska,AK,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,14.983913294213387
+04,Arizona,AZ,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,23.5405826847914
+05,Arkansas,AR,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,27.978949058595198
+06,California,CA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,47.95588921529985
+08,Colorado,CO,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,64.6021293138955
+09,Connecticut,CT,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,45.56925575355748
+10,Delaware,DE,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,35.596844733290325
+11,District of Columbia,DC,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,68.82533844782063
+12,Florida,FL,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,58.848230409034926
+13,Georgia,GA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.02328941283642
+15,Hawaii,HI,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,26.170188549166365
+16,Idaho,ID,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,51.41956580592056
+17,Illinois,IL,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.83683596178074
+18,Indiana,IN,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,54.45667350106611
+19,Iowa,IA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,58.36590345012857
+20,Kansas,KS,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,86.37359592314388
+21,Kentucky,KY,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,49.73866209652446
+22,Louisiana,LA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,36.15759410592248
+23,Maine,ME,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,52.50211311793805
+24,Maryland,MD,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,57.74591938622298
+25,Massachusetts,MA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,41.82764283653144
+26,Michigan,MI,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,53.646431707208336
+27,Minnesota,MN,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,43.529846200039785
+28,Mississippi,MS,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,35.90306946572438
+29,Missouri,MO,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,58.86123749724004
+30,Montana,MT,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,49.74125010477155
+31,Nebraska,NE,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,54.51209387558154
+32,Nevada,NV,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,39.530313001126714
+33,New Hampshire,NH,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,50.729188760850704
+34,New Jersey,NJ,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,34.683436607302994
+35,New Mexico,NM,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,52.06030666528587
+36,New York,NY,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,34.628341957311264
+37,North Carolina,NC,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,45.95374917676108
+38,North Dakota,ND,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,78.76311940652215
+39,Ohio,OH,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,65.85047913574718
+40,Oklahoma,OK,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,66.29633021524572
+41,Oregon,OR,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,38.79937841982719
+42,Pennsylvania,PA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,66.56020825733249
+44,Rhode Island,RI,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,65.45320937328214
+45,South Carolina,SC,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,20.880502832382028
+46,South Dakota,SD,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,83.02901533353665
+47,Tennessee,TN,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,45.04148737135618
+48,Texas,TX,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,63.604865403411424
+49,Utah,UT,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,56.404704964287696
+50,Vermont,VT,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,30.444500002916904
+51,Virginia,VA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,48.92317616640814
+53,Washington,WA,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,21.452303319940953
+54,West Virginia,WV,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,30.664260588998673
+55,Wisconsin,WI,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,35.24097866723731
+56,Wyoming,WY,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,1,30.283384410820986
+72,Puerto Rico,PR,2023,index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,scorecard,2,0,NA
+000,United States,USA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,48.86164554202372
+01,Alabama,AL,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,58.10994888745511
+02,Alaska,AK,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,62.39613522712912
+04,Arizona,AZ,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,56.217370374034175
+05,Arkansas,AR,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,49.471486118252415
+06,California,CA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,48.60505140487458
+08,Colorado,CO,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,52.55132658202608
+09,Connecticut,CT,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,45.11425384374025
+10,Delaware,DE,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,57.490313071233444
+11,District of Columbia,DC,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,55.65992741079753
+12,Florida,FL,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,57.842009089804776
+13,Georgia,GA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,59.225207678541295
+15,Hawaii,HI,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,57.73871998701725
+16,Idaho,ID,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,56.85866199393216
+17,Illinois,IL,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,42.24810872470279
+18,Indiana,IN,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,51.64070996709246
+19,Iowa,IA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,32.87043542199286
+20,Kansas,KS,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,38.7313582130292
+21,Kentucky,KY,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,46.248711808187906
+22,Louisiana,LA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,55.073069639562135
+23,Maine,ME,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,40.21262188268971
+24,Maryland,MD,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,50.196035632609664
+25,Massachusetts,MA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,39.54275585458345
+26,Michigan,MI,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,48.66576871318135
+27,Minnesota,MN,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,35.05303499715181
+28,Mississippi,MS,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,50.255060382693486
+29,Missouri,MO,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,41.526555716593975
+30,Montana,MT,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,46.87899028358777
+31,Nebraska,NE,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,42.39952953473385
+32,Nevada,NV,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,61.83208438187235
+33,New Hampshire,NH,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,33.70652177329212
+34,New Jersey,NJ,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,49.6525091444423
+35,New Mexico,NM,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,53.121902309568995
+36,New York,NY,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,43.461056979727005
+37,North Carolina,NC,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,56.150999722045995
+38,North Dakota,ND,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,37.80734368343734
+39,Ohio,OH,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,43.92583894151471
+40,Oklahoma,OK,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,50.020537222550324
+41,Oregon,OR,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,50.34710910698741
+42,Pennsylvania,PA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,44.67932720660543
+44,Rhode Island,RI,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,47.4795146996025
+45,South Carolina,SC,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,56.14063474401483
+46,South Dakota,SD,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,39.54623612851661
+47,Tennessee,TN,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,52.44056372519963
+48,Texas,TX,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,55.05831580988591
+49,Utah,UT,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,61.0532372391446
+50,Vermont,VT,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,47.14357293339083
+51,Virginia,VA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,48.513700813247006
+53,Washington,WA,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,60.872340827684695
+54,West Virginia,WV,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,47.63382262751199
+55,Wisconsin,WI,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,47.37647216626165
+56,Wyoming,WY,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,1,56.49044488696477
+72,Puerto Rico,PR,2023,index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,category,4,0.75,NA
+000,United States,USA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,49.62243193399356
+01,Alabama,AL,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,41.68744819013852
+02,Alaska,AK,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,64.03666809855073
+04,Arizona,AZ,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,35.49617127937979
+05,Arkansas,AR,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,43.826344273559
+06,California,CA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,46.817514011080966
+08,Colorado,CO,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,71.6133010646331
+09,Connecticut,CT,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,69.03085377045778
+10,Delaware,DE,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,48.138650884392675
+11,District of Columbia,DC,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,99.82035869604832
+12,Florida,FL,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.7087390920427
+13,Georgia,GA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,60.115761252453666
+15,Hawaii,HI,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,78.12813455061672
+16,Idaho,ID,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,54.87111417724693
+17,Illinois,IL,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,61.17764928387803
+18,Indiana,IN,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.10516798603891
+19,Iowa,IA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,30.59075322754915
+20,Kansas,KS,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,33.951806191658555
+21,Kentucky,KY,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,33.71958112172443
+22,Louisiana,LA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,36.099138332022875
+23,Maine,ME,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,25.759706884862858
+24,Maryland,MD,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,58.92059302292748
+25,Massachusetts,MA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,43.135026686566754
+26,Michigan,MI,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.170545382063274
+27,Minnesota,MN,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,51.86626893487288
+28,Mississippi,MS,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,33.70035257969502
+29,Missouri,MO,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,38.27290360194977
+30,Montana,MT,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,48.05548197455002
+31,Nebraska,NE,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,38.0427502496137
+32,Nevada,NV,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,54.80532575358222
+33,New Hampshire,NH,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,13.200022706324795
+34,New Jersey,NJ,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,50.379006439201525
+35,New Mexico,NM,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,32.68293479245172
+36,New York,NY,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,49.303443769810855
+37,North Carolina,NC,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,62.38823568082775
+38,North Dakota,ND,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,33.274409539294346
+39,Ohio,OH,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,47.97751162613265
+40,Oklahoma,OK,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,28.921626783089145
+41,Oregon,OR,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,72.1808648541362
+42,Pennsylvania,PA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,56.19636498946593
+44,Rhode Island,RI,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,72.62601720876829
+45,South Carolina,SC,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,41.86218651641451
+46,South Dakota,SD,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.1288931314682
+47,Tennessee,TN,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,52.45143431892089
+48,Texas,TX,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,52.38929008743597
+49,Utah,UT,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,47.994347015443815
+50,Vermont,VT,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,44.6920149958707
+51,Virginia,VA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,55.04447149687803
+53,Washington,WA,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,81.7235618121635
+54,West Virginia,WV,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,29.57830042874066
+55,Wisconsin,WI,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,42.73329739727939
+56,Wyoming,WY,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,40.24223476245671
+72,Puerto Rico,PR,2023,index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,31.8347182163061
+000,United States,USA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,48.39976012446253
+01,Alabama,AL,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,78.73277851561932
+02,Alaska,AK,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,52.08933566571713
+04,Arizona,AZ,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,50.42552026225202
+05,Arkansas,AR,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,65.05104540965502
+06,California,CA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,60.50811838412014
+08,Colorado,CO,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,25.008822323573444
+09,Connecticut,CT,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,48.0211881246975
+10,Delaware,DE,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,44.88570997143394
+11,District of Columbia,DC,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,44.98788031401043
+12,Florida,FL,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,60.64958109041094
+13,Georgia,GA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,50.57543258168343
+15,Hawaii,HI,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,56.1514825622664
+16,Idaho,ID,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,48.05184946014398
+17,Illinois,IL,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,35.34646880373185
+18,Indiana,IN,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,56.10907961172589
+19,Iowa,IA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,39.42572783241509
+20,Kansas,KS,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,28.89130573792905
+21,Kentucky,KY,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,70.32755137544751
+22,Louisiana,LA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,82.33343588625043
+23,Maine,ME,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,37.500347461543456
+24,Maryland,MD,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,41.869655564910296
+25,Massachusetts,MA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,43.33514189725963
+26,Michigan,MI,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,51.37801780801148
+27,Minnesota,MN,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,27.375660995606594
+28,Mississippi,MS,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,87.19276428571497
+29,Missouri,MO,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,50.93403097344503
+30,Montana,MT,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.36371008782846
+31,Nebraska,NE,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,35.114049936240576
+32,Nevada,NV,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,52.478121093842375
+33,New Hampshire,NH,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,35.666051470296274
+34,New Jersey,NJ,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,38.26264549863505
+35,New Mexico,NM,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,62.28798760672332
+36,New York,NY,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,55.42621492911925
+37,North Carolina,NC,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,49.66440363068536
+38,North Dakota,ND,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.463195764496554
+39,Ohio,OH,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,49.019434228854976
+40,Oklahoma,OK,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,53.15513195168828
+41,Oregon,OR,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,30.059315792922938
+42,Pennsylvania,PA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,40.04473823405505
+44,Rhode Island,RI,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,59.244190184714654
+45,South Carolina,SC,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,69.16668443716222
+46,South Dakota,SD,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,49.882584041405615
+47,Tennessee,TN,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,63.04266412555174
+48,Texas,TX,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,53.46964246622235
+49,Utah,UT,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,40.33384254456291
+50,Vermont,VT,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,32.01560235185988
+51,Virginia,VA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,39.35041890958905
+53,Washington,WA,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,27.53436152147468
+54,West Virginia,WV,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,82.75007739054591
+55,Wisconsin,WI,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,43.56585663131115
+56,Wyoming,WY,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,45.32745590170062
+72,Puerto Rico,PR,2023,index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,scorecard,2,1,82.21889133522328
+000,United States,USA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,48.4414397459835
+01,Alabama,AL,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.06237855782522
+02,Alaska,AK,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,36.282127798494656
+04,Arizona,AZ,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,46.794453648514
+05,Arkansas,AR,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,32.5807637430426
+06,California,CA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,41.47521780999718
+08,Colorado,CO,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,63.21781914612095
+09,Connecticut,CT,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,56.548213031012835
+10,Delaware,DE,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,44.00891810105811
+11,District of Columbia,DC,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,47.91922618426795
+12,Florida,FL,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,46.45050510654689
+13,Georgia,GA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,49.66780469148524
+15,Hawaii,HI,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,61.47843457938683
+16,Idaho,ID,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.92516286071765
+17,Illinois,IL,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,49.73246432471307
+18,Indiana,IN,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,55.951127791764804
+19,Iowa,IA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,52.115086185142026
+20,Kansas,KS,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,63.099403299696625
+21,Kentucky,KY,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,39.35919772324275
+22,Louisiana,LA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,43.40598750675738
+23,Maine,ME,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.36017242693828
+24,Maryland,MD,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,48.67603894659212
+25,Massachusetts,MA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,53.829061736225036
+26,Michigan,MI,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,52.74317166454696
+27,Minnesota,MN,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,53.7825785166066
+28,Mississippi,MS,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,34.3521988260729
+29,Missouri,MO,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,57.90576664955598
+30,Montana,MT,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,51.976354614066814
+31,Nebraska,NE,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,65.65382725438099
+32,Nevada,NV,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,41.04798875071955
+33,New Hampshire,NH,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,58.831781278438676
+34,New Jersey,NJ,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.40288253813784
+35,New Mexico,NM,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,35.57312501876263
+36,New York,NY,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,43.91725514329986
+37,North Carolina,NC,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,45.823050149656105
+38,North Dakota,ND,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,55.02407768381833
+39,Ohio,OH,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,53.149852774890384
+40,Oklahoma,OK,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,45.61796234703298
+41,Oregon,OR,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,46.94989595557856
+42,Pennsylvania,PA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,54.35049686929286
+44,Rhode Island,RI,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,51.96663197819837
+45,South Carolina,SC,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.06767739537842
+46,South Dakota,SD,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,57.822698228031065
+47,Tennessee,TN,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,52.67412239972834
+48,Texas,TX,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,40.45425026584131
+49,Utah,UT,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,60.27792102507385
+50,Vermont,VT,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,54.97178285228272
+51,Virginia,VA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,48.877480857651314
+53,Washington,WA,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,56.56059600681392
+54,West Virginia,WV,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,38.32088302199884
+55,Wisconsin,WI,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,58.5078037698944
+56,Wyoming,WY,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,54.07728213388233
+72,Puerto Rico,PR,2023,index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,39.564781654623744
+000,United States,USA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,48.98295036365531
+01,Alabama,AL,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,61.957190286237385
+02,Alaska,AK,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,97.17640934575395
+04,Arizona,AZ,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,92.15333630599086
+05,Arkansas,AR,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,56.42779104675305
+06,California,CA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,45.619355414300024
+08,Colorado,CO,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.365363793776815
+09,Connecticut,CT,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,6.856760448792869
+10,Delaware,DE,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,92.92797332804906
+11,District of Columbia,DC,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,29.912244448863415
+12,Florida,FL,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,78.55921107021857
+13,Georgia,GA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,76.54183218854287
+15,Hawaii,HI,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,35.19682825579904
+16,Idaho,ID,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,73.58652147762008
+17,Illinois,IL,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,22.735852486488195
+18,Indiana,IN,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,49.397464478840256
+19,Iowa,IA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,9.350174442865184
+20,Kansas,KS,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,28.982917622832577
+21,Kentucky,KY,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,41.588517012336915
+22,Louisiana,LA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,58.45371683321787
+23,Maine,ME,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,47.230260757414236
+24,Maryland,MD,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,51.317854996008776
+25,Massachusetts,MA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,17.871793098282343
+26,Michigan,MI,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,45.371339998103686
+27,Minnesota,MN,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,7.187631541521185
+28,Mississippi,MS,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,45.774925839291065
+29,Missouri,MO,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,18.99352164142512
+30,Montana,MT,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,42.12041445790579
+31,Nebraska,NE,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,30.78749069870014
+32,Nevada,NV,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,98.99690192934524
+33,New Hampshire,NH,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,27.12823163810873
+34,New Jersey,NJ,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,59.565502101794785
+35,New Mexico,NM,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,81.9435618203383
+36,New York,NY,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,25.19731407667804
+37,North Carolina,NC,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,66.72830942701478
+38,North Dakota,ND,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,17.467691746140137
+39,Ohio,OH,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,25.55655713618083
+40,Oklahoma,OK,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,72.3874278083909
+41,Oregon,OR,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,52.19835982531193
+42,Pennsylvania,PA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,28.12570873360787
+44,Rhode Island,RI,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,6.081219426728694
+45,South Carolina,SC,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,63.46599062710419
+46,South Dakota,SD,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,5.350769113161552
+47,Tennessee,TN,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,41.59403405659757
+48,Texas,TX,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,73.92008042004402
+49,Utah,UT,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,95.60683837149782
+50,Vermont,VT,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,56.894891533550016
+51,Virginia,VA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,50.78243198886963
+53,Washington,WA,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,77.6708439702867
+54,West Virginia,WV,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,39.88602966876254
+55,Wisconsin,WI,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,44.698930866561646
+56,Wyoming,WY,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,1,86.31480674981941
+72,Puerto Rico,PR,2023,index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,scorecard,3,0,NA
+000,United States,USA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,45.948548337958165
+01,Alabama,AL,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,56.73988487596333
+02,Alaska,AK,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,44.78077040604325
+04,Arizona,AZ,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,45.862109434769486
+05,Arkansas,AR,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,66.4812154893842
+06,California,CA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,27.049058064768595
+08,Colorado,CO,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,33.958791744461074
+09,Connecticut,CT,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,39.745344046224204
+10,Delaware,DE,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,55.36985221674458
+11,District of Columbia,DC,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,37.49988043535491
+12,Florida,FL,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,36.65747517696959
+13,Georgia,GA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,49.71868187434487
+15,Hawaii,HI,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,32.53912225549824
+16,Idaho,ID,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,47.30077080219511
+17,Illinois,IL,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,38.56311889438824
+18,Indiana,IN,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,62.725248826257385
+19,Iowa,IA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,47.32591443816418
+20,Kansas,KS,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,59.50369132311759
+21,Kentucky,KY,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,68.44534120521774
+22,Louisiana,LA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,65.0179159463959
+23,Maine,ME,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,57.30902677478358
+24,Maryland,MD,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,34.79999229908133
+25,Massachusetts,MA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,40.73669508363656
+26,Michigan,MI,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,59.37192093079507
+27,Minnesota,MN,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,38.385182774418695
+28,Mississippi,MS,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,70.34648576615739
+29,Missouri,MO,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,60.111158894572895
+30,Montana,MT,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,49.45256180409734
+31,Nebraska,NE,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,45.769014184399595
+32,Nevada,NV,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,50.37322123539346
+33,New Hampshire,NH,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,42.88234387330936
+34,New Jersey,NJ,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,20.084236113104403
+35,New Mexico,NM,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,63.09340307901104
+36,New York,NY,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,43.591152550414535
+37,North Carolina,NC,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,53.1475393537247
+38,North Dakota,ND,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,54.23025013262026
+39,Ohio,OH,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,56.96536105763413
+40,Oklahoma,OK,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,64.06693976885128
+41,Oregon,OR,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,51.28719853607525
+42,Pennsylvania,PA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,54.89567563576203
+44,Rhode Island,RI,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,52.938136588618526
+45,South Carolina,SC,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,54.72097787395579
+46,South Dakota,SD,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,45.51042784041172
+47,Tennessee,TN,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,59.56950690288845
+48,Texas,TX,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,48.81714220476783
+49,Utah,UT,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,49.15539873090093
+50,Vermont,VT,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,50.786445667680056
+51,Virginia,VA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,39.33687510027313
+53,Washington,WA,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,38.090086364611764
+54,West Virginia,WV,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,76.86507368308101
+55,Wisconsin,WI,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,44.71029465780205
+56,Wyoming,WY,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,42.095917241326774
+72,Puerto Rico,PR,2023,index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,category,2,1,68.06966750754569
+000,United States,USA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,41.777850970277555
+01,Alabama,AL,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,59.51215841806795
+02,Alaska,AK,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,58.88878869196237
+04,Arizona,AZ,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,48.94948580167402
+05,Arkansas,AR,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,57.19488516837704
+06,California,CA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,14.262815673847477
+08,Colorado,CO,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.28419317055855
+09,Connecticut,CT,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,39.33176177718783
+10,Delaware,DE,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,69.22202377947883
+11,District of Columbia,DC,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,36.407736791651956
+12,Florida,FL,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,23.905193913225894
+13,Georgia,GA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,51.000010733533856
+15,Hawaii,HI,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,7.819116742762979
+16,Idaho,ID,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,54.8134011771517
+17,Illinois,IL,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,31.085831750514746
+18,Indiana,IN,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,65.91661502804892
+19,Iowa,IA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.406143425815614
+20,Kansas,KS,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,62.82137378552768
+21,Kentucky,KY,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,59.6428358719475
+22,Louisiana,LA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,67.33554199497041
+23,Maine,ME,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,59.346524927149986
+24,Maryland,MD,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,34.992898889899564
+25,Massachusetts,MA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,35.17728673685251
+26,Michigan,MI,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,65.58178861713083
+27,Minnesota,MN,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,42.221786014329936
+28,Mississippi,MS,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,66.61182171674133
+29,Missouri,MO,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,53.76824009076218
+30,Montana,MT,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,52.98228751502534
+31,Nebraska,NE,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,43.47122892906868
+32,Nevada,NV,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,51.14023250558256
+33,New Hampshire,NH,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,60.52970892973267
+34,New Jersey,NJ,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,16.157532243027994
+35,New Mexico,NM,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,62.37636034294365
+36,New York,NY,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,29.09331741403947
+37,North Carolina,NC,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,46.591706058194376
+38,North Dakota,ND,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,44.752142836671815
+39,Ohio,OH,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,56.866007013880434
+40,Oklahoma,OK,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,65.91047390095159
+41,Oregon,OR,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,57.171755204805464
+42,Pennsylvania,PA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,54.60348508566969
+44,Rhode Island,RI,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,55.814910537825995
+45,South Carolina,SC,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,53.1346674331161
+46,South Dakota,SD,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,41.542579183427314
+47,Tennessee,TN,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.312108986083146
+48,Texas,TX,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,44.3895100185784
+49,Utah,UT,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,57.307230633517186
+50,Vermont,VT,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,67.60105396741587
+51,Virginia,VA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,39.482035908885706
+53,Washington,WA,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,45.28584380412205
+54,West Virginia,WV,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,75.73105036897411
+55,Wisconsin,WI,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,51.31004137563757
+56,Wyoming,WY,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,43.995580268375356
+72,Puerto Rico,PR,2023,index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.9987341444773
+000,United States,USA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,50.119245705638775
+01,Alabama,AL,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,53.9676113338587
+02,Alaska,AK,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,30.672752120124137
+04,Arizona,AZ,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,42.77473306786495
+05,Arkansas,AR,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,75.76754581039137
+06,California,CA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,39.83530045568971
+08,Colorado,CO,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,18.633390318363592
+09,Connecticut,CT,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,40.15892631526057
+10,Delaware,DE,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,41.517680654010334
+11,District of Columbia,DC,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,38.592024079057865
+12,Florida,FL,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.40975644071329
+13,Georgia,GA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,48.43735301515588
+15,Hawaii,HI,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,57.2591277682335
+16,Idaho,ID,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,39.788140427238524
+17,Illinois,IL,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,46.040406038261736
+18,Indiana,IN,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,59.533882624465846
+19,Iowa,IA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,45.24568545051275
+20,Kansas,KS,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,56.1860088607075
+21,Kentucky,KY,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,77.247846538488
+22,Louisiana,LA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,62.700289897821406
+23,Maine,ME,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,55.27152862241718
+24,Maryland,MD,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,34.6070857082631
+25,Massachusetts,MA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,46.29610343042061
+26,Michigan,MI,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,53.16205324445932
+27,Minnesota,MN,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,34.54857953450745
+28,Mississippi,MS,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,74.08114981557344
+29,Missouri,MO,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,66.45407769838361
+30,Montana,MT,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,45.92283609316934
+31,Nebraska,NE,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,48.0667994397305
+32,Nevada,NV,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.60620996520436
+33,New Hampshire,NH,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,25.234978816886045
+34,New Jersey,NJ,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,24.010939983180812
+35,New Mexico,NM,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,63.810445815078424
+36,New York,NY,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,58.0889876867896
+37,North Carolina,NC,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,59.70337264925503
+38,North Dakota,ND,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,63.70835742856871
+39,Ohio,OH,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,57.06471510138782
+40,Oklahoma,OK,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,62.22340563675099
+41,Oregon,OR,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,45.40264186734504
+42,Pennsylvania,PA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,55.18786618585437
+44,Rhode Island,RI,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,50.06136263941106
+45,South Carolina,SC,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,56.307288314795485
+46,South Dakota,SD,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,49.47827649739614
+47,Tennessee,TN,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,69.82690481969375
+48,Texas,TX,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,53.244774390957275
+49,Utah,UT,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,41.00356682828467
+50,Vermont,VT,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,33.971837367944254
+51,Virginia,VA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,39.19171429166055
+53,Washington,WA,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,30.89432892510147
+54,West Virginia,WV,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,77.9990969971879
+55,Wisconsin,WI,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,38.11054793996654
+56,Wyoming,WY,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,40.19625421427819
+72,Puerto Rico,PR,2023,index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,scorecard,2,1,86.1406008706141
+000,United States,USA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.384330057246665
+01,Alabama,AL,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,56.01331806512794
+02,Alaska,AK,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,47.963272197339016
+04,Arizona,AZ,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,50.05665398997806
+05,Arkansas,AR,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,51.61207109656078
+06,California,CA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,43.70004036762714
+08,Colorado,CO,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,47.73468624269583
+09,Connecticut,CT,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,44.65971285257347
+10,Delaware,DE,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,52.049446730552454
+11,District of Columbia,DC,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,51.59473816559997
+12,Florida,FL,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.236813322008636
+13,Georgia,GA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,53.7839128623284
+15,Hawaii,HI,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,45.9453554161533
+16,Idaho,ID,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,50.740493718417035
+17,Illinois,IL,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,42.07215777890894
+18,Indiana,IN,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,52.7835473423109
+19,Iowa,IA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,40.20135349083978
+20,Kansas,KS,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,52.882016432069086
+21,Kentucky,KY,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.63194408532035
+22,Louisiana,LA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.99159319832441
+23,Maine,ME,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,47.432717809634234
+24,Maryland,MD,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,46.97786611659939
+25,Massachusetts,MA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,41.167156279749726
+26,Michigan,MI,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.52465659014181
+27,Minnesota,MN,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,40.153895447161794
+28,Mississippi,MS,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,53.987811282318795
+29,Missouri,MO,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.17854633104624
+30,Montana,MT,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.12483033872735
+31,Nebraska,NE,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,44.55797773758604
+32,Nevada,NV,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.779584542804706
+33,New Hampshire,NH,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,40.81593804068515
+34,New Jersey,NJ,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,37.89377414437674
+35,New Mexico,NM,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,58.79110656801699
+36,New York,NY,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,44.184519002211374
+37,North Carolina,NC,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,52.52821263883525
+38,North Dakota,ND,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,45.72146883640148
+39,Ohio,OH,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,50.70770354525056
+40,Oklahoma,OK,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,56.50407554644459
+41,Oregon,OR,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,51.52800184941898
+42,Pennsylvania,PA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.729401749753016
+44,Rhode Island,RI,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.977360176647096
+45,South Carolina,SC,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.341714473406945
+46,South Dakota,SD,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,50.07111483970552
+47,Tennessee,TN,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.14929004333387
+48,Texas,TX,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,53.25505847268561
+49,Utah,UT,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,57.605281507418795
+50,Vermont,VT,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,47.923262748769424
+51,Virginia,VA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,45.53943568306818
+53,Washington,WA,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,49.031250190300604
+54,West Virginia,WV,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,54.89941534430803
+55,Wisconsin,WI,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,46.25024210556742
+56,Wyoming,WY,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,1,45.8324472879785
+72,Puerto Rico,PR,2023,index_eq_adaparc,ADA-PARC Index (Equity),category_index,NA,equity,category,3,0.3333333333333333,NA
+000,United States,USA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,50.53633494969967
+01,Alabama,AL,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,57.58084678023097
+02,Alaska,AK,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,59.55119325610764
+04,Arizona,AZ,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,65.963546502269807
+05,Arkansas,AR,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,74.46478846674154
+06,California,CA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,40.564816879047754
+08,Colorado,CO,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,45.659203681130904
+09,Connecticut,CT,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,37.339344348076224
+10,Delaware,DE,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,72.48574741115686
+11,District of Columbia,DC,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,24.32266115985839
+12,Florida,FL,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,56.53952157389358
+13,Georgia,GA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,62.484595565831626
+15,Hawaii,HI,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,57.94743968017865
+16,Idaho,ID,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,63.134962884989605
+17,Illinois,IL,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,49.83789852874639
+18,Indiana,IN,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,51.914871133981976
+19,Iowa,IA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,36.676154757878834
+20,Kansas,KS,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,22.325228425047662
+21,Kentucky,KY,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,59.62355408327028
+22,Louisiana,LA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,56.83250012359697
+23,Maine,ME,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,49.430991117678616
+24,Maryland,MD,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,48.58893029326216
+25,Massachusetts,MA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,41.11560539615206
+26,Michigan,MI,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,58.55861296278981
+27,Minnesota,MN,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,32.59586761028846
+28,Mississippi,MS,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,58.971933011879855
+29,Missouri,MO,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,51.51364573896235
+30,Montana,MT,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,49.020743349234806
+31,Nebraska,NE,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,50.40012318496531
+32,Nevada,NV,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,78.54506599162818
+33,New Hampshire,NH,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,42.15829089496302
+34,New Jersey,NJ,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,64.62605520910614
+35,New Mexico,NM,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,64.01459712261479
+36,New York,NY,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,40.53642621004938
+37,North Carolina,NC,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,60.91256338386336
+38,North Dakota,ND,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,29.028417019733276
+39,Ohio,OH,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,44.58114927904256
+40,Oklahoma,OK,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,50.3512356556377
+41,Oregon,OR,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,47.723920983494345
+42,Pennsylvania,PA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,36.734217903636775
+44,Rhode Island,RI,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,26.082792670989818
+45,South Carolina,SC,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,75.30090860394603
+46,South Dakota,SD,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,9.939011130909533
+47,Tennessee,TN,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,66.06644807275983
+48,Texas,TX,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,57.79566343369835
+49,Utah,UT,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,66.05528583571873
+50,Vermont,VT,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,43.66580423325166
+51,Virginia,VA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,56.89305742052743
+53,Washington,WA,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,66.29160780328964
+54,West Virginia,WV,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,64.33890299850995
+55,Wisconsin,WI,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,50.40288355968026
+56,Wyoming,WY,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,1,75.27489884514814
+72,Puerto Rico,PR,2023,index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,category,2,0,NA
+000,United States,USA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,53.87028379213656
+01,Alabama,AL,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,79.82424002706013
+02,Alaska,AK,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,44.111451035322666
+04,Arizona,AZ,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,73.35259086716748
+05,Arkansas,AR,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,87.94608968954984
+06,California,CA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,22.0858298246852
+08,Colorado,CO,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,55.3613581393748
+09,Connecticut,CT,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,15.435752263624003
+10,Delaware,DE,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,76.64537249326071
+11,District of Columbia,DC,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,1.7038639060863388
+12,Florida,FL,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,72.30166982056338
+13,Georgia,GA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,83.58774702723005
+15,Hawaii,HI,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,33.15283612864073
+16,Idaho,ID,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,76.32095979742456
+17,Illinois,IL,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,53.29934256171995
+18,Indiana,IN,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,63.684627446938336
+19,Iowa,IA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,27.789483815943342
+20,Kansas,KS,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,28.620081178708773
+21,Kentucky,KY,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,79.11778510595167
+22,Louisiana,LA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,79.30086926401833
+23,Maine,ME,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,39.06739801948866
+24,Maryland,MD,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,49.82307704121331
+25,Massachusetts,MA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,16.541114622063844
+26,Michigan,MI,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,65.60719499695256
+27,Minnesota,MN,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,4.350975094559426
+28,Mississippi,MS,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,77.87068131534846
+29,Missouri,MO,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,63.04995285409305
+30,Montana,MT,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,46.683384590992425
+31,Nebraska,NE,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,53.490412554300235
+32,Nevada,NV,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,95.07755983314098
+33,New Hampshire,NH,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,24.352062418646327
+34,New Jersey,NJ,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,64.05305565535438
+35,New Mexico,NM,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,79.29485133410012
+36,New York,NY,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,13.769535733240797
+37,North Carolina,NC,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,66.21154428606616
+38,North Dakota,ND,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,23.34711342427106
+39,Ohio,OH,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,55.81203994647787
+40,Oklahoma,OK,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,75.36672563501253
+41,Oregon,OR,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,27.39520896237731
+42,Pennsylvania,PA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,40.03972374304318
+44,Rhode Island,RI,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,6.900015883038355
+45,South Carolina,SC,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,76.26080414114142
+46,South Dakota,SD,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,4.285846957158011
+47,Tennessee,TN,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,78.91494579673149
+48,Texas,TX,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,79.19811267002453
+49,Utah,UT,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,72.53064715266422
+50,Vermont,VT,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,8.973264948855476
+51,Virginia,VA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,66.4896500814379
+53,Washington,WA,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,46.874848831206215
+54,West Virginia,WV,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,84.35608015553362
+55,Wisconsin,WI,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,35.70432976803667
+56,Wyoming,WY,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,83.59431362222841
+72,Puerto Rico,PR,2023,index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,scorecard,2,0,NA
+000,United States,USA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,47.20238610726278
+01,Alabama,AL,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,35.337453533401806
+02,Alaska,AK,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,74.9909354768926
+04,Arizona,AZ,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,58.574502137372136
+05,Arkansas,AR,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,60.983487243933226
+06,California,CA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,59.0438039334103
+08,Colorado,CO,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,35.957049222887015
+09,Connecticut,CT,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,59.242936432528445
+10,Delaware,DE,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,68.32612232905302
+11,District of Columbia,DC,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,46.94145841363044
+12,Florida,FL,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,40.77737332722378
+13,Georgia,GA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,41.38144410443319
+15,Hawaii,HI,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,82.74204323171656
+16,Idaho,ID,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,49.948965972554646
+17,Illinois,IL,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,46.37645449577283
+18,Indiana,IN,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,40.145114821025615
+19,Iowa,IA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,45.56282569981432
+20,Kansas,KS,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,16.030375671386548
+21,Kentucky,KY,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,40.12932306058889
+22,Louisiana,LA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,34.36413098317561
+23,Maine,ME,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,59.79458421586857
+24,Maryland,MD,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,47.35478354531101
+25,Massachusetts,MA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,65.69009617024028
+26,Michigan,MI,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,51.51003092862705
+27,Minnesota,MN,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,60.84076012601749
+28,Mississippi,MS,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,40.07318470841124
+29,Missouri,MO,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,39.97733862383165
+30,Montana,MT,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,51.35810210747718
+31,Nebraska,NE,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,47.30983381563039
+32,Nevada,NV,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,62.01257215011537
+33,New Hampshire,NH,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,59.96451937127971
+34,New Jersey,NJ,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,65.19905476285791
+35,New Mexico,NM,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,48.734342911129474
+36,New York,NY,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,67.30331668685795
+37,North Carolina,NC,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,55.61358248166055
+38,North Dakota,ND,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,34.709720615195494
+39,Ohio,OH,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,33.35025861160726
+40,Oklahoma,OK,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,25.335745676262874
+41,Oregon,OR,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,68.05263300461138
+42,Pennsylvania,PA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,33.42871206423036
+44,Rhode Island,RI,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,45.26556945894128
+45,South Carolina,SC,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,74.34101306675063
+46,South Dakota,SD,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,15.592175304661055
+47,Tennessee,TN,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,53.217950348788165
+48,Texas,TX,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,36.39321419737218
+49,Utah,UT,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,59.579924518773254
+50,Vermont,VT,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,78.35834351764785
+51,Virginia,VA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,47.29646475961696
+53,Washington,WA,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,85.70836677537307
+54,West Virginia,WV,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,44.32172584148628
+55,Wisconsin,WI,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,65.10143735132385
+56,Wyoming,WY,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,1,66.95548406806788
+72,Puerto Rico,PR,2023,index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,scorecard,2,0,NA
+000,United States,USA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,47.86047813304718
+01,Alabama,AL,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,30.316226823281127
+02,Alaska,AK,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,57.30173684386975
+04,Arizona,AZ,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,60.55281355947463
+05,Arkansas,AR,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,32.50779534174546
+06,California,CA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,50.06476934925127
+08,Colorado,CO,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,65.49673784309073
+09,Connecticut,CT,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,44.10038264419399
+10,Delaware,DE,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,71.89839681467389
+11,District of Columbia,DC,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,60.58013288877117
+12,Florida,FL,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,51.24200099618264
+13,Georgia,GA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,43.55842090440824
+15,Hawaii,HI,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,66.7215614776312
+16,Idaho,ID,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,57.08089959983762
+17,Illinois,IL,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,51.39106693322346
+18,Indiana,IN,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,38.25405339020933
+19,Iowa,IA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,43.78214882635203
+20,Kansas,KS,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,45.7021394104062
+21,Kentucky,KY,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,36.10092661446846
+22,Louisiana,LA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,29.457954715313882
+23,Maine,ME,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,57.982950732745714
+24,Maryland,MD,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,67.49728149439935
+25,Massachusetts,MA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,59.104133284791445
+26,Michigan,MI,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,52.30126568496461
+27,Minnesota,MN,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,61.01781243099518
+28,Mississippi,MS,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,23.598686216726694
+29,Missouri,MO,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,34.958505615088114
+30,Montana,MT,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,56.99008712663708
+31,Nebraska,NE,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,46.135515702009755
+32,Nevada,NV,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,55.361334550540235
+33,New Hampshire,NH,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,57.9132021551301
+34,New Jersey,NJ,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,63.6398864529137
+35,New Mexico,NM,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,42.31784019973241
+36,New York,NY,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,52.96801863759093
+37,North Carolina,NC,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,44.41029159391939
+38,North Dakota,ND,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,40.79580569432593
+39,Ohio,OH,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,39.49350116759338
+40,Oklahoma,OK,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,35.90450335968544
+41,Oregon,OR,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,67.12937471608771
+42,Pennsylvania,PA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,50.246174776153865
+44,Rhode Island,RI,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,34.49491296809901
+45,South Carolina,SC,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,38.5881185917513
+46,South Dakota,SD,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,39.17361963486821
+47,Tennessee,TN,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,32.46223988155892
+48,Texas,TX,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,37.95551089356202
+49,Utah,UT,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,72.3531056477061
+50,Vermont,VT,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,62.3555159654597
+51,Virginia,VA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,53.89922067553105
+53,Washington,WA,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,72.40960075340382
+54,West Virginia,WV,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,35.778363109357976
+55,Wisconsin,WI,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,55.52593060023925
+56,Wyoming,WY,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,1,62.041695032265764
+72,Puerto Rico,PR,2023,index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,category,4,0.75,NA
+000,United States,USA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,53.90869373712084
+01,Alabama,AL,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,17.236362690034987
+02,Alaska,AK,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,56.834911923933454
+04,Arizona,AZ,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,55.40196684540506
+05,Arkansas,AR,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,19.184969843703232
+06,California,CA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,67.81307113777851
+08,Colorado,CO,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,56.11968119197354
+09,Connecticut,CT,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,58.18036076327195
+10,Delaware,DE,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,44.71449231142324
+11,District of Columbia,DC,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,99.99998153417249
+12,Florida,FL,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,41.83346588342373
+13,Georgia,GA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,37.56287916572845
+15,Hawaii,HI,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,78.12956737851995
+16,Idaho,ID,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,31.99861477521619
+17,Illinois,IL,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,74.80942453142737
+18,Indiana,IN,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,28.502318058879787
+19,Iowa,IA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,35.21896493548089
+20,Kansas,KS,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,36.017951283856625
+21,Kentucky,KY,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,28.311168987213414
+22,Louisiana,LA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,25.755581027833735
+23,Maine,ME,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,40.8517329217662
+24,Maryland,MD,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,72.48418056338807
+25,Massachusetts,MA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,82.87096472086881
+26,Michigan,MI,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,39.33607842917091
+27,Minnesota,MN,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,65.08355722668033
+28,Mississippi,MS,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,16.72415296161077
+29,Missouri,MO,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,35.74233275048176
+30,Montana,MT,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,38.93487418855418
+31,Nebraska,NE,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,29.55677186292896
+32,Nevada,NV,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,54.776812446079546
+33,New Hampshire,NH,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,37.969189581993746
+34,New Jersey,NJ,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,76.5090983848485
+35,New Mexico,NM,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,34.82826422873446
+36,New York,NY,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,99.64312974558686
+37,North Carolina,NC,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,31.989648493971643
+38,North Dakota,ND,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,26.740144823017655
+39,Ohio,OH,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,39.61280583178784
+40,Oklahoma,OK,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,22.84937832903038
+41,Oregon,OR,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,69.23969573845373
+42,Pennsylvania,PA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,67.30603418507991
+44,Rhode Island,RI,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,40.8510984315089
+45,South Carolina,SC,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,23.756428533310526
+46,South Dakota,SD,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,35.65119114357333
+47,Tennessee,TN,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,25.409195266839397
+48,Texas,TX,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,36.997787463811605
+49,Utah,UT,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,55.48497571210285
+50,Vermont,VT,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,50.18953345191288
+51,Virginia,VA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,47.919183411504875
+53,Washington,WA,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,71.5404127185306
+54,West Virginia,WV,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,29.508857189152334
+55,Wisconsin,WI,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,43.345600328479804
+56,Wyoming,WY,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,34.510517448583826
+72,Puerto Rico,PR,2023,index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,20.858950587100438
+000,United States,USA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,43.09999342684645
+01,Alabama,AL,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,16.208926534034575
+02,Alaska,AK,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,57.80723510321003
+04,Arizona,AZ,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,61.54657507358165
+05,Arkansas,AR,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,18.92211622281654
+06,California,CA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,38.502657431922415
+08,Colorado,CO,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,92.15909443292692
+09,Connecticut,CT,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,53.90868378235865
+10,Delaware,DE,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,73.535303407619665
+11,District of Columbia,DC,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,68.25440709741741
+12,Florida,FL,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,58.073403863306524
+13,Georgia,GA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,36.00830308298078
+15,Hawaii,HI,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,77.45364967191458
+16,Idaho,ID,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,63.39680011663231
+17,Illinois,IL,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,50.394062796539124
+18,Indiana,IN,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,26.473408964028508
+19,Iowa,IA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,53.49260392168427
+20,Kansas,KS,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,65.64177481064831
+21,Kentucky,KY,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,9.244535700072538
+22,Louisiana,LA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,11.813752404168214
+23,Maine,ME,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,70.86094460090517
+24,Maryland,MD,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,72.9911892920835
+25,Massachusetts,MA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,60.744588442261325
+26,Michigan,MI,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,39.295933172428086
+27,Minnesota,MN,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,74.37810098907505
+28,Mississippi,MS,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,8.079192470923951
+29,Missouri,MO,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,35.12573190881598
+30,Montana,MT,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,80.31279747283739
+31,Nebraska,NE,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,62.661737078850535
+32,Nevada,NV,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,46.44228066286787
+33,New Hampshire,NH,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,81.52187309296092
+34,New Jersey,NJ,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,62.33307224820244
+35,New Mexico,NM,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,37.45020949752133
+36,New York,NY,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,39.19619283662123
+37,North Carolina,NC,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,38.03988376030257
+38,North Dakota,ND,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,60.16165537423109
+39,Ohio,OH,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,32.60466796712893
+40,Oklahoma,OK,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,37.964755702842524
+41,Oregon,OR,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,72.53976251759804
+42,Pennsylvania,PA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,40.48256850350637
+44,Rhode Island,RI,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,36.755756133278666
+45,South Carolina,SC,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,30.817125999537062
+46,South Dakota,SD,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,59.74315506708991
+47,Tennessee,TN,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,21.536435352401227
+48,Texas,TX,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,31.992679912298826
+49,Utah,UT,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,85.99181633376776
+50,Vermont,VT,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,86.37975419379731
+51,Virginia,VA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,64.67038559468315
+53,Washington,WA,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,80.80942067996388
+54,West Virginia,WV,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,9.486022389469547
+55,Wisconsin,WI,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,58.432086453810086
+56,Wyoming,WY,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,68.86811876417872
+72,Puerto Rico,PR,2023,index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,scorecard,2,1,12.022679231393733
+000,United States,USA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,41.32032659843693
+01,Alabama,AL,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,52.31328731674253
+02,Alaska,AK,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,27.78598579460804
+04,Arizona,AZ,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,37.062595491449166
+05,Arkansas,AR,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,57.31816008651998
+06,California,CA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,32.36877676025859
+08,Colorado,CO,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,43.09055938983463
+09,Connecticut,CT,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,44.73468149859298
+10,Delaware,DE,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,78.82909552769603
+11,District of Columbia,DC,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,54.828826738572864
+12,Florida,FL,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,26.29491236259616
+13,Georgia,GA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,28.476572808729582
+15,Hawaii,HI,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,63.74526369333481
+16,Idaho,ID,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,54.70425208797446
+17,Illinois,IL,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,39.941590185391526
+18,Indiana,IN,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,56.92920004755748
+19,Iowa,IA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,72.7427402314561
+20,Kansas,KS,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,46.429542125238136
+21,Kentucky,KY,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,69.25330673804955
+22,Louisiana,LA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,48.89075014193341
+23,Maine,ME,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,67.23650192364578
+24,Maryland,MD,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,54.5404056743314
+25,Massachusetts,MA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,61.22628852977967
+26,Michigan,MI,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,76.7599494655009
+27,Minnesota,MN,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,73.61592059271645
+28,Mississippi,MS,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,44.01635587053516
+29,Missouri,MO,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,44.5794826183534
+30,Montana,MT,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,65.89310035170818
+31,Nebraska,NE,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,48.684571802035656
+32,Nevada,NV,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,21.500233228478322
+33,New Hampshire,NH,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,59.65496690003831
+34,New Jersey,NJ,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,38.94783357487563
+35,New Mexico,NM,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,40.990497087778635
+36,New York,NY,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,50.09305169781894
+37,North Carolina,NC,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,49.598076080151884
+38,North Dakota,ND,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,59.47484457456289
+39,Ohio,OH,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,53.69003430875345
+40,Oklahoma,OK,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,35.38589938829633
+41,Oregon,OR,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,56.73909707950968
+42,Pennsylvania,PA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,67.54373787240355
+44,Rhode Island,RI,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,50.15565932354212
+45,South Carolina,SC,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,51.90826383197523
+46,South Dakota,SD,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,55.21479457859334
+47,Tennessee,TN,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,43.03581112326638
+48,Texas,TX,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,14.48981569588179
+49,Utah,UT,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,49.861865449151274
+50,Vermont,VT,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,62.99293225193279
+51,Virginia,VA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,47.78543828953271
+53,Washington,WA,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,49.681914515881736
+54,West Virginia,WV,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,73.13803143936661
+55,Wisconsin,WI,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,72.95942443569693
+56,Wyoming,WY,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,57.41331109254364
+72,Puerto Rico,PR,2023,index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,39.82078879526727
+000,United States,USA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,53.1128987697845
+01,Alabama,AL,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,35.50633075231241
+02,Alaska,AK,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,86.77881455372746
+04,Arizona,AZ,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,88.20011682746262
+05,Arkansas,AR,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,34.60593521394207
+06,California,CA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,61.57457206704558
+08,Colorado,CO,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,70.61761635762787
+09,Connecticut,CT,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,19.57780453255238
+10,Delaware,DE,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,90.51469601195662
+11,District of Columbia,DC,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,19.237316184921884
+12,Florida,FL,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,78.76622187540413
+13,Georgia,GA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,72.18592856019416
+15,Hawaii,HI,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,47.557765166755466
+16,Idaho,ID,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,78.22393141952752
+17,Illinois,IL,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,40.41919021953583
+18,Indiana,IN,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,41.11128649037153
+19,Iowa,IA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,13.674286216786866
+20,Kansas,KS,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,34.719289421881705
+21,Kentucky,KY,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,37.59469503253836
+22,Louisiana,LA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,31.37173528732018
+23,Maine,ME,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,52.9826234846657
+24,Maryland,MD,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,69.9733504477944
+25,Massachusetts,MA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,31.574691446255972
+26,Michigan,MI,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,53.81310167275857
+27,Minnesota,MN,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,30.99367091550887
+28,Mississippi,MS,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,25.5750435638369
+29,Missouri,MO,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,24.386475182701304
+30,Montana,MT,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,42.81957649344855
+31,Nebraska,NE,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,43.63898206422385
+32,Nevada,NV,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,98.7260118647352
+33,New Hampshire,NH,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,52.50677904552743
+34,New Jersey,NJ,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,76.76954160372823
+35,New Mexico,NM,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,56.00238998489522
+36,New York,NY,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,22.939700270336676
+37,North Carolina,NC,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,58.013558041251464
+38,North Dakota,ND,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,16.80657800549207
+39,Ohio,OH,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,32.0664965627033
+40,Oklahoma,OK,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,47.41798001857253
+41,Oregon,OR,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,69.99894352878935
+42,Pennsylvania,PA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,25.652358543625596
+44,Rhode Island,RI,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,10.217137984066342
+45,South Carolina,SC,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,47.87065600218235
+46,South Dakota,SD,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,6.085337750216264
+47,Tennessee,TN,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,39.86751778372868
+48,Texas,TX,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,68.34176050225585
+49,Utah,UT,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,98.07376509580251
+50,Vermont,VT,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,49.859843964195846
+51,Virginia,VA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,55.221875406403456
+53,Washington,WA,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,87.60665509923909
+54,West Virginia,WV,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,30.980541419443416
+55,Wisconsin,WI,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,47.36661118297018
+56,Wyoming,WY,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,1,87.37483282375689
+72,Puerto Rico,PR,2023,index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,scorecard,3,0,NA
+000,United States,USA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,47.84126948853833
+01,Alabama,AL,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,22.29209419630925
+02,Alaska,AK,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,74.10690202243559
+04,Arizona,AZ,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,60.875060192772736
+05,Arkansas,AR,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,18.479874529100236
+06,California,CA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,55.28841050342823
+08,Colorado,CO,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,84.5954869688205
+09,Connecticut,CT,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,57.05332377946851
+10,Delaware,DE,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,57.744833711151216
+11,District of Columbia,DC,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,58.4507294689124
+12,Florida,FL,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,48.1308400071359
+13,Georgia,GA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,44.70908616305158
+15,Hawaii,HI,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,67.76902087697593
+16,Idaho,ID,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,64.05685057535996
+17,Illinois,IL,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,54.89029003001178
+18,Indiana,IN,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,45.8914965114522
+19,Iowa,IA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,62.48973739912505
+20,Kansas,KS,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,63.72158144983103
+21,Kentucky,KY,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,18.586450642445996
+22,Louisiana,LA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,20.58688424742085
+23,Maine,ME,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,33.45600808883654
+24,Maryland,MD,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,75.17753989069512
+25,Massachusetts,MA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,54.075851949438324
+26,Michigan,MI,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,27.184440725928557
+27,Minnesota,MN,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,68.34282980018588
+28,Mississippi,MS,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,12.40691240420153
+29,Missouri,MO,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,37.16707593257088
+30,Montana,MT,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,58.91317571915749
+31,Nebraska,NE,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,73.58020316138575
+32,Nevada,NV,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,67.75693857987345
+33,New Hampshire,NH,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,70.90890854614813
+34,New Jersey,NJ,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,68.61969992214838
+35,New Mexico,NM,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,22.224678702125694
+36,New York,NY,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,34.8597246776368
+37,North Carolina,NC,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,34.55969739818887
+38,North Dakota,ND,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,82.21882862331577
+39,Ohio,OH,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,35.53469235546299
+40,Oklahoma,OK,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,45.91912080895657
+41,Oregon,OR,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,51.31567490342145
+42,Pennsylvania,PA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,40.25805216089329
+44,Rhode Island,RI,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,51.90211411533998
+45,South Carolina,SC,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,34.69354388525578
+46,South Dakota,SD,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,66.11550536560691
+47,Tennessee,TN,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,32.36993003345533
+48,Texas,TX,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,63.067620854767405
+49,Utah,UT,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,78.94068082498379
+50,Vermont,VT,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,36.59644902166697
+51,Virginia,VA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,68.9517669649301
+53,Washington,WA,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,72.71327485947471
+54,West Virginia,WV,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,13.746989209460821
+55,Wisconsin,WI,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,60.62116606508268
+56,Wyoming,WY,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,70.87452720283558
+72,Puerto Rico,PR,2023,index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,category,2,1,3.1101603261753987
+000,United States,USA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,43.88518206832087
+01,Alabama,AL,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,9.506168726027735
+02,Alaska,AK,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,67.35216303615883
+04,Arizona,AZ,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,59.488876292541576
+05,Arkansas,AR,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,10.031047166866399
+06,California,CA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,43.086777087174184
+08,Colorado,CO,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,90.29703932390188
+09,Connecticut,CT,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,57.68383844561548
+10,Delaware,DE,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,54.45475445895357
+11,District of Columbia,DC,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,59.72387281563849
+12,Florida,FL,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,41.91728595513077
+13,Georgia,GA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,32.03889806170029
+15,Hawaii,HI,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,51.633909133303376
+16,Idaho,ID,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,79.20351655854394
+17,Illinois,IL,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,54.85711508485038
+18,Indiana,IN,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,46.33085179309532
+19,Iowa,IA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,82.86995236503753
+20,Kansas,KS,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,81.736008503308625
+21,Kentucky,KY,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,13.053377371165663
+22,Louisiana,LA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,16.169343286259092
+23,Maine,ME,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,25.84383849590531
+24,Maryland,MD,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,66.42198259375193
+25,Massachusetts,MA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,48.09635244469763
+26,Michigan,MI,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,23.339071663647232
+27,Minnesota,MN,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,87.06587308701248
+28,Mississippi,MS,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,8.502715667130044
+29,Missouri,MO,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,35.113011868387595
+30,Montana,MT,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,76.96494285668268
+31,Nebraska,NE,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,93.52835916370398
+32,Nevada,NV,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,60.895601924053565
+33,New Hampshire,NH,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,68.12055490792511
+34,New Jersey,NJ,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,55.76078519325739
+35,New Mexico,NM,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,24.80159380318475
+36,New York,NY,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,23.158939954026923
+37,North Carolina,NC,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,24.942728168430218
+38,North Dakota,ND,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,97.66738784012739
+39,Ohio,OH,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,39.13187871572751
+40,Oklahoma,OK,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,47.14229547082032
+41,Oregon,OR,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,56.73891821768543
+42,Pennsylvania,PA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,38.85198454557262
+44,Rhode Island,RI,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,45.90566679113441
+45,South Carolina,SC,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,21.69401604581471
+46,South Dakota,SD,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,91.0797097357476
+47,Tennessee,TN,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,21.535648007665394
+48,Texas,TX,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,70.99491639496986
+49,Utah,UT,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,91.17051249221515
+50,Vermont,VT,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,37.09352429414193
+51,Virginia,VA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,58.74816689266851
+53,Washington,WA,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,62.61401305183846
+54,West Virginia,WV,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,4.045394865369678
+55,Wisconsin,WI,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,71.22389525732547
+56,Wyoming,WY,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,85.54082142334471
+72,Puerto Rico,PR,2023,index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,scorecard,2,1,6.1337263486644265
+000,United States,USA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,51.79735690875579
+01,Alabama,AL,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,35.07801966659076
+02,Alaska,AK,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,80.86164100871235
+04,Arizona,AZ,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,62.261244093003896
+05,Arkansas,AR,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,26.928701891334075
+06,California,CA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,67.49004391968228
+08,Colorado,CO,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,78.89393461373912
+09,Connecticut,CT,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,56.42280911332154
+10,Delaware,DE,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,61.03491296334886
+11,District of Columbia,DC,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,57.17758612218631
+12,Florida,FL,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,54.34439405914104
+13,Georgia,GA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,57.37927426440288
+15,Hawaii,HI,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,83.90413262064848
+16,Idaho,ID,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,48.91018459217597
+17,Illinois,IL,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,54.92346497517319
+18,Indiana,IN,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,45.45214122980908
+19,Iowa,IA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,42.10952243321257
+20,Kansas,KS,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,45.70715439635343
+21,Kentucky,KY,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,24.119523913726326
+22,Louisiana,LA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,25.00442520858261
+23,Maine,ME,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,41.06817768176777
+24,Maryland,MD,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,83.9330971876383
+25,Massachusetts,MA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,60.05535145417902
+26,Michigan,MI,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,31.02980978820988
+27,Minnesota,MN,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,49.61978651335927
+28,Mississippi,MS,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,16.311109141273015
+29,Missouri,MO,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,39.22113999675416
+30,Montana,MT,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,40.86140858163231
+31,Nebraska,NE,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,53.63204715906751
+32,Nevada,NV,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,74.61827523569333
+33,New Hampshire,NH,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,73.69726218437113
+34,New Jersey,NJ,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,81.47861465103938
+35,New Mexico,NM,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,19.647763601066632
+36,New York,NY,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,46.56050940124667
+37,North Carolina,NC,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,44.17666662794751
+38,North Dakota,ND,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,66.77026940650416
+39,Ohio,OH,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,31.937505995198464
+40,Oklahoma,OK,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,44.69594614709282
+41,Oregon,OR,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,45.89243158915747
+42,Pennsylvania,PA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,41.664119776213965
+44,Rhode Island,RI,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,57.898561439545546
+45,South Carolina,SC,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,47.69307172469685
+46,South Dakota,SD,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,41.1513009954662
+47,Tennessee,TN,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,43.20421205924528
+48,Texas,TX,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,55.14032531456495
+49,Utah,UT,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,66.71084915775243
+50,Vermont,VT,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,36.09937374919202
+51,Virginia,VA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,79.1553670371917
+53,Washington,WA,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,82.81253666711095
+54,West Virginia,WV,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,23.448583553551963
+55,Wisconsin,WI,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,50.0184368728399
+56,Wyoming,WY,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,56.20823298232645
+72,Puerto Rico,PR,2023,index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,scorecard,2,1,0.0865943036863707
+000,United States,USA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,48.74602752376173
+01,Alabama,AL,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,36.72972259994045
+02,Alaska,AK,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,63.653277374137666
+04,Arizona,AZ,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,62.46380675150573
+05,Arkansas,AR,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,41.81748611252908
+06,California,CA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,48.63933224390908
+08,Colorado,CO,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,65.25047616434738
+09,Connecticut,CT,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,46.16435025724624
+10,Delaware,DE,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,67.37632597899399
+11,District of Columbia,DC,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,47.784507839180655
+12,Florida,FL,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,51.97078752573737
+13,Georgia,GA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,50.25070087776381
+15,Hawaii,HI,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,64.14600734492859
+16,Idaho,ID,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,61.424237686729064
+17,Illinois,IL,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,52.03975183066055
+18,Indiana,IN,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,45.353473678547836
+19,Iowa,IA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,47.64934699445197
+20,Kansas,KS,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,43.916316428428296
+21,Kentucky,KY,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,38.10364378006158
+22,Louisiana,LA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,35.6257796954439
+23,Maine,ME,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,46.95664997975362
+24,Maryland,MD,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,63.75458389278555
+25,Massachusetts,MA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,51.431863543460615
+26,Michigan,MI,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,46.014773124560996
+27,Minnesota,MN,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,53.98550328048984
+28,Mississippi,MS,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,31.659177210936026
+29,Missouri,MO,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,41.21307576220712
+30,Montana,MT,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,54.974668731676466
+31,Nebraska,NE,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,56.70528068278694
+32,Nevada,NV,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,67.22111304068062
+33,New Hampshire,NH,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,56.993467198747084
+34,New Jersey,NJ,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,65.62854719472274
+35,New Mexico,NM,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,42.85237200815763
+36,New York,NY,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,42.788056508425704
+37,North Carolina,NC,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,46.6275174586572
+38,North Dakota,ND,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,50.68101711245833
+39,Ohio,OH,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,39.869780934032974
+40,Oklahoma,OK,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,44.05828660809323
+41,Oregon,OR,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,55.38965686766784
+42,Pennsylvania,PA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,42.41281494689465
+44,Rhode Island,RI,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,37.49327325147627
+45,South Carolina,SC,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,49.527523693651034
+46,South Dakota,SD,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,38.409378710461546
+47,Tennessee,TN,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,43.63287266259135
+48,Texas,TX,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,52.93959839400926
+49,Utah,UT,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,72.44969076946954
+50,Vermont,VT,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,47.53925640679278
+51,Virginia,VA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,59.9146816869962
+53,Washington,WA,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,70.47149447205607
+54,West Virginia,WV,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,37.95475177244291
+55,Wisconsin,WI,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,55.516660075000736
+56,Wyoming,WY,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,1,69.39704036008317
+72,Puerto Rico,PR,2023,index_rel_adaparc,ADA-PARC Index (Relative),category_index,NA,relative,category,3,0.3333333333333333,NA
+000,United States,USA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,49.0651787905042
+01,Alabama,AL,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.371520332534196
+02,Alaska,AK,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,55.80827478573834
+04,Arizona,AZ,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,56.260230370741894
+05,Arkansas,AR,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.71477860454493
+06,California,CA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.16968630576811
+08,Colorado,CO,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,56.4925812035216
+09,Connecticut,CT,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,45.41203155490986
+10,Delaware,DE,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,59.71288635477322
+11,District of Columbia,DC,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,49.68962300239031
+12,Florida,FL,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.603800423873004
+13,Georgia,GA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,52.017306870046106
+15,Hawaii,HI,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,55.04568138054094
+16,Idaho,ID,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,56.08236570257305
+17,Illinois,IL,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,47.05595480478475
+18,Indiana,IN,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,49.06851051042936
+19,Iowa,IA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,43.92535024264588
+20,Kansas,KS,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,48.39916643024869
+21,Kentucky,KY,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.367793932690965
+22,Louisiana,LA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,45.30868644688415
+23,Maine,ME,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,47.194683894693924
+24,Maryland,MD,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,55.36622500469247
+25,Massachusetts,MA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.29950991160517
+26,Michigan,MI,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.2697148573514
+27,Minnesota,MN,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,47.06969936382582
+28,Mississippi,MS,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,42.82349424662741
+29,Missouri,MO,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,45.19581104662668
+30,Montana,MT,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,52.04974953520191
+31,Nebraska,NE,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.63162921018649
+32,Nevada,NV,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,61.00034879174267
+33,New Hampshire,NH,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,48.90470261971612
+34,New Jersey,NJ,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,51.76116066954974
+35,New Mexico,NM,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.821739288087315
+36,New York,NY,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,43.48628775531854
+37,North Carolina,NC,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,49.577865048746226
+38,North Dakota,ND,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,48.2012429744299
+39,Ohio,OH,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,45.28874223964176
+40,Oklahoma,OK,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.28118107726891
+41,Oregon,OR,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,53.45882935854341
+42,Pennsylvania,PA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.07110834832383
+44,Rhode Island,RI,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,43.73531671406168
+45,South Carolina,SC,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,49.434619083528986
+46,South Dakota,SD,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,44.240246775083534
+47,Tennessee,TN,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,48.891081352962615
+48,Texas,TX,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,53.097328433347435
+49,Utah,UT,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,65.02748613844417
+50,Vermont,VT,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,47.7312595777811
+51,Virginia,VA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,52.72705868503219
+53,Washington,WA,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,59.75137233117833
+54,West Virginia,WV,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,46.42708355837547
+55,Wisconsin,WI,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,50.88345109028408
+56,Wyoming,WY,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,1,57.61474382403084
+72,Puerto Rico,PR,2023,index_adaparc,ADA-PARC Index,category_index,NA,NA,category,2,0,NA

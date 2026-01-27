@@ -1,0 +1,12 @@
+test,status,details
+A1 scored columns present,PASS,
+A2 scored uniqueness (GEOID-year-indicator_id),PASS,
+B1 z_score recalculates correctly,PASS,"max_abs_diff=4.44e-16, frac_bad=0%"
+B2 score_100 matches pnorm(z) + direction flip,PASS,"max_abs_diff=2.84e-14, frac_bad=NA%"
+C1 composite indicator_ids present,PASS,
+C2 composites uniqueness (GEOID-year-indicator_id),PASS,
+D1 index columns present,PASS,
+D2 index uniqueness (GEOID-year-index_id),PASS,
+D3 recompute key indices from dict matches output,PASS,"max_abs_diff=1.42e-14, frac_bad=0%"
+E1 wide uniqueness (GEOID-year),PASS,
+E2 expected key index columns present in wide,PASS,

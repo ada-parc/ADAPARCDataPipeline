@@ -16,7 +16,7 @@ city_place_data_filtered <- filterPlaceAcsDataToScope(places_data_acs_raw, place
 
 city_place_data_base <-  transformRawVariablesToADAPARCBaseVariables(ada_parc_base_variable_map, city_place_data_filtered, "acs")
 
-city_place_data_processed <- addCalculatedVariablesForBaseDemographics(city_place_data_base)
+city_place_data_processed <- addACSCalculatedVariablesCity(city_place_data_base)
 
 # Checking for Albany (place GEOID: 36001000202)
 
@@ -28,6 +28,6 @@ saveTransformedDataFile(city_place_data_processed, "city_place_data_processed")
 
 city_tracts_data_base <- transformRawVariablesToADAPARCBaseVariables(ada_parc_base_variable_map, tracts_data_acs_raw, "acs")
 
-city_tracts_data_processed <- addCalculatedVariablesForBaseDemographics(city_tracts_data_base)
+city_tracts_data_processed <- addACSCalculatedVariablesCity(city_tracts_data_base)
 
 saveTransformedDataFile(city_tracts_data_processed, "city_tracts_data_processed")

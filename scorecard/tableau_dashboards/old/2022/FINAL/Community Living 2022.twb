@@ -1,0 +1,2524 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0618.0924                               -->
+<workbook original-version='18.1' source-build='2024.1.4 (20241.24.0618.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' inline='true' name='federated.1hqkwtg1lu6uyv128bhk205x45yt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='community_living_between_2022_excel' name='excel-direct.162zzbm0ud88ax1cz4m0s07bxwgr'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='/Users/heener/Documents/GitHub/ADA-PARC-Website-Design/scorecard/scorecard_data/relative/community_living_between_2022_excel.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.162zzbm0ud88ax1cz4m0s07bxwgr' name='Sheet 1 - Rounded_Values_for_Sp' table='[&apos;Sheet 1 - Rounded_Values_for_Sp$&apos;]' type='table'>
+          <columns gridOrigin='A1:Y55:no:A1:Y55:1' header='no' lost='0' outcome='1' processed='1199'>
+            <column datatype='string' name='NAME' ordinal='0' />
+            <column datatype='real' name='pwd_nursing_18_64_pct' ordinal='1' />
+            <column datatype='real' name='pwd_grpquarters_institution_pct' ordinal='2' />
+            <column datatype='real' name='pwd_grpquarters_noninstitution_pct' ordinal='3' />
+            <column datatype='real' name='pwd_home_pct' ordinal='4' />
+            <column datatype='real' name='pwd_corrections_pct' ordinal='5' />
+            <column datatype='real' name='pwd_housing_choice_voucher_pct' ordinal='6' />
+            <column datatype='real' name='pwd_pubhousing_pct' ordinal='7' />
+            <column datatype='real' name='z_pwd_nursing_18_64_pct' ordinal='8' />
+            <column datatype='real' name='z_pwd_grpquarters_institution_pct' ordinal='9' />
+            <column datatype='real' name='z_pwd_grpquarters_noninstitution_pct' ordinal='10' />
+            <column datatype='real' name='z_pwd_home_pct' ordinal='11' />
+            <column datatype='real' name='z_pwd_corrections_pct' ordinal='12' />
+            <column datatype='real' name='z_pwd_housing_choice_voucher_pct' ordinal='13' />
+            <column datatype='real' name='z_pwd_pubhousing_pct' ordinal='14' />
+            <column datatype='real' name='score_z_pwd_nursing_18_64_pct' ordinal='15' />
+            <column datatype='real' name='score_z_pwd_grpquarters_institution_pct' ordinal='16' />
+            <column datatype='real' name='score_z_pwd_grpquarters_noninstitution_pct' ordinal='17' />
+            <column datatype='real' name='score_z_pwd_home_pct' ordinal='18' />
+            <column datatype='real' name='score_z_pwd_corrections_pct' ordinal='19' />
+            <column datatype='real' name='score_z_pwd_housing_choice_voucher_pct' ordinal='20' />
+            <column datatype='real' name='score_z_pwd_pubhousing_pct' ordinal='21' />
+            <column datatype='real' name='Housing Support' ordinal='22' />
+            <column datatype='real' name='Community Living General' ordinal='23' />
+            <column datatype='real' name='Community Resources' ordinal='24' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.162zzbm0ud88ax1cz4m0s07bxwgr' name='Sheet 1 - Rounded_Values_for_Sp' table='[&apos;Sheet 1 - Rounded_Values_for_Sp$&apos;]' type='table'>
+          <columns gridOrigin='A1:Y55:no:A1:Y55:1' header='no' lost='0' outcome='1' processed='1199'>
+            <column datatype='string' name='NAME' ordinal='0' />
+            <column datatype='real' name='pwd_nursing_18_64_pct' ordinal='1' />
+            <column datatype='real' name='pwd_grpquarters_institution_pct' ordinal='2' />
+            <column datatype='real' name='pwd_grpquarters_noninstitution_pct' ordinal='3' />
+            <column datatype='real' name='pwd_home_pct' ordinal='4' />
+            <column datatype='real' name='pwd_corrections_pct' ordinal='5' />
+            <column datatype='real' name='pwd_housing_choice_voucher_pct' ordinal='6' />
+            <column datatype='real' name='pwd_pubhousing_pct' ordinal='7' />
+            <column datatype='real' name='z_pwd_nursing_18_64_pct' ordinal='8' />
+            <column datatype='real' name='z_pwd_grpquarters_institution_pct' ordinal='9' />
+            <column datatype='real' name='z_pwd_grpquarters_noninstitution_pct' ordinal='10' />
+            <column datatype='real' name='z_pwd_home_pct' ordinal='11' />
+            <column datatype='real' name='z_pwd_corrections_pct' ordinal='12' />
+            <column datatype='real' name='z_pwd_housing_choice_voucher_pct' ordinal='13' />
+            <column datatype='real' name='z_pwd_pubhousing_pct' ordinal='14' />
+            <column datatype='real' name='score_z_pwd_nursing_18_64_pct' ordinal='15' />
+            <column datatype='real' name='score_z_pwd_grpquarters_institution_pct' ordinal='16' />
+            <column datatype='real' name='score_z_pwd_grpquarters_noninstitution_pct' ordinal='17' />
+            <column datatype='real' name='score_z_pwd_home_pct' ordinal='18' />
+            <column datatype='real' name='score_z_pwd_corrections_pct' ordinal='19' />
+            <column datatype='real' name='score_z_pwd_housing_choice_voucher_pct' ordinal='20' />
+            <column datatype='real' name='score_z_pwd_pubhousing_pct' ordinal='21' />
+            <column datatype='real' name='Housing Support' ordinal='22' />
+            <column datatype='real' name='Community Living General' ordinal='23' />
+            <column datatype='real' name='Community Resources' ordinal='24' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-refresh-mode='' incremental-updates='' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:Y55:no:A1:Y55:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>1199</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[NAME]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_nursing_18_64_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_nursing_18_64_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_nursing_18_64_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_grpquarters_institution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_grpquarters_institution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_grpquarters_institution_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_grpquarters_noninstitution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_grpquarters_noninstitution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_grpquarters_noninstitution_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_home_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_home_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_home_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_corrections_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_corrections_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_corrections_pct</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_housing_choice_voucher_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_housing_choice_voucher_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_housing_choice_voucher_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pwd_pubhousing_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pwd_pubhousing_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>pwd_pubhousing_pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_nursing_18_64_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_nursing_18_64_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_nursing_18_64_pct</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_grpquarters_institution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_grpquarters_institution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_grpquarters_institution_pct</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_grpquarters_noninstitution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_grpquarters_noninstitution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_grpquarters_noninstitution_pct</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_home_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_home_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_home_pct</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_corrections_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_corrections_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_corrections_pct</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_housing_choice_voucher_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_housing_choice_voucher_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_housing_choice_voucher_pct</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_pwd_pubhousing_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_pwd_pubhousing_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>z_pwd_pubhousing_pct</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_nursing_18_64_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_nursing_18_64_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_nursing_18_64_pct</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_grpquarters_institution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_grpquarters_institution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_grpquarters_institution_pct</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_grpquarters_noninstitution_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_grpquarters_noninstitution_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_grpquarters_noninstitution_pct</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_home_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_home_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_home_pct</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_corrections_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_corrections_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_corrections_pct</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_housing_choice_voucher_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_housing_choice_voucher_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_housing_choice_voucher_pct</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_z_pwd_pubhousing_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_z_pwd_pubhousing_pct]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>score_z_pwd_pubhousing_pct</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing Support</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Housing Support]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>Housing Support</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Community Living General</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Community Living General]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>Community Living General</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Community Resources</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Community Resources]</local-name>
+            <parent-name>[Sheet 1 - Rounded_Values_for_Sp]</parent-name>
+            <remote-alias>Community Resources</remote-alias>
+            <ordinal>24</ordinal>
+            <hidden>true</hidden>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Community Living General Quartiles' datatype='string' name='[Calculation_6820349809039835136]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Community Living General], 0.25) } &gt;= [Community Living General] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.5) } &gt;= [Community Living General] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.75) } &gt;= [Community Living General] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+      </column>
+      <column caption='Housing Support Quartiles' datatype='string' name='[Community Living General Quartiles (copy)_6820349809042931713]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Housing Support], 0.25) } &gt;= [Housing Support] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.5) } &gt;= [Housing Support] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.75) } &gt;= [Housing Support] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+      </column>
+      <column datatype='real' hidden='true' name='[Community Resources]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet 1 - Rounded_Values_for_Sp' datatype='table' name='[__tableau_internal_object_id__].[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_6820349809039835136]' derivation='None' name='[none:Calculation_6820349809039835136:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Community Living General Quartiles (copy)_6820349809042931713]' derivation='None' name='[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/heener/Documents/My Tableau Repository/Datasources/2024.1/en_US-US/community_living_extract_2022.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/23/2025 10:39:25 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-refresh-mode='' incremental-updates=''>
+            <refresh-event add-from-file-path='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' increment-value='%null%' refresh-type='create' rows-inserted='53' timestamp-start='2025-01-23 22:39:21.810' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NAME</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_nursing_18_64_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_nursing_18_64_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_nursing_18_64_pct</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_grpquarters_institution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_grpquarters_institution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_grpquarters_institution_pct</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_grpquarters_noninstitution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_grpquarters_noninstitution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_grpquarters_noninstitution_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_home_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_home_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_home_pct</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_corrections_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_corrections_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_corrections_pct</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_housing_choice_voucher_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_housing_choice_voucher_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_housing_choice_voucher_pct</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pwd_pubhousing_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pwd_pubhousing_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pwd_pubhousing_pct</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_nursing_18_64_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_nursing_18_64_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_nursing_18_64_pct</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_grpquarters_institution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_grpquarters_institution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_grpquarters_institution_pct</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_grpquarters_noninstitution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_grpquarters_noninstitution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_grpquarters_noninstitution_pct</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_home_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_home_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_home_pct</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_corrections_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_corrections_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_corrections_pct</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_housing_choice_voucher_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_housing_choice_voucher_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_housing_choice_voucher_pct</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_pwd_pubhousing_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_pwd_pubhousing_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_pwd_pubhousing_pct</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_nursing_18_64_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_nursing_18_64_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_nursing_18_64_pct</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_grpquarters_institution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_grpquarters_institution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_grpquarters_institution_pct</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_grpquarters_noninstitution_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_grpquarters_noninstitution_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_grpquarters_noninstitution_pct</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_home_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_home_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_home_pct</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_corrections_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_corrections_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_corrections_pct</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_housing_choice_voucher_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_housing_choice_voucher_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_housing_choice_voucher_pct</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_z_pwd_pubhousing_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[score_z_pwd_pubhousing_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_z_pwd_pubhousing_pct</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Housing Support</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Housing Support]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Housing Support</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Community Living General</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Community Living General]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Community Living General</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Sheet 1 - Rounded_Values_for_Sp</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' type='palette'>
+            <map to='#762f3d'>
+              <bucket>&quot;Q4&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;Q3&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;Q1&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;Q2&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_6820349809039835136:nk]' type='palette'>
+            <map to='#762f3d'>
+              <bucket>&quot;Q4&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;Q3&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;Q2&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;Q1&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet 1 - Rounded_Values_for_Sp' id='Sheet 1 - Rounded!Values!for!Sp_DF13BD80AC9D4799A1E3DA08DFE842F9'>
+            <properties context=''>
+              <relation connection='excel-direct.162zzbm0ud88ax1cz4m0s07bxwgr' name='Sheet 1 - Rounded_Values_for_Sp' table='[&apos;Sheet 1 - Rounded_Values_for_Sp$&apos;]' type='table'>
+                <columns gridOrigin='A1:Y55:no:A1:Y55:1' header='no' lost='0' outcome='1' processed='1199'>
+                  <column datatype='string' name='NAME' ordinal='0' />
+                  <column datatype='real' name='pwd_nursing_18_64_pct' ordinal='1' />
+                  <column datatype='real' name='pwd_grpquarters_institution_pct' ordinal='2' />
+                  <column datatype='real' name='pwd_grpquarters_noninstitution_pct' ordinal='3' />
+                  <column datatype='real' name='pwd_home_pct' ordinal='4' />
+                  <column datatype='real' name='pwd_corrections_pct' ordinal='5' />
+                  <column datatype='real' name='pwd_housing_choice_voucher_pct' ordinal='6' />
+                  <column datatype='real' name='pwd_pubhousing_pct' ordinal='7' />
+                  <column datatype='real' name='z_pwd_nursing_18_64_pct' ordinal='8' />
+                  <column datatype='real' name='z_pwd_grpquarters_institution_pct' ordinal='9' />
+                  <column datatype='real' name='z_pwd_grpquarters_noninstitution_pct' ordinal='10' />
+                  <column datatype='real' name='z_pwd_home_pct' ordinal='11' />
+                  <column datatype='real' name='z_pwd_corrections_pct' ordinal='12' />
+                  <column datatype='real' name='z_pwd_housing_choice_voucher_pct' ordinal='13' />
+                  <column datatype='real' name='z_pwd_pubhousing_pct' ordinal='14' />
+                  <column datatype='real' name='score_z_pwd_nursing_18_64_pct' ordinal='15' />
+                  <column datatype='real' name='score_z_pwd_grpquarters_institution_pct' ordinal='16' />
+                  <column datatype='real' name='score_z_pwd_grpquarters_noninstitution_pct' ordinal='17' />
+                  <column datatype='real' name='score_z_pwd_home_pct' ordinal='18' />
+                  <column datatype='real' name='score_z_pwd_corrections_pct' ordinal='19' />
+                  <column datatype='real' name='score_z_pwd_housing_choice_voucher_pct' ordinal='20' />
+                  <column datatype='real' name='score_z_pwd_pubhousing_pct' ordinal='21' />
+                  <column datatype='real' name='Housing Support' ordinal='22' />
+                  <column datatype='real' name='Community Living General' ordinal='23' />
+                  <column datatype='real' name='Community Resources' ordinal='24' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_D7312969CD89463986EC187B75DC2CA1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Affordable Housing Score' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Housing Support Quartiles' />
+        <param name='target' value='Affordable Housing Score' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Community Living General Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' name='federated.1hqkwtg1lu6uyv128bhk205x45yt' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1hqkwtg1lu6uyv128bhk205x45yt'>
+            <column caption='Community Living General Quartiles' datatype='string' name='[Calculation_6820349809039835136]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Community Living General], 0.25) } &gt;= [Community Living General] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.5) } &gt;= [Community Living General] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.75) } &gt;= [Community Living General] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+            </column>
+            <column datatype='real' name='[Community Living General]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_6820349809039835136]' derivation='None' name='[none:Calculation_6820349809039835136:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Community Living General]' derivation='Sum' name='[sum:Community Living General:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Longitude (generated)]' field-type='quantitative' max='33169814.114704743' min='25456007.630490966' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Latitude (generated)]' field-type='quantitative' max='7298263.2085121926' min='1615678.5391168972' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' num-steps='6' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='admin-0-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-1st-tier' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park-stroke' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='parks-stroke' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='Coastline' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute-sub' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents' value='true' />
+            <format attr='enabled' id='light-admin1-water-lines-usa-tableau' value='true' />
+            <format attr='enabled' id='light-9-dash-line-casing' value='true' />
+            <format attr='enabled' id='light-9-dash-line' value='true' />
+            <format attr='enabled' id='admin-1-label-9th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-8th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-7th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-6th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-1st-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-3rd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-2nd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-1st-tier' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.28999999165534973' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' />
+              <color column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' />
+              <lod column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' />
+              <geometry column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Latitude (generated)]</rows>
+        <cols>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{146B0371-7636-425E-8B9E-9F0305680710}' />
+    </worksheet>
+    <worksheet name='Community Living General Table'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' name='federated.1hqkwtg1lu6uyv128bhk205x45yt' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1hqkwtg1lu6uyv128bhk205x45yt'>
+            <column caption='Community Living General Quartiles' datatype='string' name='[Calculation_6820349809039835136]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Community Living General], 0.25) } &gt;= [Community Living General] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.5) } &gt;= [Community Living General] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Community Living General], 0.75) } &gt;= [Community Living General] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+            </column>
+            <column datatype='real' name='[Community Living General]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_6820349809039835136]' derivation='None' name='[none:Calculation_6820349809039835136:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Community Living General]' derivation='Sum' name='[sum:Community Living General:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' direction='DESC' using='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' />
+          <computed-sort column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' direction='DESC' using='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='309' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' value='256' />
+            <format attr='width' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' value='228' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' num-steps='6' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='admin-0-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-1st-tier' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park-stroke' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='parks-stroke' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='Coastline' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute-sub' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents' value='true' />
+            <format attr='enabled' id='light-admin1-water-lines-usa-tableau' value='true' />
+            <format attr='enabled' id='light-9-dash-line-casing' value='true' />
+            <format attr='enabled' id='light-9-dash-line' value='true' />
+            <format attr='enabled' id='admin-1-label-9th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-8th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-7th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-6th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-1st-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-3rd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-2nd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-1st-tier' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.28999999165534973' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' />
+              <text column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Community Living General:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk] / [federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{EA3B789A-BD92-45AF-9D85-47B2F9035F00}' />
+    </worksheet>
+    <worksheet name='Housing Support Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' name='federated.1hqkwtg1lu6uyv128bhk205x45yt' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1hqkwtg1lu6uyv128bhk205x45yt'>
+            <column caption='Housing Support Quartiles' datatype='string' name='[Community Living General Quartiles (copy)_6820349809042931713]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Housing Support], 0.25) } &gt;= [Housing Support] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.5) } &gt;= [Housing Support] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.75) } &gt;= [Housing Support] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+            </column>
+            <column datatype='real' name='[Housing Support]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Community Living General Quartiles (copy)_6820349809042931713]' derivation='None' name='[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Housing Support]' derivation='Sum' name='[sum:Housing Support:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Longitude (generated)]' field-type='quantitative' max='33181980.424200196' min='25695078.977797601' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Latitude (generated)]' field-type='quantitative' max='7296004.7062651571' min='1780575.784413334' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' num-steps='6' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='admin-0-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-1st-tier' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park-stroke' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='parks-stroke' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='Coastline' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute-sub' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-sub' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-supress' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-sm-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-md-parents' value='true' />
+            <format attr='enabled' id='light-admin-1-boundaries-lg-parents' value='true' />
+            <format attr='enabled' id='light-admin1-water-lines-usa-tableau' value='true' />
+            <format attr='enabled' id='light-9-dash-line-casing' value='true' />
+            <format attr='enabled' id='light-9-dash-line' value='true' />
+            <format attr='enabled' id='admin-1-label-9th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-8th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-7th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-6th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-1-label-1st-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-3rd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-2nd-tier' value='false' />
+            <format attr='enabled' id='us-admin-1-label-abbr-1st-tier' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.28999999165534973' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' />
+              <color column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' />
+              <lod column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' />
+              <geometry column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Latitude (generated)]</rows>
+        <cols>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E8688481-DB75-458D-A174-01A880C9F81B}' />
+    </worksheet>
+    <worksheet name='Housing Support Table'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet 1 - Rounded_Values_for_Sp (community_living_between_2022_excel)' name='federated.1hqkwtg1lu6uyv128bhk205x45yt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hqkwtg1lu6uyv128bhk205x45yt'>
+            <column caption='Housing Support Quartiles' datatype='string' name='[Community Living General Quartiles (copy)_6820349809042931713]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF { FIXED : PERCENTILE([Housing Support], 0.25) } &gt;= [Housing Support] THEN&#10;    &quot;Q1&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.5) } &gt;= [Housing Support] THEN&#10;    &quot;Q2&quot;&#10;ELSEIF { FIXED : PERCENTILE([Housing Support], 0.75) } &gt;= [Housing Support] THEN&#10;    &quot;Q3&quot;&#10;ELSE&#10;    &quot;Q4&quot;&#10;END' />
+            </column>
+            <column datatype='real' name='[Housing Support]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Community Living General Quartiles (copy)_6820349809042931713]' derivation='None' name='[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Housing Support]' derivation='Sum' name='[sum:Housing Support:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' direction='DESC' using='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' />
+          <computed-sort column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' direction='DESC' using='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='320' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' value='256' />
+            <format attr='width' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk]' value='252' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='vertical-align' value='auto' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' num-steps='6' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' />
+              <text column='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[sum:Housing Support:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk] / [federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:NAME:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B9CE1E46-4F0B-4E27-8790-B01A7DA279F3}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Affordable Housing Score'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='5' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='8' param='horz' type-v2='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0' />
+          </zone>
+        </zone>
+        <zone forceUpdate='true' h='19750' id='3' type-v2='text' w='51100' x='24700' y='1250'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='26'>Affordable Housing Score</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontsize='10'>How much financial support opportunity does the state provide people with disabilities for housing.</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='30125' id='4' name='Housing Support Table' show-title='false' w='98700' x='1000' y='69250' />
+        <zone h='19375' id='9' leg-item-order='reversed' name='Housing Support Table' pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' type-v2='color' w='20000' x='81600' y='17875' />
+        <zone h='50125' id='10' name='Housing Support Map' show-title='false' w='80800' x='800' y='18000' />
+        <zone forceUpdate='true' h='44625' id='22' type-v2='text' w='16700' x='81800' y='27375'>
+          <formatted-text>
+            <run bold='true' fontcolor='#333333' fontsize='10'>Q4 : Top Scores, Greatest Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#333333' fontsize='10'>Q3: Above Average Scores, Good Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#333333' fontsize='10'>Q2: Below Average Scores, Less Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#333333' fontsize='10'>Q1: Bottom Scores, Worst Opportunity for Disability Population</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='28' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='27' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='19750' id='3' type-v2='text' w='51100' x='24700' y='1250'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='26'>Affordable Housing Score</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontsize='10'>How much financial support opportunity does the state provide people with disabilities for housing.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50125' id='10' is-fixed='true' name='Housing Support Map' show-title='false' w='80800' x='800' y='18000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='44625' id='22' type-v2='text' w='16700' x='81800' y='27375'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#333333' fontsize='10'>Q4 : Top Scores, Greatest Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#333333' fontsize='10'>Q3: Above Average Scores, Good Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#333333' fontsize='10'>Q2: Below Average Scores, Less Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#333333' fontsize='10'>Q1: Bottom Scores, Worst Opportunity for Disability Population</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='241' h='30125' id='4' is-fixed='true' name='Housing Support Table' show-title='false' w='98700' x='1000' y='69250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='19375' id='9' leg-item-order='reversed' name='Housing Support Table' pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' type-v2='color' w='20000' x='81600' y='17875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B9747874-3DF1-4567-9BE0-C55F1FD9550A}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Living in Community Score'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone fixed-size='158' h='19750' id='9' is-fixed='true' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='21375' id='8' leg-item-order='reversed' name='Community Living General Table' pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' type-v2='color' w='22000' x='79000' y='23375' />
+        <zone h='25750' id='3' name='Community Living General Table' show-title='false' w='101300' x='700' y='73750' />
+        <zone h='49250' id='12' name='Community Living General Map' show-title='false' w='78000' x='200' y='23375'>
+          <layout-cache minheight='244' type-h='scalable' type-w='fixed' />
+        </zone>
+        <zone forceUpdate='true' h='46125' id='22' type-v2='text' w='20200' x='78500' y='32250'>
+          <formatted-text>
+            <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q4 : Top Scores, Greatest Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q3: Above Average Scores, Good Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q2: Below Average Scores, Less Opportunity for Disability Population</run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q1: Bottom Scores, Worst Opportunity for Disability Population</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='18000' id='11' type-v2='text' w='57600' x='17900' y='7125'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='26'>Living In The Community Score</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#333333' fontsize='10'>Represents the level of opportunity for people with disabilities to live in the community rather than an institution. </run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='30' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='29' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='18000' id='11' type-v2='text' w='57600' x='17900' y='7125'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='26'>Living In The Community Score</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#333333' fontsize='10'>Represents the level of opportunity for people with disabilities to live in the community rather than an institution. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49250' id='12' is-fixed='true' name='Community Living General Map' show-title='false' w='78000' x='200' y='23375'>
+                  <layout-cache minheight='244' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='46125' id='22' type-v2='text' w='20200' x='78500' y='32250'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q4 : Top Scores, Greatest Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q3: Above Average Scores, Good Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q2: Below Average Scores, Less Opportunity for Disability Population</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#1b1b1b' fontsize='10'>Q1: Bottom Scores, Worst Opportunity for Disability Population</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='206' h='25750' id='3' is-fixed='true' name='Community Living General Table' show-title='false' w='101300' x='700' y='73750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='21375' id='8' leg-item-order='reversed' name='Community Living General Table' pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' type-v2='color' w='22000' x='79000' y='23375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4AB4E58C-A9F4-406B-8949-A76FA47D43DD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Living in Community Score'>
+      <viewpoints>
+        <viewpoint name='Community Living General Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Community Living General Table'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{46321D4E-92D3-4DD5-84F3-9556CFB572E8}' />
+    </window>
+    <window class='dashboard' name='Affordable Housing Score'>
+      <viewpoints>
+        <viewpoint name='Housing Support Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Housing Support Table'>
+          <highlight field='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='10' />
+      <simple-id uuid='{38C47D79-8CFB-4995-A166-CA3500F003A4}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Community Living General Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='265'>
+            <card pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{75A8490F-972B-48C8-9A9B-83E46D3D38AA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Community Living General Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='248'>
+            <card pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Calculation_6820349809039835136:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2EA161EC-2565-43D5-87B3-03921461CE5F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Housing Support Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='269'>
+            <card pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{A8851346-45F5-4157-A8D3-8E59C9C0B661}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Housing Support Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='206'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+            <card pane-specification-id='0' param='[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hqkwtg1lu6uyv128bhk205x45yt].[none:Community Living General Quartiles (copy)_6820349809042931713:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D62C4E5B-5BEA-4673-8AEA-FC1556BCC6FE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Affordable Housing Score' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nO29eZgcV333+6ml93V61p5F0lirLWx5wWAw8EYo2H4xmCXYgC+EkEAuIeDk
+      5eZNHm4Cb/wkgbwkJE8gJpgtJOSJw4WbS0hswNgYsPG+YtnaRyPN3tPT+1rdVXX/aJ1SdU/3
+      TI80M9JI/X00T6urT506VfX7nfPbj2SapkkHHVykkM/1ADro4FyiwwAdXNToMEAHFzU6DNDB
+      RY0OA3RwUaPDAB1c1OgwQAcXNToM0MFFjQ4DdHBRo8MAHVzU6DBABxc1OgzQwUWNDgN0cFGj
+      wwBtwjAMpqenmZubqzv+85//nL/9278lnU4Tj8f5h3/4Bx566KEV9Z3NZvnKV75CNptt+vuD
+      Dz7Io48+WnfskUce4cEHH1yyX9M0SSaTVCoVAEqlUstrtItMJsN3v/td4vH4GZ1frVYZGxtj
+      YWHhrMaxajA7aAuPP/64CZiKopgLCwumaZrmM888Y0qSZL7tbW8zZ2ZmzL1795o7duwwv/71
+      r6+o7/HxcRMwx8bGmv5+2223mb/zO79Td+wjH/mIeeutty7ZbyqVMgHzgQceME3TNP/0T//U
+      vPzyy1c0tkYcPXrUHB0dNZ988skVn3vkyBFzy5YtJmBKkmT+5V/+5VmNZTWgnlv22zi49957
+      edOb3sQLL7zA/fffzy233MKdd96J1+vlsssu4/vf/z5PPvkk+/bto6enh1wux+c+9znGx8e5
+      9dZbeetb38o999yD3+9nenqaPXv2MDAwwF133YWmadZ1nnvuOb71rW+RTCa55ZZbeMc73gHA
+      iRMnuOOOOxgeHuYTn/hE3dgOHz7M3/zN3+BwOPjkJz/J4ODgsvczNjbG5z//earVKnfccQe7
+      d+/mzjvv5N3vfjfhcJgvfOELfOpTn+LEiRN8+ctfRtM03vGOd3Ddddfxnve8h82bN3PPPfeQ
+      yWQYHx9H0zTuvPNOAL74xS8Si8W47LLLeNWrXsWePXsA+OY3v4nf72dubo7Z2VlrFXn00Uf5
+      2te+hsvl4q/+6q944okn+Na3vsXAwAB/+Id/SCQS4TOf+Qz79u3jvvvu44477uDpp5/mX//1
+      X9m2bRt/9Ed/hNPpPKP32hGB2sR9993HDTfcwBvf+EZ+8IMfYJom1WoVSZLQNA1N0zBNE13X
+      qVQqfOxjH+Pb3/42kUiEt7/97Tz11FN873vf46Mf/Sj/43/8D6amprjpppv4+c9/TqFQsK7z
+      6KOPoigKLpeLW2+9lfn5eQAOHDgAwKc//Wm+9a1vWe0rlQo33ngjAJOTk/zGb/zGorF/4xvf
+      4E/+5E8skalarXLDDTdw9OhRYrEY+/btI5/P8/nPf54jR44wPz/PZz/7WQqFAh/4wAc4evQo
+      AwMDPPHEE+TzeT772c8Sj8f53ve+x5133kksFuMLX/gC9957Lx//+Mf50pe+hNPp5Pd///d5
+      6aWXrHFs376dl156id/8zd/k6NGj7N27l7GxMfbt2weAz+dj//793HTTTbjdbn74wx/ygQ98
+      AIC/+7u/413vehd33XUXL7zwArfccguXX34599xzD3/91399xu+1swK0gZmZGZ599lne8Y53
+      4Ha7ue+++/B4PNx+++288MIL1gv48z//c97//vfza7/2a3z84x/nc5/7HO973/t47LHHeOCB
+      BwBwu90cOnQIgEOHDnHgwAE8Hg9f+9rXAHj1q1/NU089xcmTJ9F1ndnZWQBuuukmvvCFLzA+
+      Ps4zzzxjje3YsWOMj4/j9Xrx+/386Ec/wjRNJEmy2hw/fpxsNkssFsPpdHLs2DGOHTvGQw89
+      RHd3Nz6fj1/+8pdN731kZISf//zn9Pf383u/93uLfn/729/Ol770JR544AHK5TIPPfQQn/70
+      p/nwhz/Mv/zLv9S1/fVf/3U8Hg9f/epXede73sUf//EfMzIyQn9/P1//+teRJIm7776bzZs3
+      8+Uvf5kf/OAHvPOd78QwDACuueYa/u3f/o1vfvObBAIB0uk0PT09PPzww2f0XqGzArSFH/zg
+      B7jdbr7zne/w7LPPEovFePbZZ5c8x+v1srCwgGEYJJNJPB4PAG9605sYGRnBPJWJms/nrf9D
+      jUii0Shf/OIXF/UpFPFQKGQdE/16PB5uvPFG7rrrrkXn/dmf/Rnf//73ee9732uNDSCRSJBI
+      JOr6qVarFsEB/P3f/z3/9E//xPz8PLfffvsyTwr8fj+PPfYYBw4coFQq1f322GOPccMNN/Dj
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Living in Community Score' width='192'>
+      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
+      5PN5iwjf/e5384Mf/IBHH32U3//937fOO3z4MB0dHXzjG9/gi1/8Is8995x1D1NTU1afPp+P
+      hYUFDMMgHo9b93TrrbeycePGps9pObjoGSAYDOLz+ZienraO3XTTTeTzeX7yk58siQHuvvtu
+      rr76aq6//nq++c1vnsvhMjAwwB133MEXvvAFvvjFL/Lxj3/cYo7+/n4++clP8rGPfYyenh4G
+      BgbYuHEjr3vd67jjjju47rrruO6669i+ffsZjaGrq4u9e/cyODjID3/4wyVds337dqanp9m8
+      eTPPPfcct99+O5FIhG3btnH55Zdb5x04cIDNmzdzySWX8Id/+Ie8+c1vZsOGDbzrXe/izjvv
+      ZMeOHXzta1/jfe97Hx/5yEfYsWMHsViM++67b8nPaVlYkeK0BjA3Nycef/xx6186nRaPP/64
+      yGQyQgghfvrTn4pvfetblm76wgsviPHxcZHNZsXjjz8uisWimJqaEr/85S/FwsKCeOaZZ8Tx
+      48fFW97yFnHDDTdU9PXEE0+I6enputdW49lnnxUTExNCCFFx/uTkpHW+qqri0UcfFd/73vfE
+      6OhoTRuHDh0SDz30kNi1a5cQQohSqSQefvhh8e1vf1vkcjmrn5mZGRGPx8UTTzwhhBDi8OHD
+      Yv/+/RX9Hj9+XLz44otCCCGef/55MTExITRNEw8//LB48sknxb59+8SRI0fExMSEeP7554UQ
+      Qhw8eFAcOnRIFIvFime6e/du8dBDD4mFhQWRSqXEjh07xGc+85ma8R84cEB85zvfEc8884ww
+      DEMIIYRhGOKpp54S3/ve90QikRBCCPH000+Lr3/962JyclIIUbaZDh8+bLWz2HNaCiQhVtsR
+      e+FjZGSE1772tczMzLBp0yb+9V//leuuu261h3VBQ5ZlXvOa1/Cf//mfBAKB1R5OQ7QYoIVz
+      Al3XURRltYexKC4aG+Dll1/m2LFjy75OVVXL4INylDWdTpPL5SrOm5mZqXt99fGDBw9WtNcM
+      1X1A2ddfffz48eOk0+kltdloXPb28/k8s7OzFcdnZ2eJx+M1x8xrZmZmrLHlcjkrhmHCMIwK
+      z5Cu68zOztaNVtv7Me+1ejwrQb1ntxgumkDY9PQ0pVKJRCKBJEkUi0Xcbjezs7N0dnZSKBRw
+      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
+      Pq5ntuXkAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

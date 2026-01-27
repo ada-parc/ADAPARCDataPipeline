@@ -13,7 +13,7 @@ city_place_data_final <-
   filter(GEOID %in% place_tract_county_map$place_GEOID)
 
 
-saveFinalDataFile(city_place_data_processed, "city_place_full")
+saveFinalDataFile(city_place_data_final, "city_place_full")
 
 
 city_tracts_data_final <- readTransformedExtractedDataFile("city_tracts_data_processed")

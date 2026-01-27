@@ -17,84 +17,153 @@
 #' @import tibble
 #' @import tidyr
 #'
+downloadCountryWideAcs <- function(tables,
+                                   geography,
+                                   year,
+                                   survey = "acs5",
+                                   fips_codes_for_states = c()) {
 
-downloadCountryWideAcs <- function(tables, geography, year, survey = "acs5", fips_codes_for_states = c()) {
-  # TODO: Throw error if there is no Census key loaded
-  # TODO: Throw error if any of the input parameters are not correct.
-  # TODO: Throw error if any of the tables are not present on our official list, according to what we get from the Census.
-  # TODO: Figure out how to create an example for this function's documentation; unable to get \dontrun{} to compile.
+  # Ensure we have a reasonably long timeout while this runs
+  old_timeout <- getOption("timeout")
+  if (is.null(old_timeout) || old_timeout < 1200) {
+    options(timeout = 1200)
+  }
+  on.exit({
+    if (!is.null(old_timeout)) options(timeout = old_timeout)
+  }, add = TRUE)
 
   api_key <- loadCensusAPIKey()
 
-  # The ACS Request will be slightly different if it should be done state-by-state (and someone passes in FIPS Codes for lookup) or if they can make a national request
-  acs_request <- function(table) {
-    if(length(fips_codes_for_states) > 0) {
+  # Small wrapper around get_acs to:
+  # - add cache_table = TRUE
+  # - throttle calls with Sys.sleep()
+  safe_get_acs <- function(...) {
+    Sys.sleep(0.25)  # throttle a bit between calls
+    purrr::safely(tidycensus::get_acs, otherwise = NULL)(...)
+  }
 
-      data <-
-        purrr::map(
-          fips_codes_for_states,
-          ~ tidycensus::get_acs(
+  # The ACS Request will be slightly different if it should be done state-by-state
+  acs_request <- function(table) {
+
+    if (length(fips_codes_for_states) > 0) {
+      # ---- State-by-state requests ----
+      state_results <- purrr::map(
+        fips_codes_for_states,
+        function(st) {
+          res <- safe_get_acs(
             geography = geography,
-            table = table,
-            year = year,
-            state = .x,
-            geometry = FALSE,
-            key = api_key,
-            survey = survey,
-            .progress = TRUE
+            table     = table,
+            year      = year,
+            state     = st,
+            geometry  = FALSE,
+            key       = api_key,
+            survey    = survey,
+            cache_table = TRUE,
+            .progress = FALSE
           )
-        ) %>%
+
+          if (!is.null(res$error)) {
+            message(
+              "Failed get_acs() for table ", table,
+              " year ", year,
+              " geography ", geography,
+              " state ", st, ": ",
+              res$error$message
+            )
+            return(NULL)
+          }
+
+          res$result
+        }
+      )
+
+      data <- state_results %>%
+        purrr::compact() %>%      # drop NULLs
         dplyr::bind_rows()
 
     } else {
-
-      data <-
-        tidycensus::get_acs(
-        year = year,
+      # ---- Single national-level request (e.g. state / us / place) ----
+      res <- safe_get_acs(
         geography = geography,
-        table = table,
-        survey = survey,
-        geometry = F,
-        key = api_key,
-        cache_table = F,
-        .progress = TRUE
+        table     = table,
+        year      = year,
+        survey    = survey,
+        geometry  = FALSE,
+        key       = api_key,
+        cache_table = TRUE,
+        .progress = FALSE
       )
 
+      if (!is.null(res$error)) {
+        message(
+          "Failed get_acs() for table ", table,
+          " year ", year,
+          " geography ", geography, ": ",
+          res$error$message
+        )
+        data <- NULL
+      } else {
+        data <- res$result
+      }
     }
 
-    return(data)
+    data
   }
 
-
-
-  df <- purrr::map(
+  # Download all requested tables and pivot wide
+  df_list <- purrr::map(
     tables,
-    ~ acs_request(.x)	%>%
-      dplyr::select(GEOID, NAME, variable, estimate) %>%
-      tidyr::pivot_wider(
-      names_from = variable,
-      values_from = c(estimate))
-  ) %>%
-    purrr::reduce(left_join) %>%
-    dplyr::mutate(year = as.numeric(year))
+    function(tbl) {
+      dat <- acs_request(tbl)
 
-  if (geography == "state") {
+      if (is.null(dat) || nrow(dat) == 0) {
+        message("No data returned for table ", tbl,
+                " year ", year,
+                " geography ", geography, " – skipping.")
+        return(NULL)
+      }
+
+      dat %>%
+        dplyr::select(GEOID, NAME, variable, estimate) %>%
+        tidyr::pivot_wider(
+          names_from  = variable,
+          values_from = c(estimate)
+        )
+    }
+  ) %>%
+    purrr::compact()  # drop NULLs from failed tables
+
+  # If everything failed, return empty tibble
+  if (length(df_list) == 0) {
+    warning("No ACS data could be downloaded for any table for year ",
+            year, " and geography ", geography, ". Returning empty tibble.")
+    df <- tibble::tibble()
+  } else {
+    df <- df_list %>%
+      purrr::reduce(dplyr::left_join, by = c("GEOID", "NAME")) %>%
+      dplyr::mutate(year = as.numeric(year))
+  }
+
+  if (geography == "state" && nrow(df) > 0) {
     df <- df %>%
       dplyr::left_join(
         tibble::tibble(state.abb, state.name) %>%
           tibble::add_row(
-            state.abb = c("PR", "DC"),
+            state.abb  = c("PR", "DC"),
             state.name = c("Puerto Rico", "District of Columbia")
           ) %>%
-          dplyr::select(NAME = state.name, ABBR = state.abb)
+          dplyr::select(NAME = state.name, ABBR = state.abb),
+        by = "NAME"
       ) %>%
-      dplyr::select(GEOID, NAME, ABBR, year, everything())
+      dplyr::select(GEOID, NAME, ABBR, year, dplyr::everything())
   }
 
-  if (geography == "us") {
+  if (geography == "us" && nrow(df) > 0) {
     df <- df %>%
-      dplyr::mutate(ABBR = "USA",
-             GEOID = "000")
+      dplyr::mutate(
+        ABBR  = "USA",
+        GEOID = "000"
+      )
   }
 
   return(df)
