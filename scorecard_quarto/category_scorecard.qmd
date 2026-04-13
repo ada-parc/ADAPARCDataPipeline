@@ -1,0 +1,676 @@
+---
+title: "ADA-PARC Category Scorecard"
+params:
+  category: "WE"   # "CL", "CP", or "WE"
+  year: 2024
+format:
+  html:
+    self-contained: true
+    toc: false
+    page-layout: full
+    theme: cosmo
+    css: scorecard_v3.css
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(gt)
+library(maps)
+library(scales)
+library(htmltools)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CATEGORY CONFIG
+# All category-specific values live here. To add a new category, add a
+# new entry to this list — the rest of the document is fully generic.
+#
+# sub_cols_pending: names (from sub_cols) that currently have no data.
+#   Set to character(0) when all sub-indices are populated.
+# ═══════════════════════════════════════════════════════════════════════════
+CATS <- list(
+
+  CL = list(
+    name        = "Community Living",
+    desc        = "The degree to which people with disabilities (aged 18–64) live in community settings rather than nursing homes, correctional facilities, or other institutions, and whether states invest in community-based housing and support resources.",
+    col_overall = "index_rel_community_living",
+    col_sub     = c("index_rel_living_arrangements",
+                    "index_rel_community_resource"),
+    score_col   = "CL Score",
+    sub_cols    = c("Living Arrangements", "Community Resource"),
+    sub_labels  = c("Living Arrangements",
+                    "Community Resource"),
+    sub_cols_pending = character(0),
+    sub_desc    = c(
+      "Composite of four living situation indicators for people with disabilities (aged 18\u201364): share living at home (private residence), in non-institutional group quarters, in nursing homes, and in correctional facilities. Higher scores reflect greater community integration.",
+      "Measures state investment in community-based supports: (1) ratio of Medicaid HCBS to institutional spending, (2) HCBS spending per disabled Medicaid enrollee, (3) Housing Choice Voucher households per head-of-household, and (4) Public Housing households per head-of-household."
+    ),
+    # 4-stop palette: dark red (low/worst) → gold (high/best)
+    pal         = c("#7a0901", "#c41306", "#fa7b3c", "#fcde6f"),
+    accent      = "#6a040f",
+    col_hdr_bg  = "#5a0a0a",
+    heading_color = "#92620a",   # section heading color on white bg
+    banner_dark = "#92620a",
+    banner_light= "#92620a"
+  ),
+
+  CP = list(
+    name        = "Community Participation",
+    desc        = "Access to the tools and systems that enable full participation in community life — including technology, health insurance, educational attainment, transportation, and public safety.",
+    col_overall = "index_rel_community_participation",
+    col_sub     = c("index_rel_tech",
+                    "index_rel_education",
+                    "index_rel_insurance",
+                    "index_rel_commute",
+                    "index_rel_safety"),
+    score_col   = "CP Score",
+    sub_cols    = c("Technology", "Education", "Insurance",
+                    "Transportation", "Safety"),
+    sub_labels  = c("Technology Access",
+                    "Education Access",
+                    "Insurance Access",
+                    "Transportation Access",
+                    "Public Safety"),
+    sub_cols_pending = character(0),
+    sub_desc    = c(
+      "Computer ownership and broadband internet access among households with disabilities — increasingly essential for employment, healthcare navigation, and civic engagement.",
+      "Educational attainment among adults with disabilities, including high school completion and higher education rates — key drivers of economic and civic participation.",
+      "Health insurance coverage among people with disabilities aged 19\u201364: private insurance, public insurance (Medicare/Medicaid/CHIP), and uninsured rate.",
+      "Commute and transportation accessibility for people with disabilities, reflecting ease of access to employment, services, and community resources.",
+      "State-level property and violent crime rates per 100,000 population. Note: FL, PA, and NY have lower agency participation rates."
+    ),
+    pal         = c("#3b0707", "#780c0c", "#fa7b3c", "#fcd86d"),
+    accent      = "#6a040f",
+    col_hdr_bg  = "#5a0a0a",
+    heading_color = "#92400e",   # section heading color on white bg
+    banner_dark = "#c2410c",
+    banner_light= "#c2410c"
+  ),
+
+  WE = list(
+    name        = "Work & Economic",
+    desc        = "Economic inclusion and security for people with disabilities — measuring work outcomes (employment, income, poverty, and labor force participation) and housing affordability.",
+    col_overall = "index_rel_work_economic",
+    col_sub     = c("index_rel_positive_work",
+                    "index_rel_negative_work",
+                    "index_rel_housing_affordability"),
+    score_col   = "WE Score",
+    sub_cols    = c("Positive Work", "Negative Work", "Housing Affordability"),
+    sub_labels  = c("Positive Work Score",
+                    "Negative Work Score",
+                    "Housing Affordability"),
+    sub_cols_pending = character(0),
+    sub_desc    = c(
+      "Employment rate and cost-of-living-adjusted income (individual and household) for people with disabilities. Income adjusted using BEA Regional Price Parities (2022).",
+      "Negative work indicators for people with disabilities: not-in-labor-force rate, poverty rate (all ages, derived from age-split ACS counts), and unemployment rate. Higher scores indicate lower rates of these negative outcomes.",
+      "SSI as a percent of fair market rent for a one-bedroom apartment, plus disability-specific renter and owner cost burden rates. Note: Puerto Rico missing PUMS data."
+    ),
+    pal         = c("#3b0707", "#780c0c", "#fa7b3c", "#fcd86d"),
+    accent      = "#6a040f",
+    col_hdr_bg  = "#5a0a0a",
+    heading_color = "#6a040f",   # section heading color on white bg
+    banner_dark = "#2a0000",
+    banner_light= "#3b0707"
+  )
+)
+
+# ── Select config for this render ──────────────────────────────────────────
+cfg <- CATS[[params$category]]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# DATA
+# ═══════════════════════════════════════════════════════════════════════════
+raw     <- read_csv("scorecard_data/final/index_scores_wide.csv",
+                    show_col_types = FALSE)
+nat_row <- raw |> filter(ABBR == "USA")
+states  <- raw |> filter(ABBR != "USA")
+
+# Build scored data frame with generic column names
+# Only keep states where the domain-level score is non-NA
+scores_df <- states |>
+  select(GEOID, NAME, ABBR,
+         cat_overall = all_of(cfg$col_overall),
+         all_of(cfg$col_sub)) |>
+  mutate(cat_overall = as.numeric(cat_overall),
+         across(all_of(cfg$col_sub), as.numeric)) |>
+  filter(!is.na(cat_overall)) |>
+  rename_with(~ paste0("sub_", seq_along(cfg$col_sub)),
+              all_of(cfg$col_sub)) |>
+  arrange(desc(cat_overall)) |>
+  mutate(rank = row_number())
+
+# ── Availability guard ─────────────────────────────────────────────────────
+# If ALL domain scores are NA (e.g., WE when sub-index data are pending),
+# flag it — remaining chunks will show a pending message and exit early.
+data_available <- nrow(scores_df) > 0
+
+# ── Helpers ────────────────────────────────────────────────────────────────
+f <- function(x) ifelse(is.na(x), "\u2014", sprintf("%.1f", as.numeric(x)))
+
+# ── Only compute these when data are available ─────────────────────────────
+if (data_available) {
+
+  # National values
+  nat_overall <- as.numeric(nat_row[[cfg$col_overall]])
+  nat_subs    <- sapply(cfg$col_sub, function(x) as.numeric(nat_row[[x]]))
+
+  # Summary stats for banner pills
+  top_row <- scores_df |> slice(1)
+  bot_row <- scores_df |> slice(n())
+  n_above <- sum(scores_df$cat_overall > nat_overall, na.rm = TRUE)
+
+  # ── Quantile breaks: 4 equal-population bins ─────────────────────────────
+  q_breaks    <- quantile(scores_df$cat_overall, probs = c(0.25, 0.5, 0.75), na.rm = TRUE)
+  bin_breaks  <- c(0, unname(q_breaks), 100)
+
+  score_pal_4 <- col_bin(
+    palette  = cfg$pal,
+    bins     = bin_breaks,
+    na.color = "#eeeeee"
+  )
+
+  # ── Map data ───────────────────────────────────────────────────────────────
+  us_map <- map_data("state") |>
+    left_join(
+      scores_df |> mutate(region = tolower(NAME)),
+      by = "region"
+    ) |>
+    mutate(fill_col = ifelse(is.na(cat_overall), "#d0d5dc",
+                             score_pal_4(cat_overall)))
+
+  # ── State label centroids ──────────────────────────────────────────────────
+  state_centroids <- us_map |>
+    group_by(region) |>
+    summarise(long = mean(range(long)), lat = mean(range(lat)), .groups = "drop")
+
+  map_labels <- scores_df |>
+    mutate(region = tolower(NAME)) |>
+    inner_join(state_centroids, by = "region")
+
+  # ── Census region lookup ───────────────────────────────────────────────────
+  census_regions <- c(
+    "Connecticut"="Northeast","Maine"="Northeast","Massachusetts"="Northeast",
+    "New Hampshire"="Northeast","Rhode Island"="Northeast","Vermont"="Northeast",
+    "New Jersey"="Northeast","New York"="Northeast","Pennsylvania"="Northeast",
+    "Illinois"="Midwest","Indiana"="Midwest","Iowa"="Midwest",
+    "Kansas"="Midwest","Michigan"="Midwest","Minnesota"="Midwest",
+    "Missouri"="Midwest","Nebraska"="Midwest","North Dakota"="Midwest",
+    "Ohio"="Midwest","South Dakota"="Midwest","Wisconsin"="Midwest",
+    "Alabama"="South","Arkansas"="South","Delaware"="South",
+    "District of Columbia"="South","Florida"="South","Georgia"="South",
+    "Kentucky"="South","Louisiana"="South","Maryland"="South",
+    "Mississippi"="South","North Carolina"="South","Oklahoma"="South",
+    "South Carolina"="South","Tennessee"="South","Texas"="South",
+    "Virginia"="South","West Virginia"="South",
+    "Alaska"="West","Arizona"="West","California"="West",
+    "Colorado"="West","Hawaii"="West","Idaho"="West",
+    "Montana"="West","Nevada"="West","New Mexico"="West",
+    "Oregon"="West","Utah"="West","Washington"="West","Wyoming"="West"
+  )
+
+  region_df <- scores_df |>
+    mutate(region = census_regions[NAME]) |>
+    filter(!is.na(region)) |>
+    group_by(region) |>
+    summarise(avg_score = mean(cat_overall, na.rm = TRUE),
+              n_states  = n(), .groups = "drop") |>
+    arrange(avg_score) |>
+    mutate(region = factor(region, levels = region))
+
+  # ── Top / bottom performers ────────────────────────────────────────────────
+  top5 <- scores_df |> slice(1:min(5, n()))
+  bot5 <- scores_df |> slice(max(1, n() - 4):n())
+
+}
+
+# ── Inline style strings ───────────────────────────────────────────────────
+banner_style  <- paste0(
+  "background: ", cfg$banner_light, "; ",
+  "color: white; padding: 2.4rem 3rem 2.2rem; ",
+  "border-radius: 12px; margin-bottom: 2rem;"
+)
+
+heading_style <- paste0(
+  "font-family: 'EB Garamond', Garamond, Georgia, serif; ",
+  "font-size: 1.6rem; font-weight: 700; color: ", cfg$heading_color, "; ",
+  "margin: 0 0 0.3rem; letter-spacing: -0.01em;"
+)
+
+heading_style_black <- paste0(
+  "font-family: 'EB Garamond', Garamond, Georgia, serif; ",
+  "font-size: 1.6rem; font-weight: 700; color: #1c2b3a; ",
+  "margin: 0 0 0.3rem; letter-spacing: -0.01em;"
+)
+
+# ── Performer card helpers ─────────────────────────────────────────────────
+make_perf_row <- function(r, name, score) {
+  paste0(
+    '<div class="perf-row">',
+    '<span class="perf-rank">#', r, '</span>',
+    '<span class="perf-name">', name, '</span>',
+    '<span class="perf-score">', sprintf("%.1f", score), '</span>',
+    '</div>'
+  )
+}
+
+make_perf_card <- function(label, df, hdr_color) {
+  rows <- paste0(mapply(make_perf_row, df$rank, df$NAME, df$cat_overall),
+                 collapse = "")
+  paste0('<div class="perf-card">',
+         '<div class="perf-header" style="background:', hdr_color, ';">', label, '</div>',
+         '<div class="perf-body">', rows, '</div>',
+         '</div>')
+}
+```
+
+::: {.page-wrap}
+
+<!-- ═══════════════════════════════════════════════════════════
+     BANNER
+════════════════════════════════════════════════════════════ -->
+
+<div style="`r banner_style`">
+
+<p class="cat-eyebrow">ADA-PARC Scorecard &nbsp;·&nbsp; `r params$year` Data</p>
+
+<h1 style="font-family:'EB Garamond',Garamond,Georgia,serif; font-size:3rem; font-weight:700; color:white; margin:0 0 0.3rem; line-height:1.05;">`r cfg$name`</h1>
+
+<p class="cat-desc">`r cfg$desc`</p>
+
+```{r banner-pills, results='asis'}
+if (!data_available) {
+  cat(paste0(
+    '<div style="background:rgba(255,255,255,0.15); border-radius:10px;',
+    ' padding:1.2rem 1.8rem; margin-top:1rem; color:white;">',
+    '<strong>Domain scores are not available for this category.</strong><br>',
+    'All sub-index scores are NA for the selected year.',
+    ' Re-run the pipeline to regenerate scores, or check that source data',
+    ' files are present in the expected locations.',
+    '</div>'
+  ))
+} else {
+  cat(paste0(
+    '::: {.stat-pills}\n\n',
+    '::: {.stat-pill}\n',
+    '<div class="pill-val">', f(nat_overall), '</div>\n',
+    '<div class="pill-lbl">US Average</div>\n',
+    ':::\n\n',
+    '::: {.stat-pill}\n',
+    '<div class="pill-val">', f(top_row$cat_overall), '</div>\n',
+    '<div class="pill-lbl">Highest Score</div>\n',
+    '<div class="pill-sub">', top_row$NAME, '</div>\n',
+    ':::\n\n',
+    '::: {.stat-pill}\n',
+    '<div class="pill-val">', f(bot_row$cat_overall), '</div>\n',
+    '<div class="pill-lbl">Lowest Score</div>\n',
+    '<div class="pill-sub">', bot_row$NAME, '</div>\n',
+    ':::\n\n',
+    '::: {.stat-pill}\n',
+    '<div class="pill-val">', n_above, '</div>\n',
+    '<div class="pill-lbl">States Above US Avg</div>\n',
+    '<div class="pill-sub">of ', nrow(scores_df), ' states &amp; territories</div>\n',
+    ':::\n\n',
+    ':::\n'
+  ))
+}
+```
+
+</div>
+
+```{r early-exit, results='asis'}
+# If no data, show an explanatory pending section and stop rendering
+if (!data_available) {
+  cat(paste0(
+    '<div class="section-card" style="margin-top:1.5rem;">',
+    '<p style="', heading_style, '">About This Category</p>',
+    '<p class="section-sub">The sub-indices that comprise the ',
+    cfg$name, ' score and the measures they capture.</p>',
+    '<ul class="about-list">',
+    paste0(
+      "<li><strong>", cfg$sub_labels, "</strong> &mdash; ", cfg$sub_desc, "</li>",
+      collapse = "\n"
+    ),
+    '</ul>',
+    '</div>'
+  ))
+  knitr::knit_exit()
+}
+```
+
+<!-- ═══════════════════════════════════════════════════════════
+     MAP
+════════════════════════════════════════════════════════════ -->
+::: {.section-card}
+
+<p style="`r heading_style`">State Scores — `r cfg$name`</p>
+<p class="section-sub">States divided into four equal-population quartile groups. Alaska, Hawaii, D.C., and territories appear in the rankings table below.</p>
+
+```{r choropleth, fig.width=10, fig.height=6.2, fig.align='center'}
+# Build legend labels from quartile breaks
+legend_labels <- c(
+  paste0("Q1: 0\u2013",    sprintf("%.1f", q_breaks[1])),
+  paste0("Q2: ", sprintf("%.1f", q_breaks[1]), "\u2013", sprintf("%.1f", q_breaks[2])),
+  paste0("Q3: ", sprintf("%.1f", q_breaks[2]), "\u2013", sprintf("%.1f", q_breaks[3])),
+  paste0("Q4: ", sprintf("%.1f", q_breaks[3]), "\u2013100")
+)
+
+ggplot(us_map, aes(x = long, y = lat, group = group, fill = fill_col)) +
+  geom_polygon(color = "white", linewidth = 0.35) +
+  scale_fill_identity(
+    name   = "Score (quartile)",
+    guide  = guide_legend(
+      title.position = "top",
+      title.hjust    = 0.5,
+      keywidth       = unit(1.8, "cm"),
+      keyheight      = unit(0.45, "cm"),
+      label.theme    = element_text(size = 9, color = "#1c2b3a", family = "serif")
+    ),
+    breaks = cfg$pal,
+    labels = legend_labels
+  ) +
+  geom_text(
+    data = map_labels,
+    aes(x = long, y = lat, label = ABBR),
+    inherit.aes = FALSE,
+    size = 2.5, color = "#1c2b3a", fontface = "bold", alpha = 0.75
+  ) +
+  coord_map("albers", lat0 = 39, lat1 = 45) +
+  labs(x = NULL, y = NULL) +
+  theme_void(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    legend.title    = element_text(size = 10, face = "bold",
+                                   color = "#1c2b3a", family = "serif"),
+    legend.text     = element_text(size = 9, color = "#1c2b3a",
+                                   family = "serif"),
+    plot.background  = element_blank(),
+    panel.background = element_blank()
+  )
+```
+
+<p class="map-caption">Scores range 0–100; higher is better. Grey indicates states with no data in this render.</p>
+
+```{r strip-chart, fig.width=10, fig.height=2.6, fig.align='center'}
+strip_df <- scores_df |>
+  select(NAME, ABBR, cat_overall) |>
+  mutate(fill_col = score_pal_4(cat_overall))
+
+ggplot(strip_df, aes(x = cat_overall, y = 0.5)) +
+  # Quartile region shading
+  annotate("rect", xmin = 0,              xmax = q_breaks[[1]],
+           ymin = 0, ymax = 1, fill = cfg$pal[1], alpha = 0.13) +
+  annotate("rect", xmin = q_breaks[[1]],  xmax = q_breaks[[2]],
+           ymin = 0, ymax = 1, fill = cfg$pal[2], alpha = 0.13) +
+  annotate("rect", xmin = q_breaks[[2]],  xmax = q_breaks[[3]],
+           ymin = 0, ymax = 1, fill = cfg$pal[3], alpha = 0.13) +
+  annotate("rect", xmin = q_breaks[[3]],  xmax = 100,
+           ymin = 0, ymax = 1, fill = cfg$pal[4], alpha = 0.13) +
+  # Quartile break lines
+  geom_vline(xintercept = unname(q_breaks),
+             color = "#cccccc", linewidth = 0.5) +
+  # National average dashed line
+  geom_vline(xintercept = nat_overall,
+             color = "#1c2b3a", linewidth = 0.85, linetype = "dashed") +
+  # State dots, colored by palette bin
+  geom_jitter(aes(color = fill_col),
+              position = position_jitter(height = 0.26, width = 0, seed = 42),
+              size = 3.4, alpha = 0.88) +
+  scale_color_identity() +
+  # US average label
+  annotate("text", x = nat_overall + 1.5, y = 0.87,
+           label = paste0("US avg  ", f(nat_overall)),
+           hjust = 0, size = 3, color = "#1c2b3a",
+           fontface = "bold", family = "serif") +
+  # Quartile labels
+  annotate("text", x = q_breaks[[1]] / 2,                    y = 0.1,
+           label = "Q1", size = 2.4, color = "#aaaaaa", family = "serif") +
+  annotate("text", x = (q_breaks[[1]] + q_breaks[[2]]) / 2,  y = 0.1,
+           label = "Q2", size = 2.4, color = "#aaaaaa", family = "serif") +
+  annotate("text", x = (q_breaks[[2]] + q_breaks[[3]]) / 2,  y = 0.1,
+           label = "Q3", size = 2.4, color = "#aaaaaa", family = "serif") +
+  annotate("text", x = (q_breaks[[3]] + 100) / 2,            y = 0.1,
+           label = "Q4", size = 2.4, color = "#aaaaaa", family = "serif") +
+  scale_x_continuous(limits = c(0, 100),
+                     breaks = c(0, 25, 50, 75, 100),
+                     expand = c(0.01, 0)) +
+  scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
+  labs(x = "Score (0\u2013100)", y = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(
+    axis.text.y        = element_blank(),
+    axis.ticks.y       = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.x = element_line(color = "#eaecf0", linewidth = 0.3),
+    axis.text.x        = element_text(size = 9, color = "#555555", family = "serif"),
+    axis.title.x       = element_text(size = 9, color = "#555555", family = "serif",
+                                      margin = margin(t = 5)),
+    plot.background    = element_blank(),
+    panel.background   = element_blank(),
+    plot.margin        = margin(10, 20, 2, 20)
+  )
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     RANKINGS TABLE
+════════════════════════════════════════════════════════════ -->
+::: {.section-card}
+
+<p style="`r heading_style_black`">State Rankings</p>
+<p class="section-sub">All states, D.C., and Puerto Rico ranked by `r cfg$name` score. Sub-index scores are shown alongside the overall score.</p>
+
+```{r gt-table}
+# ── Build display table with pretty column names ───────────────────────────
+sub_rename <- setNames(paste0("sub_", seq_along(cfg$sub_cols)), cfg$sub_cols)
+
+tbl_data <- scores_df |>
+  mutate(Tier = dplyr::case_when(
+    rank <= 12 ~ "Excellent",
+    rank <= 25 ~ "Above Avg",
+    rank <= 39 ~ "Below Avg",
+    TRUE       ~ "Poor"
+  )) |>
+  rename(!!cfg$score_col := cat_overall) |>
+  rename(!!!sub_rename) |>
+  select(rank, Tier, State = NAME, Abbr = ABBR,
+         all_of(cfg$score_col),
+         all_of(cfg$sub_cols))
+
+# ── All score columns for fmt_number ──────────────────────────────────────
+score_cols <- c(cfg$score_col, cfg$sub_cols)
+
+# ── Build source note with national averages (NA-safe) ────────────────────
+nat_note_parts <- paste0(
+  f(nat_subs), " ", cfg$sub_cols
+)
+nat_note <- paste0(
+  "**US National Average:** ",
+  f(nat_overall), " overall",
+  paste0(" &nbsp;\u00b7&nbsp; ", nat_note_parts, collapse = "")
+)
+
+# ── Render gt table ────────────────────────────────────────────────────────
+tbl_data |>
+  gt() |>
+
+  fmt_number(columns = all_of(score_cols), decimals = 1) |>
+
+  # Show — for NA values in sub-index columns
+  fmt_missing(columns = all_of(score_cols), missing_text = "\u2014") |>
+
+  cols_label(rank = "Rank", Tier = "Tier", Abbr = "",
+             State = "State / Territory") |>
+
+  cols_width(
+    rank  ~ px(55),
+    Tier  ~ px(95),
+    Abbr  ~ px(48),
+    State ~ px(190),
+    everything() ~ px(105)
+  ) |>
+
+  cols_align(align = "center",
+             columns = c(rank, Tier, Abbr, all_of(cfg$score_col),
+                         all_of(cfg$sub_cols))) |>
+  cols_align(align = "left", columns = State) |>
+
+  # Colour overall score column only
+  data_color(
+    columns        = all_of(cfg$score_col),
+    fn             = score_pal_4,
+    autocolor_text = TRUE
+  ) |>
+
+  # Bold rank
+  tab_style(
+    style     = cell_text(weight = "bold", size = px(15)),
+    locations = cells_body(columns = rank)
+  ) |>
+
+  # Accent border on top 3 rows
+  tab_style(
+    style     = cell_borders(sides = "left", color = cfg$accent, weight = px(4)),
+    locations = cells_body(rows = rank <= 3)
+  ) |>
+
+  tab_source_note(source_note = md(nat_note)) |>
+
+  tab_header(
+    title    = md(paste0("**", cfg$name, "** — All States Ranked")),
+    subtitle = md(paste0(
+      "Ranked 1–", nrow(tbl_data),
+      " by overall ", cfg$name, " score · ",
+      params$year, " ACS Data"
+    ))
+  ) |>
+
+  tab_options(
+    table.width                     = pct(100),
+    table.font.names                = c("EB Garamond", "Georgia", "serif"),
+    table.font.size                 = px(16),
+    data_row.padding                = px(5),
+    heading.background.color        = cfg$accent,
+    heading.title.font.size         = px(18),
+    heading.subtitle.font.size      = px(13),
+    column_labels.background.color  = cfg$col_hdr_bg,
+    column_labels.font.size         = px(13),
+    row.striping.include_table_body = TRUE,
+    row.striping.background_color   = "#f8f8fc",
+    source_notes.font.size          = px(13),
+    source_notes.background.color   = "#f8f8fc",
+    table.border.top.color          = cfg$accent,
+    table.border.top.width          = px(3)
+  ) |>
+
+  tab_style(
+    style     = cell_text(color = "white", weight = "bold"),
+    locations = cells_column_labels(everything())
+  ) |>
+  tab_style(
+    style     = cell_text(color = "white"),
+    locations = cells_title(groups = c("title", "subtitle"))
+  )
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     TOP / BOTTOM PERFORMERS
+════════════════════════════════════════════════════════════ -->
+::: {.section-card}
+
+<p style="`r heading_style`">Top &amp; Bottom Performers</p>
+<p class="section-sub">The five highest- and lowest-scoring states for `r cfg$name`.</p>
+
+```{r performers}
+HTML(paste0(
+  '<div class="top-bottom-container">',
+  make_perf_card("Top 5 States",    top5, "#92620a"),
+  make_perf_card("Bottom 5 States", bot5, "#7b1717"),
+  '</div>'
+))
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     REGIONAL BREAKDOWN
+════════════════════════════════════════════════════════════ -->
+::: {.section-card}
+
+<p style="`r heading_style`">Average Score by Census Region</p>
+<p class="section-sub">State scores averaged within each U.S. Census region. Territories and Puerto Rico excluded.</p>
+
+```{r regional-chart, fig.width=8, fig.height=2.4, fig.align='center'}
+ggplot(region_df, aes(x = avg_score,
+                      y = region)) +
+  geom_col(fill = cfg$pal[3], alpha = 0.82, width = 0.48) +
+  geom_vline(xintercept = nat_overall,
+             linetype = "dashed", color = "#1c2b3a", linewidth = 0.75) +
+  geom_text(aes(label = sprintf("%.1f", avg_score)),
+            hjust = -0.25, size = 3.8, color = "#1c2b3a",
+            family = "serif", fontface = "bold") +
+  annotate("text", x = nat_overall + 0.8, y = 0.55,
+           label = paste0("US avg  ", f(nat_overall)),
+           hjust = 0, size = 3, color = "#1c2b3a",
+           fontface = "bold", family = "serif") +
+  scale_x_continuous(limits = c(0, 100),
+                     breaks = c(0, 25, 50, 75, 100),
+                     expand = c(0.01, 0)) +
+  labs(x = "Average Score (0\u2013100)", y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.y        = element_text(size = 12, family = "serif",
+                                      color = "#1c2b3a"),
+    axis.text.x        = element_text(size = 9, color = "#555555"),
+    axis.title.x       = element_text(size = 9, color = "#555555",
+                                      margin = margin(t = 5)),
+    panel.grid.major.x = element_line(color = "#eaecf0", linewidth = 0.4),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    plot.background    = element_blank(),
+    panel.background   = element_blank(),
+    plot.margin        = margin(4, 20, 4, 4)
+  )
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT THIS CATEGORY
+════════════════════════════════════════════════════════════ -->
+::: {.section-card}
+
+<p style="`r heading_style`">About This Category</p>
+<p class="section-sub">The sub-indices that comprise the `r cfg$name` score and the measures they capture.</p>
+
+```{r about-measures, results='asis'}
+items <- paste0(
+  "<li><strong>", cfg$sub_labels, "</strong> &mdash; ", cfg$sub_desc, "</li>",
+  collapse = "\n"
+)
+cat(paste0('<ul class="about-list">', items, '</ul>'))
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<p class="footer-note">
+  <strong>Data source:</strong> ADA-PARC Scorecard &nbsp;·&nbsp;
+  `r params$year` American Community Survey (ACS) &nbsp;·&nbsp;
+  Scores range 0–100; higher is better. &nbsp;·&nbsp;
+  Sub-indices comprising the <strong>`r cfg$name`</strong> score:
+  `r paste(cfg$sub_labels, collapse = "; ")`.
+  Alaska, Hawaii, D.C., and Puerto Rico are excluded from the map but included in the rankings table.
+</p>
+
+:::

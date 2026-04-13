@@ -1,0 +1,18 @@
+test,status,details
+A1 scored columns present,PASS,
+A2 scored uniqueness (GEOID-year-indicator_id),PASS,
+A3 all acs_ready indicators present in scored output,PASS,38 acs_ready indicators all present
+A4 all external_ready indicators present in scored output,PASS,15 external_ready indicators all present
+A5 external_ready indicator coverage (>90% non-NA for states),PASS,All 15 external indicators have >90% state coverage
+B1 z_score recalculates correctly,WARN,"max_abs_diff=0.925, frac_bad=7.378%"
+B2 score_100 matches pnorm(z) + direction flip,PASS,"max_abs_diff=2.84e-14, frac_bad=0%"
+C1 composite indicators check,SKIP,No composite indicators defined in 2024 revision. All prior age-split composites replaced by single-variable ACS pulls. Re-enable this check if new composites are added to 03b.
+D1 index columns present,PASS,
+D2 index uniqueness (GEOID-year-index_id),PASS,
+D3 all 2024-revision indices present in index_scores_long,PASS,30 expected indices all present
+D4 recompute audit indices from dict matches output,PASS,"n=787, max_abs_diff=1.42e-14, frac_bad=0%"
+E1 wide uniqueness (GEOID-year),PASS,
+E2 all 2024-revision index columns present in wide export,PASS,30 expected columns all present
+E3 USA row exists in wide export,PASS,USA row present
+E4 USA row completeness,PASS,USA has 100% of index scores (30/30)
+E6 scorecard_index coverage by category (>90% non-NA for states),PASS,All scorecard indices have >90% state coverage

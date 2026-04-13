@@ -1,0 +1,80 @@
+index_id,index_label,index_type,category,dimension,indicator_id,weight,agg_method,min_frac_present,notes
+index_rel_living_arrangements,Community Living Arrangements Index (Relative),scorecard_index,CL,relative,rel_score_home,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_rel_living_arrangements,Community Living Arrangements Index (Relative),scorecard_index,CL,relative,rel_score_noninstgroupquarters,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_rel_living_arrangements,Community Living Arrangements Index (Relative),scorecard_index,CL,relative,rel_score_nursing_18to64,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_rel_living_arrangements,Community Living Arrangements Index (Relative),scorecard_index,CL,relative,rel_score_corrections,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_eq_living_arrangements,Community Living Arrangements Index (Equity),scorecard_index,CL,equity,eq_score_home,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_eq_living_arrangements,Community Living Arrangements Index (Equity),scorecard_index,CL,equity,eq_score_noninstgroupquarters,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_eq_living_arrangements,Community Living Arrangements Index (Equity),scorecard_index,CL,equity,eq_score_nursing_18to64,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_eq_living_arrangements,Community Living Arrangements Index (Equity),scorecard_index,CL,equity,eq_score_corrections,1,weighted_mean,0.8,Combines all four community living arrangement indicators for PWD aged 18-64 into a single index — replaces the former split into communal_living and institutional_living. All members ACS-ready.
+index_rel_community_resource,Community Resource Index (Relative),scorecard_index,CL,relative,rel_score_hcbs_ratio,1,weighted_mean,0.3,"Community Resource (old version, no disability filter on housing variables). All members external_ready (KFF FY2024 HCBS + HUD POSH 2023). min_frac_present = 0.3."
+index_rel_community_resource,Community Resource Index (Relative),scorecard_index,CL,relative,rel_score_hcbs_per_individual,1,weighted_mean,0.3,"Community Resource (old version, no disability filter on housing variables). All members external_ready (KFF FY2024 HCBS + HUD POSH 2023). min_frac_present = 0.3."
+index_rel_community_resource,Community Resource Index (Relative),scorecard_index,CL,relative,rel_score_hcv_hoh,1,weighted_mean,0.3,"Community Resource (old version, no disability filter on housing variables). All members external_ready (KFF FY2024 HCBS + HUD POSH 2023). min_frac_present = 0.3."
+index_rel_community_resource,Community Resource Index (Relative),scorecard_index,CL,relative,rel_score_pubhousing_hoh,1,weighted_mean,0.3,"Community Resource (old version, no disability filter on housing variables). All members external_ready (KFF FY2024 HCBS + HUD POSH 2023). min_frac_present = 0.3."
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_computer,1,weighted_mean,0.8,
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_smartphone,1,weighted_mean,0.8,
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_int,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_computer,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_smartphone,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_int,1,weighted_mean,0.8,
+index_rel_insurance,Health Insurance Index (Relative),scorecard_index,CP,relative,rel_score_privatehealth,1,weighted_mean,0.6,3-indicator index (private + public + no-insurance). B18135 rows 016E/017E/018E (age 19-64). All three acs_ready. min_frac = 0.6.
+index_rel_insurance,Health Insurance Index (Relative),scorecard_index,CP,relative,rel_score_nohealthins,1,weighted_mean,0.6,
+index_rel_insurance,Health Insurance Index (Relative),scorecard_index,CP,relative,rel_score_publichealth,1,weighted_mean,0.6,New consolidated public insurance indicator (B18135_017E) replacing separate Medicare/Medicaid.
+index_eq_insurance,Health Insurance Index (Equity),scorecard_index,CP,equity,eq_score_privatehealth,1,weighted_mean,0.6,Equity version same 3 indicators.
+index_eq_insurance,Health Insurance Index (Equity),scorecard_index,CP,equity,eq_score_nohealthins,1,weighted_mean,0.6,
+index_eq_insurance,Health Insurance Index (Equity),scorecard_index,CP,equity,eq_score_publichealth,1,weighted_mean,0.6,New consolidated public insurance indicator equity pair.
+index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,rel_score_noGED,1,weighted_mean,0.8,
+index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,rel_score_bachelors,1,weighted_mean,0.8,
+index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,eq_score_noGED,1,weighted_mean,0.8,
+index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,eq_score_bachelors,1,weighted_mean,0.8,
+index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,rel_score_transit,1,weighted_mean,0.8,
+index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,rel_score_drivealone,1,weighted_mean,0.8,
+index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,eq_score_transit,1,weighted_mean,0.8,
+index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,eq_score_drivealone,1,weighted_mean,0.8,
+index_rel_safety,Public Safety Index (Relative),scorecard_index,CP,relative,rel_score_propertycrime,1,weighted_mean,0.8,New index. All members acs_ready. FBI NIBRS 2024 crime rates integrated via 01b.
+index_rel_safety,Public Safety Index (Relative),scorecard_index,CP,relative,rel_score_violentcrime,1,weighted_mean,0.8,
+index_rel_positive_work,Positive Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_employment,1,weighted_mean,0.3,New sub-index replacing index_rel_labor. Employment acs_ready; COL-adj incomes external_ready (BEA RPP 2022 + PUMS). min_frac_present = 0.3.
+index_rel_positive_work,Positive Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_coladj_ind_income,1,weighted_mean,0.3,External_ready. BEA RPP 2022 + PUMS individual income completed via 01b.
+index_rel_positive_work,Positive Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_coladj_hh_income,1,weighted_mean,0.3,External_ready. BEA RPP 2022 + PUMS household income completed via 01b.
+index_eq_positive_work,Positive Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_employment,1,weighted_mean,0.3,
+index_eq_positive_work,Positive Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_coladj_ind_income,1,weighted_mean,0.3,
+index_eq_positive_work,Positive Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_coladj_hh_income,1,weighted_mean,0.3,
+index_rel_negative_work,Negative Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_poverty,1,weighted_mean,0.4,New sub-index replacing index_rel_poverty. Poverty = all-ages derived in script 02. All three indicators acs_ready. min_frac_present = 0.4.
+index_rel_negative_work,Negative Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_unemployed,1,weighted_mean,0.4,Acs_ready. B18131 confirmed present in national_data from main pipeline.
+index_rel_negative_work,Negative Work Indicators Index (Relative),scorecard_index,WE,relative,rel_score_labor,1,weighted_mean,0.4,
+index_eq_negative_work,Negative Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_poverty,1,weighted_mean,0.4,
+index_eq_negative_work,Negative Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_unemployed,1,weighted_mean,0.4,
+index_eq_negative_work,Negative Work Indicators Index (Equity),scorecard_index,WE,equity,eq_score_labor,1,weighted_mean,0.4,
+index_rel_housing_affordability,Housing Affordability Index (Relative),scorecard_index,WE,relative,rel_score_ssi_rent,1,weighted_mean,0.3,New index. All members external_ready. SSI/FMR (SSA ASR 2024 + HUD FY2025) and PUMS housing burden completed via 01b. min_frac_present = 0.3.
+index_rel_housing_affordability,Housing Affordability Index (Relative),scorecard_index,WE,relative,rel_score_renter_burden,1,weighted_mean,0.3,
+index_rel_housing_affordability,Housing Affordability Index (Relative),scorecard_index,WE,relative,rel_score_owner_burden,1,weighted_mean,0.3,
+index_eq_housing_affordability,Housing Affordability Index (Equity),scorecard_index,WE,equity,eq_score_renter_burden,1,weighted_mean,0.5,Note: ssi_rent has no equity comparator (disability-specific with no pwod equivalent)
+index_eq_housing_affordability,Housing Affordability Index (Equity),scorecard_index,WE,equity,eq_score_owner_burden,1,weighted_mean,0.5,
+index_rel_all_work_indicators,All Work Indicators Index (Relative),category_index,WE,relative,index_rel_positive_work,1,weighted_mean,0.3,Intermediate composite per original ADAPARC dictionary: combines Positive and Negative Work Indicators into a single overall work score before combining with Housing Affordability. min_frac = 0.3 so employment-only scoring passes.
+index_rel_all_work_indicators,All Work Indicators Index (Relative),category_index,WE,relative,index_rel_negative_work,1,weighted_mean,0.3,Intermediate composite per original ADAPARC dictionary: combines Positive and Negative Work Indicators into a single overall work score before combining with Housing Affordability. min_frac = 0.3 so employment-only scoring passes.
+index_eq_all_work_indicators,All Work Indicators Index (Equity),category_index,WE,equity,index_eq_positive_work,1,weighted_mean,0.3,Intermediate composite per original ADAPARC dictionary: combines Positive and Negative Work Indicators into a single overall work score before combining with Housing Affordability. min_frac = 0.3 so employment-only scoring passes.
+index_eq_all_work_indicators,All Work Indicators Index (Equity),category_index,WE,equity,index_eq_negative_work,1,weighted_mean,0.3,Intermediate composite per original ADAPARC dictionary: combines Positive and Negative Work Indicators into a single overall work score before combining with Housing Affordability. min_frac = 0.3 so employment-only scoring passes.
+index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,index_rel_living_arrangements,1,weighted_mean,0.5,member index_id. min_frac = 0.5. Both sub-indices now have data: living_arrangements (ACS-ready) and community_resource (external_ready).
+index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,index_rel_community_resource,1,weighted_mean,0.5,member index_id. min_frac = 0.5. Both sub-indices now have data: living_arrangements (ACS-ready) and community_resource (external_ready).
+index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,index_eq_living_arrangements,1,weighted_mean,0.8,member index_id; community_resource has no equity comparator so equity CL = living_arrangements only
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_tech,1,weighted_mean,0.5,member index_id. min_frac = 0.5. All 6 sub-indices now have data: tech + insurance + education + commute + safety + housing_support.
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_insurance,1,weighted_mean,0.5,member index_id. All insurance indicators acs_ready (B18135 age 19-64).
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_education,1,weighted_mean,0.5,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_commute,1,weighted_mean,0.5,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_safety,1,weighted_mean,0.5,member index_id. Acs_ready (FBI NIBRS 2024).
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_tech,1,weighted_mean,0.6,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_insurance,1,weighted_mean,0.6,member index_id. All insurance indicators acs_ready.
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_education,1,weighted_mean,0.6,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_commute,1,weighted_mean,0.6,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_community_living,1,weighted_mean,0.8,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_community_participation,1,weighted_mean,0.8,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_work_economic,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_community_living,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_community_participation,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_work_economic,1,weighted_mean,0.8,member index_id
+index_adaparc,ADA-PARC Index,category_index,,,index_rel_adaparc,1,weighted_mean,0.8,member index_id
+index_adaparc,ADA-PARC Index,category_index,,,index_eq_adaparc,1,weighted_mean,0.8,member index_id
+index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,index_rel_all_work_indicators,1,weighted_mean,0.5,member index_id. 2-member composite per original ADAPARC dictionary. min_frac = 0.5. All member indices now have data (all_work_indicators + housing_affordability).
+index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,index_rel_housing_affordability,1,weighted_mean,0.5,member index_id. 2-member composite per original ADAPARC dictionary. min_frac = 0.5. All member indices now have data (all_work_indicators + housing_affordability).
+index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,index_eq_all_work_indicators,1,weighted_mean,0.5,member index_id; housing_affordability has no full equity comparator
+index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,index_eq_housing_affordability,1,weighted_mean,0.5,member index_id; housing_affordability has no full equity comparator

@@ -1,0 +1,589 @@
+---
+title: "ADA-PARC State Scorecard"
+params:
+  state_abbr: "NY"   # Any state/territory abbreviation in the data
+  year: 2024
+format:
+  html:
+    self-contained: true
+    toc: false
+    page-layout: full
+    theme: cosmo
+    css: scorecard_state.css
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(readr)
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(htmltools)
+library(gt)
+
+# ── Data ───────────────────────────────────────────────────────────────────
+raw       <- read_csv("scorecard_data/final/index_scores_wide.csv",
+                      show_col_types = FALSE)
+state_row <- raw |> filter(ABBR == params$state_abbr)
+nat_row   <- raw |> filter(ABBR == "USA")
+
+# If no USA row in pipeline output, fall back to column means across all states
+if (nrow(nat_row) == 0) {
+  nat_row <- raw |>
+    filter(!is.na(ABBR), ABBR != params$state_abbr) |>
+    summarise(across(where(is.numeric), ~mean(.x, na.rm = TRUE))) |>
+    mutate(ABBR = "USA", NAME = "US Average")
+}
+
+state_name <- as.character(state_row$NAME)
+year_label <- params$year
+
+# ── Shorthand helpers ──────────────────────────────────────────────────────
+s <- function(col) {
+  val <- state_row[[col]]
+  if (is.null(val)) return(NA_real_)
+  as.numeric(val)
+}
+n <- function(col) {
+  val <- nat_row[[col]]
+  if (is.null(val)) return(NA_real_)
+  as.numeric(val)
+}
+f <- function(x) ifelse(is.na(x), "—", sprintf("%.1f", x))
+
+# ── Domain colours ─────────────────────────────────────────────────────────
+COL <- list(
+  cl  = "#c2410c",   # burnt orange
+  cp  = "#a16207",   # muted gold
+  we  = "#7b1717",   # deep crimson
+  nat = "#888888"
+)
+
+# ── Rankings (higher score = better = lower rank number) ───────────────────
+states_only <- raw |> filter(ABBR != "USA")
+
+rank_of <- function(col) {
+  if (!col %in% names(states_only)) return(NA_integer_)
+  vals      <- as.numeric(states_only[[col]])
+  state_idx <- which(states_only$ABBR == params$state_abbr)
+  if (length(state_idx) == 0 || is.na(vals[state_idx])) return(NA_integer_)
+  as.integer(rank(-vals, ties.method = "min", na.last = "keep")[state_idx])
+}
+
+n_ranked <- sum(!is.na(as.numeric(states_only[["index_adaparc"]])))
+
+RNK <- list(
+  overall             = rank_of("index_adaparc"),
+  cl                  = rank_of("index_rel_community_living"),
+  cp                  = rank_of("index_rel_community_participation"),
+  we                  = rank_of("index_rel_work_economic"),
+  # CL sub-indices
+  living_arrangements = rank_of("index_rel_living_arrangements"),
+  community_res       = rank_of("index_rel_community_resource"),
+  # CP sub-indices
+  tech                = rank_of("index_rel_tech"),
+  education           = rank_of("index_rel_education"),
+  insurance           = rank_of("index_rel_insurance"),
+  commute             = rank_of("index_rel_commute"),
+  safety              = rank_of("index_rel_safety"),
+  # WE sub-indices
+  positive_work       = rank_of("index_rel_positive_work"),
+  negative_work       = rank_of("index_rel_negative_work"),
+  housing_afford      = rank_of("index_rel_housing_affordability")
+)
+
+# ── Rank pill helper (for banner) ──────────────────────────────────────────
+qual_info <- function(r) {
+  if (is.na(r))   return(list(label = "N/A",          cls = ""))
+  if (r <= 12)    list(label = "Excellent",     cls = "excellent")
+  else if (r <= 25) list(label = "Above Average", cls = "above-avg")
+  else if (r <= 39) list(label = "Below Average", cls = "below-avg")
+  else              list(label = "Poor",           cls = "poor")
+}
+
+rank_pill <- function(domain_label, rnk, n_total) {
+  if (is.na(rnk)) return("")
+  qi <- qual_info(rnk)
+  paste0(
+    '<div class="rank-pill">',
+    '<div class="rp-domain">', domain_label, '</div>',
+    '<div class="rp-number">#', rnk, '</div>',
+    '<div class="rp-of">of ', n_total, '</div>',
+    '<div class="rp-qual ', qi$cls, '">', qi$label, '</div>',
+    '</div>'
+  )
+}
+
+# ── Qualitative label + colour for bar chart annotations ──────────────────
+bar_qual_color <- function(r) "#1c2b3a"
+bar_qual_label <- function(r) {
+  if (is.na(r))   return("")
+  if (r <= 12)    "Excellent"
+  else if (r <= 25) "Above Average"
+  else if (r <= 39) "Below Average"
+  else              "Poor"
+}
+
+# ── SVG semicircle gauge ───────────────────────────────────────────────────
+make_gauge <- function(score, nat_score, arc_color = "#60a5fa") {
+
+  if (is.na(score)) {
+    return(HTML(paste0(
+      '<svg width="300" height="190" viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg">',
+      '<text x="150" y="130" text-anchor="middle" font-family="EB Garamond,Garamond,Georgia,serif"',
+      ' font-size="22" fill="#aaaaaa">Score pending</text></svg>'
+    )))
+  }
+
+  score_c <- min(score,     99.9)
+  nat_c   <- if (!is.na(nat_score)) min(nat_score, 99.9) else NA
+
+  cx <- 150; cy <- 148; r <- 108
+
+  xy <- function(val) {
+    a <- pi * (1 - val / 100)
+    list(x = round(cx + r * cos(a), 2),
+         y = round(cy - r * sin(a), 2))
+  }
+
+  se <- xy(score_c)
+
+  tick_html <- function(val, inner_r = 98, outer_r = 118) {
+    a  <- pi * (1 - val / 100)
+    x1 <- round(cx + inner_r * cos(a), 2)
+    y1 <- round(cy - inner_r * sin(a), 2)
+    x2 <- round(cx + outer_r * cos(a), 2)
+    y2 <- round(cy - outer_r * sin(a), 2)
+    paste0('<line x1="', x1, '" y1="', y1,
+           '" x2="', x2, '" y2="', y2,
+           '" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>')
+  }
+
+  ticks <- paste0(
+    tick_html(0), tick_html(25), tick_html(50),
+    tick_html(75), tick_html(100)
+  )
+
+  lbl <- function(val, dx = 0, dy = 0) {
+    a  <- pi * (1 - val / 100)
+    lx <- round(cx + 132 * cos(a) + dx, 1)
+    ly <- round(cy - 132 * sin(a) + dy, 1)
+    paste0('<text x="', lx, '" y="', ly,
+           '" text-anchor="middle"',
+           ' font-family="Arial,sans-serif" font-size="12" fill="#6b7280">',
+           val, '</text>')
+  }
+
+  tick_labels <- paste0(
+    lbl(0, dx = -4, dy = 4), lbl(25, dy = -2),
+    lbl(50, dy = -4), lbl(75, dy = -2), lbl(100, dx = 4, dy = 4)
+  )
+
+  nat_marker <- if (!is.na(nat_score)) {
+    ne <- xy(nat_c)
+    paste0('<circle cx="', ne$x, '" cy="', ne$y,
+           '" r="8" fill="white" stroke="black" stroke-width="2.5"/>')
+  } else ""
+
+  nat_label <- if (!is.na(nat_score)) {
+    paste0('<text x="', cx, '" y="', cy + 30, '"',
+           ' text-anchor="middle"',
+           ' font-family="EB Garamond,Garamond,Georgia,serif"',
+           ' font-size="14" fill="#6b7280">US avg: ', f(nat_score), '</text>')
+  } else ""
+
+  HTML(paste0(
+    '<svg width="300" height="190" viewBox="0 0 300 190"',
+    ' xmlns="http://www.w3.org/2000/svg">',
+    '<path d="M ', cx - r, ' ', cy, ' A ', r, ' ', r, ' 0 0 0 ',
+      cx + r, ' ', cy, '"',
+      ' fill="none" stroke="#e5e7eb" stroke-width="26"',
+      ' stroke-linecap="butt"/>',
+    '<path d="M ', cx - r, ' ', cy, ' A ', r, ' ', r, ' 0 0 0 ',
+      se$x, ' ', se$y, '"',
+      ' fill="none" stroke="', arc_color, '" stroke-width="26"',
+      ' stroke-linecap="butt"/>',
+    ticks, tick_labels,
+    nat_marker,
+    '<text x="', cx, '" y="', cy - 14, '"',
+      ' text-anchor="middle"',
+      ' font-family="EB Garamond,Garamond,Georgia,serif"',
+      ' font-size="62" font-weight="700" fill="#1c2b3a">',
+      f(score), '</text>',
+    '<text x="', cx, '" y="', cy + 12, '"',
+      ' text-anchor="middle"',
+      ' font-family="EB Garamond,Garamond,Georgia,serif"',
+      ' font-size="15" fill="#6b7280">out of 100</text>',
+    nat_label,
+    '</svg>'
+  ))
+}
+
+# ── Horizontal bar chart ───────────────────────────────────────────────────
+# NA-aware: silently drops any label/score/rank where score is NA
+# (pending sub-indices won't create empty bars)
+make_bar_chart <- function(labels, state_scores, ranks,
+                           fill_color = "#1a4d9e") {
+
+  keep         <- !is.na(state_scores)
+  labels       <- labels[keep]
+  state_scores <- state_scores[keep]
+  ranks        <- ranks[keep]
+
+  if (length(labels) == 0) {
+    return(
+      ggplot() +
+        annotate("text", x = 0.5, y = 0.5,
+                 label = "No sub-index scores available for this domain.",
+                 hjust = 0.5, size = 3.8, color = "#888888", family = "serif") +
+        theme_void()
+    )
+  }
+
+  ann_text  <- mapply(function(r, sc) {
+    paste0("Rank #", r, "  \u00b7  ", bar_qual_label(r))
+  }, ranks, state_scores)
+  ann_color <- sapply(ranks, bar_qual_color)
+
+  df <- tibble(
+    label     = factor(labels, levels = rev(labels)),
+    state     = state_scores,
+    full      = 100,
+    ann_text  = ann_text,
+    ann_color = ann_color
+  )
+
+  ggplot(df) +
+    geom_col(aes(x = full, y = label),
+             fill = "#edf0f5", width = 0.5) +
+    geom_col(aes(x = state, y = label),
+             fill = fill_color, alpha = 0.88, width = 0.5) +
+    geom_text(aes(x = state, y = label, label = f(state)),
+              hjust = 1.15, size = 3.6,
+              color = "white", fontface = "bold",
+              family = "serif") +
+    geom_text(aes(x = 102, y = label, label = ann_text, color = ann_color),
+              hjust = 0, size = 3.35, fontface = "bold",
+              family = "serif") +
+    scale_color_identity() +
+    scale_x_continuous(limits = c(0, 175),
+                       breaks = c(0, 25, 50, 75, 100),
+                       labels = c("0", "25", "50", "75", "100"),
+                       expand = c(0, 0)) +
+    labs(x = NULL, y = NULL) +
+    theme_minimal(base_size = 12) +
+    theme(
+      panel.grid.major.x = element_line(color = "#e8ecf1", linewidth = 0.4),
+      panel.grid.major.y = element_blank(),
+      panel.grid.minor   = element_blank(),
+      axis.text.y        = element_text(size = 11, color = "#2c3e50",
+                                        family = "serif"),
+      axis.text.x        = element_text(size = 8.5, color = "#333333"),
+      plot.background    = element_blank(),
+      panel.background   = element_blank(),
+      plot.margin        = margin(2, 8, 2, 2)
+    )
+}
+```
+
+::: {.page-wrap}
+
+<!-- ═══════════════════════════════════════════════════════════
+     BANNER
+════════════════════════════════════════════════════════════ -->
+::: {.state-banner}
+
+::: {.banner-left}
+# `r state_name`
+<p class="banner-sub">ADA-PARC Scorecard &nbsp;·&nbsp; `r year_label` Data</p>
+:::
+
+::: {.banner-right}
+```{r gauge, fig.height=0.1, fig.width=0.1}
+make_gauge(
+  score     = s("index_adaparc"),
+  nat_score = n("index_adaparc"),
+  arc_color = "#9ca3af"
+)
+```
+<p class="overall-lbl">Overall ADA-PARC Score</p>
+:::
+
+::: {.banner-ranks}
+```{r rank-pills}
+HTML(paste0(
+  rank_pill("Overall",                 RNK$overall, n_ranked),
+  rank_pill("Community Living",        RNK$cl,      n_ranked),
+  rank_pill("Community Participation", RNK$cp,      n_ranked),
+  rank_pill("Work &amp; Economic",     RNK$we,      n_ranked)
+))
+```
+:::
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     COMMUNITY LIVING
+════════════════════════════════════════════════════════════ -->
+::: {.domain-card .cl}
+
+::: {.domain-header-row}
+::: {}
+<p class="domain-heading cl">Community Living</p>
+<p class="domain-desc">The degree to which people with disabilities (aged 18–64) live in community settings rather than nursing homes or correctional facilities, and whether states invest in community-based housing resources.</p>
+:::
+::: {.domain-score-badge .cl}
+<div class="score-val">`r f(s("index_rel_community_living"))`</div>
+<div class="score-lbl">Score</div>
+<div class="score-nat">US avg: `r f(n("index_rel_community_living"))`</div>
+<div class="score-rank">`r ifelse(is.na(RNK$cl), "\u2014", paste0("Rank #", RNK$cl, " of ", n_ranked, " \u00b7 ", bar_qual_label(RNK$cl)))`</div>
+:::
+:::
+
+<div class="chart-label">Sub-Index Scores</div>
+
+```{r cl-chart, fig.height=2.3, fig.width=7.4}
+make_bar_chart(
+  labels = c(
+    "Community Resource",
+    "Living Arrangements"
+  ),
+  state_scores = c(s("index_rel_community_resource"),
+                   s("index_rel_living_arrangements")),
+  ranks        = c(RNK$community_res, RNK$living_arrangements),
+  fill_color   = COL$cl
+)
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     COMMUNITY PARTICIPATION
+════════════════════════════════════════════════════════════ -->
+::: {.domain-card .cp}
+
+::: {.domain-header-row}
+::: {}
+<p class="domain-heading cp">Community Participation</p>
+<p class="domain-desc">Access to the tools and systems that enable full participation in community life — including technology, health insurance, educational attainment, transportation, and public safety.</p>
+:::
+::: {.domain-score-badge .cp}
+<div class="score-val">`r f(s("index_rel_community_participation"))`</div>
+<div class="score-lbl">Score</div>
+<div class="score-nat">US avg: `r f(n("index_rel_community_participation"))`</div>
+<div class="score-rank">`r ifelse(is.na(RNK$cp), "\u2014", paste0("Rank #", RNK$cp, " of ", n_ranked, " \u00b7 ", bar_qual_label(RNK$cp)))`</div>
+:::
+:::
+
+<div class="chart-label">Sub-Index Scores</div>
+
+```{r cp-chart, fig.height=3.6, fig.width=7.4}
+make_bar_chart(
+  labels = c(
+    "Public Safety",
+    "Transportation Access",
+    "Education Access",
+    "Insurance Access",
+    "Technology Access"
+  ),
+  state_scores = c(s("index_rel_safety"),
+                   s("index_rel_commute"),
+                   s("index_rel_education"),
+                   s("index_rel_insurance"),
+                   s("index_rel_tech")),
+  ranks        = c(RNK$safety,
+                   RNK$commute, RNK$education, RNK$insurance, RNK$tech),
+  fill_color   = COL$cp
+)
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     WORK & ECONOMIC
+════════════════════════════════════════════════════════════ -->
+::: {.domain-card .we}
+
+::: {.domain-header-row}
+::: {}
+<p class="domain-heading we">Work &amp; Economic</p>
+<p class="domain-desc">Economic inclusion and security for people with disabilities — measuring positive work outcomes (employment, income), negative labor force indicators (poverty, unemployment, NILF), and housing affordability.</p>
+:::
+::: {.domain-score-badge .we}
+<div class="score-val">`r f(s("index_rel_work_economic"))`</div>
+<div class="score-lbl">Score</div>
+<div class="score-nat">US avg: `r f(n("index_rel_work_economic"))`</div>
+<div class="score-rank">`r ifelse(is.na(RNK$we), "\u2014", paste0("Rank #", RNK$we, " of ", n_ranked, " \u00b7 ", bar_qual_label(RNK$we)))`</div>
+:::
+:::
+
+<div class="chart-label">Sub-Index Scores</div>
+
+```{r we-chart, fig.height=2.8, fig.width=7.4}
+make_bar_chart(
+  labels = c(
+    "Housing Affordability",
+    "Negative Work Score",
+    "Positive Work Score"
+  ),
+  state_scores = c(s("index_rel_housing_affordability"),
+                   s("index_rel_negative_work"),
+                   s("index_rel_positive_work")),
+  ranks        = c(RNK$housing_afford, RNK$negative_work, RNK$positive_work),
+  fill_color   = COL$we
+)
+```
+
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCORE SUMMARY TABLE
+════════════════════════════════════════════════════════════ -->
+::: {.summary-section}
+<div class="chart-label">Score Summary</div>
+
+```{r summary-table}
+score_cols_tbl <- c(
+  "index_adaparc",
+  "index_rel_community_living",
+    "index_rel_living_arrangements",
+    "index_rel_community_resource",
+  "index_rel_community_participation",
+    "index_rel_tech",
+    "index_rel_education",
+    "index_rel_insurance",
+    "index_rel_commute",
+    "index_rel_safety",
+  "index_rel_work_economic",
+    "index_rel_positive_work",
+    "index_rel_negative_work",
+    "index_rel_housing_affordability"
+)
+
+metric_tbl <- c(
+  "Overall ADA-PARC",
+  "Community Living",
+    "Living Arrangements",
+    "Community Resources",
+  "Community Participation",
+    "Technology Access",
+    "Education Access",
+    "Insurance Access",
+    "Transportation Access",
+    "Public Safety",
+  "Work & Economic",
+    "Positive Work Score",
+    "Negative Work Score",
+    "Housing Affordability"
+)
+
+lvl_tbl <- c(
+  "overall",
+  "domain","sub","sub",
+  "domain","sub","sub","sub","sub","sub",
+  "domain","sub","sub","sub"
+)
+
+dom_tbl <- c(
+  "overall",
+  "cl","cl","cl",
+  "cp","cp","cp","cp","cp","cp",
+  "we","we","we","we"
+)
+
+rnk_list <- c(
+  RNK$overall,
+  RNK$cl,  RNK$living_arrangements, RNK$community_res,
+  RNK$cp,  RNK$tech,   RNK$education, RNK$insurance,
+           RNK$commute, RNK$safety,
+  RNK$we,  RNK$positive_work, RNK$negative_work, RNK$housing_afford
+)
+
+tbl_df <- tibble(
+  metric      = metric_tbl,
+  level       = lvl_tbl,
+  domain      = dom_tbl,
+  state_score = sapply(score_cols_tbl, s),
+  nat_score   = sapply(score_cols_tbl, n),
+  rank_n      = rnk_list
+) |>
+  mutate(tier = sapply(rank_n, bar_qual_label))
+
+dom_rows <- which(tbl_df$level %in% c("overall", "domain"))
+exc_rows <- which(!is.na(tbl_df$rank_n) & tbl_df$rank_n <= 12)
+abv_rows <- which(!is.na(tbl_df$rank_n) & tbl_df$rank_n >= 13 & tbl_df$rank_n <= 25)
+blw_rows <- which(!is.na(tbl_df$rank_n) & tbl_df$rank_n >= 26 & tbl_df$rank_n <= 39)
+por_rows <- which(!is.na(tbl_df$rank_n) & tbl_df$rank_n >= 40)
+
+tbl_df |>
+  select(metric, state_score, nat_score, rank_n, tier) |>
+  gt() |>
+  cols_label(
+    metric      = "Index / Sub-Index",
+    state_score = state_name,
+    nat_score   = "US Average",
+    rank_n      = "Rank",
+    tier        = "Tier"
+  ) |>
+  fmt_number(columns = c(state_score, nat_score), decimals = 1) |>
+  fmt(columns = rank_n,
+      fns     = function(x) ifelse(is.na(x), "\u2014", paste0("#", as.integer(x)))) |>
+  tab_style(
+    style     = list(cell_text(weight = "bold"),
+                     cell_fill(color = "#f4f6fa")),
+    locations = cells_body(rows = dom_rows)
+  ) |>
+  tab_style(
+    style     = cell_text(indent = px(16), color = "#444444"),
+    locations = cells_body(columns = metric,
+                           rows = !tbl_df$level %in% c("overall","domain"))
+  ) |>
+  cols_align(align = "left",   columns = metric) |>
+  cols_align(align = "center", columns = c(state_score, nat_score, rank_n, tier)) |>
+  tab_style(
+    style     = cell_text(color = "white", weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_source_note(
+    source_note = md(
+      "Scores range 0\u2013100; higher is better. Rankings among all U.S. states and territories with available data. Puerto Rico may show \u2014 for PUMS-sourced indices."
+    )
+  ) |>
+  tab_options(
+    table.width                        = pct(100),
+    table.font.names                   = c("EB Garamond", "Georgia", "serif"),
+    table.font.size                    = px(15),
+    data_row.padding                   = px(6),
+    column_labels.font.weight          = "bold",
+    column_labels.background.color     = "#1a1a1a",
+    column_labels.padding              = px(10),
+    table.border.top.color             = "#1a1a1a",
+    table.border.top.width             = px(2),
+    table_body.border.bottom.color     = "#dde2ea",
+    table_body.hlines.color            = "#eaecf0",
+    row.striping.background_color      = "#fafbfc",
+    source_notes.font.size             = px(12),
+    source_notes.background.color      = "#f8f8fc"
+  ) |>
+  opt_row_striping()
+```
+:::
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<p class="footer-note">
+  ADA-PARC Scorecard &nbsp;·&nbsp;
+  `r year_label` Data &nbsp;·&nbsp;
+  Scores range 0–100; higher is better. &nbsp;·&nbsp;
+  Rankings among `r n_ranked` U.S. states and territories. &nbsp;·&nbsp;
+  Rank tiers: <strong>Excellent</strong> (1–12) &nbsp;·&nbsp;
+  <strong>Above Average</strong> (13–25) &nbsp;·&nbsp;
+  <strong>Below Average</strong> (26–39) &nbsp;·&nbsp;
+  <strong>Poor</strong> (40+).
+</p>
+
+:::
