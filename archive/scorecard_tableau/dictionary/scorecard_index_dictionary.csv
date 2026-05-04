@@ -1,0 +1,61 @@
+index_id,index_label,index_type,category,dimension,indicator_id,weight,agg_method,min_frac_present,notes
+index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,rel_score_home,1,weighted_mean,0.8,
+index_rel_communal_living,Communal Living Index (Relative),scorecard_index,CL,relative,rel_score_noninstgroupquarters,1,weighted_mean,0.8,
+index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,eq_score_home,1,weighted_mean,0.8,
+index_eq_communal_living,Communal Living Index (Equity),scorecard_index,CL,equity,eq_score_noninstgroupquarters,1,weighted_mean,0.8,
+index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,rel_score_nursing,1,weighted_mean,0.8,
+index_rel_institutional_living,Institutional Living Index (Relative),scorecard_index,CL,relative,rel_score_corrections,1,weighted_mean,0.8,
+index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,eq_score_nursing,1,weighted_mean,0.8,
+index_eq_institutional_living,Institutional Living Index (Equity),scorecard_index,CL,equity,eq_score_corrections,1,weighted_mean,0.8,
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_computer,1,weighted_mean,0.8,
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_smartphone,1,weighted_mean,0.8,
+index_rel_tech,Tech Access Index (Relative),scorecard_index,CP,relative,rel_score_int,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_computer,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_smartphone,1,weighted_mean,0.8,
+index_eq_tech,Tech Access Index (Equity),scorecard_index,CP,equity,eq_score_int,1,weighted_mean,0.8,
+index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,rel_score_publichealth,1,weighted_mean,0.8,
+index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,rel_score_privatehealth,1,weighted_mean,0.8,
+index_rel_insurance,Insurance Access Index (Relative),scorecard_index,CP,relative,rel_score_nohealthins,1,weighted_mean,0.8,
+index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,eq_score_publichealth,1,weighted_mean,0.8,
+index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,eq_score_privatehealth,1,weighted_mean,0.8,
+index_eq_insurance,Insurance Access Index (Equity),scorecard_index,CP,equity,eq_score_nohealthins,1,weighted_mean,0.8,
+index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,rel_score_noGED,1,weighted_mean,0.8,
+index_rel_education,Education Access Index (Relative),scorecard_index,CP,relative,rel_score_bachelors,1,weighted_mean,0.8,
+index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,eq_score_noGED,1,weighted_mean,0.8,
+index_eq_education,Education Access Index (Equity),scorecard_index,CP,equity,eq_score_bachelors,1,weighted_mean,0.8,
+index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,rel_score_transit,1,weighted_mean,0.8,
+index_rel_commute,Transportation Access Index (Relative),scorecard_index,CP,relative,rel_score_drivealone,1,weighted_mean,0.8,
+index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,eq_score_transit,1,weighted_mean,0.8,
+index_eq_commute,Transportation Access Index (Equity),scorecard_index,CP,equity,eq_score_drivealone,1,weighted_mean,0.8,
+index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,rel_score_poverty,1,weighted_mean,0.8,
+index_rel_poverty,Wealth & Poverty Index (Relative),scorecard_index,WE,relative,rel_score_medincome,1,weighted_mean,0.8,
+index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,eq_score_poverty,1,weighted_mean,0.8,
+index_eq_poverty,Wealth & Poverty Index (Equity),scorecard_index,WE,equity,eq_score_medincome,1,weighted_mean,0.8,
+index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,rel_score_employment,1,weighted_mean,0.8,
+index_rel_labor,Employment Index (Relative),scorecard_index,WE,relative,rel_score_labor,1,weighted_mean,0.8,
+index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,eq_score_employment,1,weighted_mean,0.8,
+index_eq_labor,Employment Index (Equity),scorecard_index,WE,equity,eq_score_labor,1,weighted_mean,0.8,
+index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,index_rel_communal_living,1,weighted_mean,0.8,member index_id
+index_rel_community_living,Community Living Index (Relative),category_index,CL,relative,index_rel_institutional_living,1,weighted_mean,0.8,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_tech,1,weighted_mean,0.8,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_insurance,1,weighted_mean,0.8,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_education,1,weighted_mean,0.8,member index_id
+index_rel_community_participation,Community Participation Index (Relative),category_index,CP,relative,index_rel_commute,1,weighted_mean,0.8,member index_id
+index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,index_rel_poverty,1,weighted_mean,0.8,member index_id
+index_rel_work_economic,Work-Economic Index (Relative),category_index,WE,relative,index_rel_labor,1,weighted_mean,0.8,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_community_living,1,weighted_mean,0.8,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_community_participation,1,weighted_mean,0.8,member index_id
+index_rel_adaparc,ADA-PARC Index (Relative),category_index,,relative,index_rel_work_economic,1,weighted_mean,0.8,member index_id
+index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,index_eq_communal_living,1,weighted_mean,0.8,member index_id
+index_eq_community_living,Community Living Index (Equity),category_index,CL,equity,index_eq_institutional_living,1,weighted_mean,0.8,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_tech,1,weighted_mean,0.8,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_insurance,1,weighted_mean,0.8,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_education,1,weighted_mean,0.8,member index_id
+index_eq_community_participation,Community Participation Index (Equity),category_index,CP,equity,index_eq_commute,1,weighted_mean,0.8,member index_id
+index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,index_eq_poverty,1,weighted_mean,0.8,member index_id
+index_eq_work_economic,Work-Economic Index (Equity),category_index,WE,equity,index_eq_labor,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_community_living,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_community_participation,1,weighted_mean,0.8,member index_id
+index_eq_adaparc,ADA-PARC Index (Equity),category_index,,equity,index_eq_work_economic,1,weighted_mean,0.8,member index_id
+index_adaparc,ADA-PARC Index,category_index,,,index_rel_adaparc,1,weighted_mean,0.8,member index_id
+index_adaparc,ADA-PARC Index,category_index,,,index_eq_adaparc,1,weighted_mean,0.8,member index_id
